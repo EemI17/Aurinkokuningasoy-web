@@ -77,7 +77,7 @@ function App() {
             {[
               { icon: Building2, title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat' },
               { icon: Ruler, title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa' },
-              { icon: Users, title: 'Konsultointipalvelut', desc: 'Asiantuntevaa ohjausta ja neuvontaa kaikkiin rakennusprojekteihin' },
+              { icon: Users, title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n• Viranomaisasioiden hoitamisen neuvonta\n• Ratkaisut asiakkaan tarpeen mukaan\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen' },
               { icon: Award, title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n• Pääsuunnittelija\n• Rakennushankkeen hallinta alusta loppuun\n• Asiakkaan edunvalvonta koko projektin ajan\n• Vaivattomampi ja hallitumpi rakennusprosessi' }
             ].map((service, index) => (
               <div
