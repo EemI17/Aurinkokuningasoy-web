@@ -9,10 +9,9 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img
-                src="/ChatGPT Image 4. lokak. 2025 klo 12.55.44.png"
+                src="/logo.png"
                 alt="Aurinkokuninkan Logo"
-                className="h-32 w-32"
-                style={{ color: '#C9972E' }}
+                className="h-32 w-32 object-contain"
               />
               <span className="text-lg font-semibold" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
