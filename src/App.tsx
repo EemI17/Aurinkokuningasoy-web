@@ -9,9 +9,9 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Aurinkokuninkan Logo"
-                className="h-32 w-32 object-contain"
+                className="h-16 w-16 object-contain"
               />
               <span className="text-lg font-semibold" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
