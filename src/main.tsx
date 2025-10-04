@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.tsx';
 import ArkkitehtisuunnitteluPage from './ArkkitehtisuunnitteluPage.tsx';
+import RakennesuunnitteluPage from './RakennesuunnitteluPage.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/arkkitehtisuunnittelu" element={<ArkkitehtisuunnitteluPage />} />
+        <Route path="/rakennesuunnittelu" element={<RakennesuunnitteluPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
