@@ -73,12 +73,12 @@ function App() {
       <section id="services" className="min-h-screen flex items-center justify-center px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>Palvelumme</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
-              { icon: Building2, title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat' },
-              { icon: Ruler, title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa' },
-              { icon: Users, title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n• Viranomaisasioiden hoitamisen neuvonta\n• Ratkaisut asiakkaan tarpeen mukaan\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen' },
-              { icon: Award, title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n• Pääsuunnittelija\n• Rakennushankkeen hallinta alusta loppuun\n• Asiakkaan edunvalvonta koko projektin ajan\n• Vaivattomampi ja hallitumpi rakennusprosessi' }
+              { title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat' },
+              { title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa' },
+              { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen' },
+              { title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi' }
             ].map((service, index) => (
               <div
                 key={index}
@@ -89,13 +89,12 @@ function App() {
                   boxShadow: '0 4px 6px rgba(201, 151, 46, 0.1)'
                 }}
               >
-                <service.icon className="w-14 h-14 mb-6" style={{ color: '#C9972E' }} />
-                <h3 className="text-xl font-bold mb-8" style={{ color: '#3E3326', fontSize: '1.3rem', lineHeight: '1.5', letterSpacing: '0.01em' }}>{service.title}</h3>
+                <h3 className="text-xl font-bold mb-8" style={{ color: '#3E3326', fontSize: '1.35rem', lineHeight: '1.5', letterSpacing: '0.01em' }}>{service.title}</h3>
                 <p style={{
                   color: '#3E3326',
                   whiteSpace: 'pre-line',
-                  lineHeight: '2.2',
-                  fontSize: '0.95rem',
+                  lineHeight: '2',
+                  fontSize: '1rem',
                   fontWeight: '400',
                   letterSpacing: '0.01em'
                 }}>{service.desc}</p>
