@@ -77,7 +77,7 @@ function App() {
             {[
               { title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat', link: '/arkkitehtisuunnittelu' },
               { title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa', link: '/rakennesuunnittelu' },
-              { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen', link: null },
+              { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen', link: '/konsultointipalvelut' },
               { title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi', link: '/rakennuttajapalvelut' }
             ].map((service, index) => {
               const ServiceBox = (

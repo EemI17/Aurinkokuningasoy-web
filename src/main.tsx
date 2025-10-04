@@ -5,6 +5,7 @@ import App from './App.tsx';
 import ArkkitehtisuunnitteluPage from './ArkkitehtisuunnitteluPage.tsx';
 import RakennesuunnitteluPage from './RakennesuunnitteluPage.tsx';
 import RakennuttajapalvelutPage from './RakennuttajapalvelutPage.tsx';
+import KonsultointipalvelutPage from './KonsultointipalvelutPage.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/arkkitehtisuunnittelu" element={<ArkkitehtisuunnitteluPage />} />
         <Route path="/rakennesuunnittelu" element={<RakennesuunnitteluPage />} />
         <Route path="/rakennuttajapalvelut" element={<RakennuttajapalvelutPage />} />
+        <Route path="/konsultointipalvelut" element={<KonsultointipalvelutPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
