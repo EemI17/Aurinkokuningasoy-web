@@ -75,7 +75,7 @@ function App() {
           <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>Palvelumme</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Building2, title: 'Arkkitehtisuunnittelu', desc: 'Innovatiivisia ja toiminnallisia arkkitehtuuriratkaisuja tarpeisiisi' },
+              { icon: Building2, title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat' },
               { icon: Ruler, title: 'Rakennussuunnittelu', desc: 'Yksityiskohtaista suunnittelua ja projektinhallintaa ideasta toteutukseen' },
               { icon: Users, title: 'Konsultointipalvelut', desc: 'Asiantuntevaa ohjausta ja neuvontaa kaikkiin rakennusprojekteihin' },
               { icon: Award, title: 'Laadunvarmistus', desc: 'Tiukka laadunvalvonta takaa erinomaisuuden jokaisessa projektissa' }
