@@ -82,21 +82,22 @@ function App() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="p-8 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
+                className="p-10 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
                 style={{
-                  backgroundColor: '#FFFFFF',
+                  backgroundColor: '#FEF8EB',
                   border: '3px solid #C9972E',
                   boxShadow: '0 4px 6px rgba(201, 151, 46, 0.1)'
                 }}
               >
                 <service.icon className="w-14 h-14 mb-6" style={{ color: '#C9972E' }} />
-                <h3 className="text-xl font-bold mb-6" style={{ color: '#3E3326', fontSize: '1.25rem', lineHeight: '1.4' }}>{service.title}</h3>
+                <h3 className="text-xl font-bold mb-8" style={{ color: '#3E3326', fontSize: '1.3rem', lineHeight: '1.5', letterSpacing: '0.01em' }}>{service.title}</h3>
                 <p style={{
                   color: '#3E3326',
                   whiteSpace: 'pre-line',
-                  lineHeight: '1.9',
+                  lineHeight: '2.2',
                   fontSize: '0.95rem',
-                  fontWeight: '400'
+                  fontWeight: '400',
+                  letterSpacing: '0.01em'
                 }}>{service.desc}</p>
               </div>
             ))}
