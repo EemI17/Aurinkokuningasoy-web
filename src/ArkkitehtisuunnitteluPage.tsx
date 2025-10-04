@@ -39,7 +39,7 @@ function ArkkitehtisuunnitteluPage() {
           <div
             className="p-12 rounded-2xl space-y-8"
             style={{
-              backgroundColor: '#FFFFFF',
+              backgroundColor: '#FEF8EB',
               border: '3px solid #C9972E',
               boxShadow: '0 10px 30px rgba(201, 151, 46, 0.15)'
             }}
