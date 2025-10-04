@@ -76,7 +76,7 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Building2, title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat' },
-              { icon: Ruler, title: 'Rakennussuunnittelu', desc: 'Yksityiskohtaista suunnittelua ja projektinhallintaa ideasta toteutukseen' },
+              { icon: Ruler, title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa' },
               { icon: Users, title: 'Konsultointipalvelut', desc: 'Asiantuntevaa ohjausta ja neuvontaa kaikkiin rakennusprojekteihin' },
               { icon: Award, title: 'Laadunvarmistus', desc: 'Tiukka laadunvalvonta takaa erinomaisuuden jokaisessa projektissa' }
             ].map((service, index) => (
