@@ -86,8 +86,8 @@ function App() {
                 style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
               >
                 <service.icon className="w-12 h-12 mb-4" style={{ color: '#C9972E' }} />
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#3E3326' }}>{service.title}</h3>
-                <p style={{ color: '#3E3326', opacity: 0.8 }}>{service.desc}</p>
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#3E3326' }}>{service.title}</h3>
+                <p style={{ color: '#3E3326', opacity: 0.8, whiteSpace: 'pre-line', lineHeight: '1.8' }}>{service.desc}</p>
               </div>
             ))}
           </div>
