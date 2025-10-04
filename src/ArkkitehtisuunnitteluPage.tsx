@@ -30,9 +30,9 @@ function ArkkitehtisuunnitteluPage() {
       </header>
 
       {/* Content Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 py-24">
+      <section className="min-h-screen flex items-center justify-center px-6 pt-32 pb-24">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>
+          <h1 className="text-5xl font-bold text-center mb-16 mt-8" style={{ color: '#3E3326' }}>
             Arkkitehtisuunnittelu
           </h1>
 
