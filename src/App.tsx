@@ -75,31 +75,36 @@ function App() {
           <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>Palvelumme</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
-              { title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat' },
-              { title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa' },
-              { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen' },
-              { title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi' }
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="p-10 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
-                style={{
-                  backgroundColor: '#FEF8EB',
-                  border: '3px solid #C9972E',
-                  boxShadow: '0 4px 6px rgba(201, 151, 46, 0.1)'
-                }}
-              >
-                <h3 className="text-xl font-bold mb-8" style={{ color: '#3E3326', fontSize: '1.35rem', lineHeight: '1.5', letterSpacing: '0.01em' }}>{service.title}</h3>
-                <p style={{
-                  color: '#3E3326',
-                  whiteSpace: 'pre-line',
-                  lineHeight: '2',
-                  fontSize: '1rem',
-                  fontWeight: '400',
-                  letterSpacing: '0.01em'
-                }}>{service.desc}</p>
-              </div>
-            ))}
+              { title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat', link: '/arkkitehtisuunnittelu' },
+              { title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa', link: null },
+              { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen', link: null },
+              { title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi', link: null }
+            ].map((service, index) => {
+              const ServiceBox = (
+                <div
+                  key={index}
+                  className="p-10 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
+                  style={{
+                    backgroundColor: '#FEF8EB',
+                    border: '3px solid #C9972E',
+                    boxShadow: '0 4px 6px rgba(201, 151, 46, 0.1)',
+                    cursor: service.link ? 'pointer' : 'default'
+                  }}
+                  onClick={() => service.link && window.open(service.link, '_blank')}
+                >
+                  <h3 className="text-xl font-bold mb-8" style={{ color: '#3E3326', fontSize: '1.35rem', lineHeight: '1.5', letterSpacing: '0.01em' }}>{service.title}</h3>
+                  <p style={{
+                    color: '#3E3326',
+                    whiteSpace: 'pre-line',
+                    lineHeight: '2',
+                    fontSize: '1rem',
+                    fontWeight: '400',
+                    letterSpacing: '0.01em'
+                  }}>{service.desc}</p>
+                </div>
+              );
+              return ServiceBox;
+            })}
           </div>
         </div>
       </section>
