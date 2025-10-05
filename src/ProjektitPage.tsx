@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 function ProjektitPage() {
   const projects = [
     {
-      title: 'Moderni Huvila',
+      title: 'Autotalli laajennus',
       category: 'Asuinrakennus',
-      area: '450 m²',
-      location: 'Espoo',
-      year: '2024',
+      area: '88 m²',
+      location: 'Mänttä-Vilppula',
+      year: '2022',
       description: 'Ylellinen ja moderni huvila, jossa yhdistyvät tyylikkäät arkkitehtoniset ratkaisut ja korkealaatuiset materiaalit.',
       features: ['Avoin pohjaratkaisu', 'Suuret ikkunat', 'Energiatehokas', 'Korkealaatuiset materiaalit']
     },
