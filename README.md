@@ -20,3 +20,5 @@ npm run build
 - Build command: `npm ci --include=dev && npm run build`
 - Publish directory: `dist`
 - Node version: 20 (pinned in `netlify.toml` and `.nvmrc`)
+
+**⚠️ Important:** Do NOT set `NPM_FLAGS=--production` or `npm_config_production=true` in Netlify environment variables. These flags omit devDependencies and will break Vite builds (vite: not found error).
