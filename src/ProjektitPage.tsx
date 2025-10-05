@@ -110,10 +110,14 @@ function ProjektitPage() {
                 style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
               >
                 <div
-                  className="h-56 flex items-center justify-center"
+                  className="h-56 flex items-center justify-center overflow-hidden"
                   style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                 >
-                  <Building2 className="w-20 h-20" style={{ color: '#C9972E' }} />
+                  <img
+                    src="/project-image.jpeg"
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-2" style={{ color: '#3E3326' }}>{project.title}</h3>
