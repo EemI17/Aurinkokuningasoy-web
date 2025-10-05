@@ -100,20 +100,22 @@ function ProjektitPage() {
                 className="rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
                 style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
               >
-                <div
-                  className="h-56 flex items-center justify-center overflow-hidden"
-                  style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
-                >
-                  <img
-                    src="/IMG_1785 copy.jpg"
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                    }}
-                  />
-                </div>
+                {index === 0 && (
+                  <div
+                    className="h-56 flex items-center justify-center overflow-hidden"
+                    style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
+                  >
+                    <img
+                      src="/IMG_1785 copy.jpg"
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                )}
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold mb-2" style={{ color: '#3E3326' }}>{project.title}</h3>
                   <p className="text-sm font-semibold mb-4" style={{ color: '#C9972E' }}>{project.category}</p>
