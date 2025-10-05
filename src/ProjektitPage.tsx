@@ -114,9 +114,13 @@ function ProjektitPage() {
                   style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                 >
                   <img
-                    src="/project-image.png"
+                    src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
