@@ -1,4 +1,5 @@
 import { Building2, Ruler, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -32,6 +33,13 @@ function App() {
               >
                 Meistä
               </a>
+              <Link
+                to="/projektit"
+                className="px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                style={{ color: '#3E3326' }}
+              >
+                Projektit
+              </Link>
               <a
                 href="#contact"
                 className="px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
