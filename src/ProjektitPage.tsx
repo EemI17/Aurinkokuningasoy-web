@@ -105,7 +105,7 @@ function ProjektitPage() {
                   style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                 >
                   <img
-                    src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src="/IMG_1785 copy.jpg"
                     alt={project.title}
                     className="w-full h-full object-cover"
                     onError={(e) => {
