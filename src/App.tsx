@@ -33,13 +33,6 @@ function App() {
                 Meistä
               </a>
               <a
-                href="#projects"
-                className="px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-                style={{ color: '#3E3326' }}
-              >
-                Projektit
-              </a>
-              <a
                 href="#contact"
                 className="px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
                 style={{ color: '#3E3326' }}
@@ -117,38 +110,6 @@ function App() {
             <p>
               Taustani ulottuu käytännön rakennustöistä työnjohtoon ja projektinhallintaan, joten ymmärrän rakentamista monesta näkökulmasta. Työskentelyssäni yhdistyvät asiantuntemus, käytännön kokemus ja halu tehdä rakennusprojekteista asiakkaille selkeitä ja sujuvia
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Showcase */}
-      <section id="projects" className="min-h-screen flex items-center justify-center px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>Esittelyssä Projektit</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Moderni Huvila', category: 'Asuinrakennus', area: '450 m²' },
-              { title: 'Liiketilakompleksi', category: 'Liikerakennus', area: '1,200 m²' },
-              { title: 'Kaupunkiasunto', category: 'Asuinrakennus', area: '320 m²' }
-            ].map((project, index) => (
-              <div
-                key={index}
-                className="rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
-                style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
-              >
-                <div
-                  className="h-64 flex items-center justify-center"
-                  style={{ backgroundColor: 'rgba(201, 151, 46, 0.2)' }}
-                >
-                  <Building2 className="w-24 h-24" style={{ color: '#C9972E' }} />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: '#3E3326' }}>{project.title}</h3>
-                  <p className="mb-2" style={{ color: '#C9972E' }}>{project.category}</p>
-                  <p style={{ color: '#3E3326', opacity: 0.8 }}>Kokonaispinta-ala: {project.area}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
