@@ -75,8 +75,8 @@ function App() {
           <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>Palvelumme</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
-              { title: 'Arkkitehtisuunnittelu', desc: '- Asemapiirustus\n- Pohjapiirustus\n- Leikkauspiirustukset\n- Julkisivukuvat', link: '/arkkitehtisuunnittelu' },
-              { title: 'Rakennesuunnittelu', desc: '- Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n- Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n- Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa', link: '/rakennesuunnittelu' },
+              { title: 'Arkkitehtisuunnittelu', desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat', link: '/arkkitehtisuunnittelu' },
+              { title: 'Rakennesuunnittelu', desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa', link: '/rakennesuunnittelu' },
               { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen', link: '/konsultointipalvelut' },
               { title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi', link: '/rakennuttajapalvelut' }
             ].map((service, index) => {
