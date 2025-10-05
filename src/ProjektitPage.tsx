@@ -114,7 +114,7 @@ function ProjektitPage() {
                   style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                 >
                   <img
-                    src="/project-image.jpeg"
+                    src="/project-image.png"
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
