@@ -70,9 +70,9 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="min-h-screen flex items-center justify-center px-6 pt-32" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
+      <section id="services" className="min-h-screen flex items-center justify-center px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#3E3326' }}>Palvelut</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 mt-12" style={{ color: '#3E3326' }}>Palvelut</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
               { title: 'Arkkitehtisuunnittelu', desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat', link: '/arkkitehtisuunnittelu' },
