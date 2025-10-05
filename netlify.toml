@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci --include=dev --no-audit --no-fund && npm run build"
+  command = "npm ci --no-audit --no-fund || npm install --ci --no-audit --no-fund; npm run whereami; npm run prebuild; npm run build"
   publish = "dist"
 
 [build.environment]

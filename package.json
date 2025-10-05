@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "prebuild": "node -v && npm -v",
+    "prebuild": "node -v && npm -v && pwd && ls -la && (ls -la node_modules/.bin || true) && (npx vite --version || echo 'npx could not find vite')",
+    "whereami": "node -e \"console.log('CWD=',process.cwd())\" && node -e \"try{console.log('pkg=',require('./package.json').name)}catch(e){console.log('no package.json here')}\"",
+    "build": "npx vite build",
+    "dev": "npx vite",
+    "preview": "npx vite preview",
     "lint": "eslint .",
-    "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
