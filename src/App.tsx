@@ -112,16 +112,10 @@ function App() {
       {/* About Section */}
       <section id="about" className="min-h-screen flex items-center justify-center px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#3E3326' }}>Meistä</h2>
+          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#3E3326' }}>Minusta</h2>
           <div className="space-y-6 text-lg" style={{ color: '#3E3326' }}>
             <p>
-              Aurinkokuninkan Suunnittelu-ja Rakennuspalvelu OY on johtava rakennussuunnitteluyritys, joka on omistautunut toteuttamaan arkkitehtuuriset unelmasi. Vuosien kokemuksella alalta erikoistumme innovatiivisten, kestävien ja esteettisesti miellyttävien suunnitelmien luomiseen.
-            </p>
-            <p>
-              Asiantuntija-arkkitehtien ja suunnittelijoiden tiimimme työskentelee tiiviisti asiakkaiden kanssa ymmärtääkseen heidän visionsa ja toteuttaakseen odotukset ylittäviä projekteja. Yhdistämme perinteisen käsityötaidon moderniin teknologiaan varmistaaksemme, että jokainen projekti valmistuu korkeimpien standardien mukaisesti.
-            </p>
-            <p>
-              Asuinrakennuksista liikerakennuksiin käsittelemme kaikenkokoiset projektit samalla omistautumisella ja huomiolla yksityiskohtiin.
+              Taustani ulottuu käytännön rakennustöistä työnjohtoon ja projektinhallintaan, joten ymmärrän rakentamista monesta näkökulmasta. Työskentelyssäni yhdistyvät asiantuntemus, käytännön kokemus ja halu tehdä rakennusprojekteista asiakkaille selkeitä ja sujuvia
             </p>
           </div>
         </div>
