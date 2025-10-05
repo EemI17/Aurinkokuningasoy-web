@@ -48,15 +48,6 @@ function ProjektitPage() {
       description: 'Moderni toimistorakennus, joka tarjoaa inspiroivan ja tehokkaan työympäristön.',
       features: ['Avoimet työtilat', 'Neuvottelutilat', 'Lounasravintola', 'Kattoterassi']
     },
-    {
-      title: 'Omakotitalo',
-      category: 'Asuinrakennus',
-      area: '280 m²',
-      location: 'Kirkkonummi',
-      year: '2024',
-      description: 'Viihtyisä omakotitalo luonnonläheisessä ympäristössä, suunniteltu perheelämän tarpeisiin.',
-      features: ['Tilava olohuone', 'Moderni keittiö', 'Suuri terassi', 'Sauna']
-    }
   ];
 
   return (
