@@ -1,5 +1,31 @@
-import { Building2, Ruler, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+const services = [
+  {
+    title: 'Arkkitehtisuunnittelu',
+    desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat',
+    link: '/arkkitehtisuunnittelu',
+    logo: '/arkkitehtisuunnittelu-logo.svg'
+  },
+  {
+    title: 'Rakennesuunnittelu',
+    desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa',
+    link: '/rakennesuunnittelu',
+    logo: '/rakennesuunnittelu-logo.svg'
+  },
+  {
+    title: 'Konsultointipalvelut – pähkinänkuoressa',
+    desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
+    link: '/konsultointipalvelut',
+    logo: '/konsultointipalvelut-logo.svg'
+  },
+  {
+    title: 'Rakennuttajapalvelut',
+    desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi',
+    link: '/rakennuttajapalvelut',
+    logo: '/rakennuttajapalvelut-logo.svg'
+  }
+];
 
 function App() {
   return (
@@ -55,18 +81,12 @@ function App() {
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center px-6">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#3E3326' }}>
-            Rakennamme Visiosi
+          <h2 className="text-5xl md:text-6xl font-bold mb-4" style={{ color: '#3E3326' }}>
+            Tarkkaa suunnittelua, varmaa valvontaa
           </h2>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" style={{ color: '#3E3326' }}>
-            Ammattitaitoista rakennussuunnittelua ja arkkitehtuuripalveluita asuin- ja liikekiinteistöihin
+          <p className="text-2xl md:text-3xl font-semibold mb-6 max-w-2xl mx-auto" style={{ color: '#C9972E' }}>
+            Yhdessä teemme unelmastasi totta
           </p>
-          <button
-            className="px-8 py-4 rounded-lg text-white font-semibold text-lg hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#C9972E' }}
-          >
-            Aloita Projektisi
-          </button>
         </div>
       </section>
 
@@ -75,16 +95,11 @@ function App() {
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 mt-12" style={{ color: '#3E3326' }}>Palvelut</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {[
-              { title: 'Arkkitehtisuunnittelu', desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat', link: '/arkkitehtisuunnittelu' },
-              { title: 'Rakennesuunnittelu', desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa', link: '/rakennesuunnittelu' },
-              { title: 'Konsultointipalvelut – pähkinänkuoressa', desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen', link: '/konsultointipalvelut' },
-              { title: 'Rakennuttajapalvelut', desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi', link: '/rakennuttajapalvelut' }
-            ].map((service, index) => {
+            {services.map((service, index) => {
               const ServiceBox = (
                 <div
                   key={index}
-                  className="p-10 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
+                  className="p-10 rounded-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col relative overflow-hidden"
                   style={{
                     backgroundColor: '#FEF8EB',
                     border: '3px solid #C9972E',
@@ -93,8 +108,21 @@ function App() {
                   }}
                   onClick={() => service.link && window.open(service.link, '_blank')}
                 >
-                  <h3 className="text-xl font-bold mb-8" style={{ color: '#3E3326', fontSize: '1.35rem', lineHeight: '1.5', letterSpacing: '0.01em' }}>{service.title}</h3>
-                  <p style={{
+                  {service.logo && (
+                    <img
+                      src={service.logo}
+                      alt={`${service.title} logo`}
+                      className="absolute -top-6 -right-6 w-36 h-36 opacity-10 select-none pointer-events-none"
+                      style={{ color: '#3E3326' }}
+                    />
+                  )}
+                  <h3
+                    className="text-xl font-bold mb-8 relative z-10"
+                    style={{ color: '#3E3326', fontSize: '1.35rem', lineHeight: '1.5', letterSpacing: '0.01em' }}
+                  >
+                    {service.title}
+                  </h3>
+                  <p className="relative z-10" style={{
                     color: '#3E3326',
                     whiteSpace: 'pre-line',
                     lineHeight: '2',
@@ -157,72 +185,75 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#3E3326' }}>Ota Yhteyttä</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Phone className="w-6 h-6 mt-1" style={{ color: '#C9972E' }} />
-                <div>
-                  <h3 className="font-bold mb-1" style={{ color: '#3E3326' }}>Puhelin</h3>
-                  <p style={{ color: '#3E3326', opacity: 0.8 }}>+358 XX XXX XXXX</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Mail className="w-6 h-6 mt-1" style={{ color: '#C9972E' }} />
-                <div>
-                  <h3 className="font-bold mb-1" style={{ color: '#3E3326' }}>Sähköposti</h3>
-                  <p style={{ color: '#3E3326', opacity: 0.8 }}>info@aurinkokuninkan.fi</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 mt-1" style={{ color: '#C9972E' }} />
-                <div>
-                  <h3 className="font-bold mb-1" style={{ color: '#3E3326' }}>Osoite</h3>
-                  <p style={{ color: '#3E3326', opacity: 0.8 }}>Helsinki, Finland</p>
-                </div>
-              </div>
+        <div className="container mx-auto max-w-2xl">
+          <form
+            className="rounded-3xl border shadow-lg p-10 space-y-8"
+            style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF' }}
+          >
+            <div className="space-y-2 text-center">
+              <h2 className="text-4xl font-bold" style={{ color: '#3E3326' }}>
+                Ota yhteyttä
+              </h2>
+              <p className="text-base" style={{ color: '#3E3326', opacity: 0.8 }}>
+                Täytä lomake ja palaamme sinulle pian.
+              </p>
             </div>
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Nimi"
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-100"
-                style={{
-                  backgroundColor: '#FEF8EB',
-                  borderColor: '#C9972E',
-                  color: '#3E3326'
-                }}
-              />
-              <input
-                type="email"
-                placeholder="Sähköposti"
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-100"
-                style={{
-                  backgroundColor: '#FEF8EB',
-                  borderColor: '#C9972E',
-                  color: '#3E3326'
-                }}
-              />
-              <textarea
-                placeholder="Viesti"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-opacity-100"
-                style={{
-                  backgroundColor: '#FEF8EB',
-                  borderColor: '#C9972E',
-                  color: '#3E3326'
-                }}
-              />
-              <button
-                type="submit"
-                className="w-full py-3 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: '#C9972E' }}
-              >
-                Lähetä Viesti
-              </button>
-            </form>
-          </div>
+            <div className="space-y-6">
+              <label className="block text-left">
+                <span className="block text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                  Nimi
+                </span>
+                <input
+                  type="text"
+                  placeholder="Kirjoita koko nimesi"
+                  className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                  style={{
+                    backgroundColor: '#FEF8EB',
+                    borderColor: '#E0D2BF',
+                    color: '#3E3326'
+                  }}
+                />
+              </label>
+              <label className="block text-left">
+                <span className="block text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                  Sähköposti
+                </span>
+                <input
+                  type="email"
+                  placeholder="esimerkki@yritys.fi"
+                  className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                  style={{
+                    backgroundColor: '#FEF8EB',
+                    borderColor: '#E0D2BF',
+                    color: '#3E3326'
+                  }}
+                />
+              </label>
+              <label className="block text-left">
+                <span className="block text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                  Viesti
+                </span>
+                <textarea
+                  placeholder="Kerro lyhyesti projektistasi ja toiveistasi"
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                  style={{
+                    backgroundColor: '#FEF8EB',
+                    borderColor: '#E0D2BF',
+                    color: '#3E3326',
+                    resize: 'vertical'
+                  }}
+                />
+              </label>
+            </div>
+            <button
+              type="submit"
+              className="w-full py-4 rounded-xl text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+              style={{ backgroundColor: '#C9972E', boxShadow: '0 12px 24px rgba(201, 151, 46, 0.25)' }}
+            >
+              Lähetä viesti
+            </button>
+          </form>
         </div>
       </section>
 
