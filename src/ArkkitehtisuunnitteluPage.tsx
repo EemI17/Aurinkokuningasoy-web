@@ -5,22 +5,21 @@ function ArkkitehtisuunnitteluPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       {/* Header */}
       <header className="fixed top-0 w-full z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}>
-        <nav className="px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+        <nav className="px-4 sm:px-6 py-4">
+          <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <div className="flex items-center justify-center gap-4 sm:justify-start">
               <img
                 src="/logo.svg"
                 alt="Aurinkokuninkan Logo"
-                className="h-16 w-16 object-contain"
+                className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
               />
-              <span className="text-lg font-semibold" style={{ color: '#3E3326' }}>
+              <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
             </div>
             <a
               href="/"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-              style={{ color: '#3E3326' }}
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#C9972E]/40 px-4 py-2.5 text-sm font-medium text-[#3E3326] transition-colors hover:bg-[#C9972E]/15 sm:text-base"
             >
               <ArrowLeft className="w-5 h-5" />
               Takaisin
@@ -30,22 +29,22 @@ function ArkkitehtisuunnitteluPage() {
       </header>
 
       {/* Content Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-32 pb-24">
+      <section className="px-4 sm:px-6 pt-28 pb-16">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl font-bold text-center mb-16 mt-8" style={{ color: '#3E3326' }}>
+          <h1 className="mt-20 text-center text-3xl font-bold sm:mt-12 sm:text-4xl md:text-5xl" style={{ color: '#3E3326' }}>
             Arkkitehtisuunnittelu
           </h1>
 
           <div
-            className="p-12 rounded-2xl space-y-8"
+            className="mt-10 rounded-2xl border-2 p-6 sm:p-8 lg:p-12 space-y-6 sm:space-y-8"
             style={{
               backgroundColor: '#FEF8EB',
-              border: '3px solid #C9972E',
-              boxShadow: '0 10px 30px rgba(201, 151, 46, 0.15)'
+              border: '2px solid #C9972E',
+              boxShadow: '0 10px 30px rgba(201, 151, 46, 0.12)'
             }}
           >
             <p
-              className="text-lg leading-relaxed"
+              className="text-base sm:text-lg leading-relaxed"
               style={{
                 color: '#3E3326',
                 lineHeight: '2',
@@ -59,7 +58,7 @@ function ArkkitehtisuunnitteluPage() {
             </p>
 
             <p
-              className="text-lg leading-relaxed"
+              className="text-base sm:text-lg leading-relaxed"
               style={{
                 color: '#3E3326',
                 lineHeight: '2',
@@ -74,7 +73,7 @@ function ArkkitehtisuunnitteluPage() {
             </p>
 
             <p
-              className="text-lg leading-relaxed"
+              className="text-base sm:text-lg leading-relaxed"
               style={{
                 color: '#3E3326',
                 lineHeight: '2',
@@ -87,12 +86,9 @@ function ArkkitehtisuunnitteluPage() {
               tarpeita että esteettisiä toiveita.
             </p>
 
-            <div
-              className="mt-12 pt-8 border-t-2"
-              style={{ borderColor: '#C9972E' }}
-            >
+            <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-2" style={{ borderColor: '#C9972E' }}>
               <h2
-                className="text-2xl font-bold mb-6"
+                className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
                 style={{ color: '#3E3326' }}
               >
                 Palvelut sisältävät
@@ -106,7 +102,7 @@ function ArkkitehtisuunnitteluPage() {
                 ].map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-3 text-lg"
+                    className="flex items-center gap-3 text-base sm:text-lg"
                     style={{ color: '#3E3326' }}
                   >
                     <span

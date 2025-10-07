@@ -54,22 +54,21 @@ function ProjektitPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       {/* Header */}
       <header className="fixed top-0 w-full z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}>
-        <nav className="px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+        <nav className="px-4 sm:px-6 py-4">
+          <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <Link to="/" className="flex items-center justify-center gap-4 transition-opacity hover:opacity-80 sm:justify-start">
               <img
                 src="/logo.svg"
                 alt="Aurinkokuninkan Logo"
-                className="h-16 w-16 object-contain"
+                className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
               />
-              <span className="text-lg font-semibold" style={{ color: '#3E3326' }}>
+              <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
             </Link>
             <Link
               to="/"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-              style={{ color: '#3E3326' }}
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#C9972E]/40 px-4 py-2.5 text-sm font-medium text-[#3E3326] transition-colors hover:bg-[#C9972E]/15 sm:text-base"
             >
               <ArrowLeft className="w-5 h-5" />
               Takaisin
@@ -79,30 +78,30 @@ function ProjektitPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
+      <section className="pt-28 pb-14 px-4 sm:px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl font-bold text-center mb-6" style={{ color: '#3E3326' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6" style={{ color: '#3E3326' }}>
             Projektit
           </h1>
-          <p className="text-xl text-center max-w-3xl mx-auto" style={{ color: '#3E3326', opacity: 0.9 }}>
+          <p className="text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto" style={{ color: '#3E3326', opacity: 0.9 }}>
             Tutustu toteutettuihin projekteihimme, jotka kuvaavat osaamistamme ja sitoutumistamme laatuun
           </p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 px-6">
+      <section className="py-14 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+                className="flex flex-col overflow-hidden rounded-xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
               >
                 {index === 0 && (
                   <div
-                    className="h-56 flex items-center justify-center overflow-hidden"
+                    className="h-48 sm:h-56 flex items-center justify-center overflow-hidden"
                     style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                   >
                     <img
@@ -116,26 +115,30 @@ function ProjektitPage() {
                     />
                   </div>
                 )}
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: '#3E3326' }}>{project.title}</h3>
-                  <p className="text-sm font-semibold mb-4" style={{ color: '#C9972E' }}>{project.category}</p>
+                <div className="flex flex-grow flex-col gap-4 p-5 sm:p-6">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#3E3326' }}>{project.title}</h3>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#C9972E] sm:text-sm">
+                      {project.category}
+                    </p>
+                  </div>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-xs sm:text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
                       <MapPin className="w-4 h-4" style={{ color: '#C9972E' }} />
                       <span>{project.location}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
                       <Calendar className="w-4 h-4" style={{ color: '#C9972E' }} />
                       <span>{project.year}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
                       <Ruler className="w-4 h-4" style={{ color: '#C9972E' }} />
                       <span>{project.area}</span>
                     </div>
                   </div>
 
-                  <p className="text-sm mb-4" style={{ color: '#3E3326', opacity: 0.85, lineHeight: '1.6' }}>
+                  <p className="text-sm" style={{ color: '#3E3326', opacity: 0.85, lineHeight: '1.7' }}>
                     {project.description}
                   </p>
 
@@ -143,7 +146,7 @@ function ProjektitPage() {
                     <h4 className="text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>Ominaisuudet:</h4>
                     <ul className="space-y-1">
                       {project.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm flex items-start gap-2" style={{ color: '#3E3326', opacity: 0.8 }}>
+                        <li key={idx} className="flex items-start gap-2 text-sm" style={{ color: '#3E3326', opacity: 0.8 }}>
                           <span style={{ color: '#C9972E' }}>•</span>
                           <span>{feature}</span>
                         </li>
@@ -158,17 +161,17 @@ function ProjektitPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
+      <section className="py-16 px-4 sm:px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6" style={{ color: '#3E3326' }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6" style={{ color: '#3E3326' }}>
             Aloita Oma Projektisi
           </h2>
-          <p className="text-lg mb-8" style={{ color: '#3E3326', opacity: 0.9 }}>
+          <p className="text-base sm:text-lg mb-8" style={{ color: '#3E3326', opacity: 0.9 }}>
             Haluatko toteuttaa oman rakennusprojektisi? Ota yhteyttä ja keskustellaan, miten voimme auttaa visiosi toteutumisessa.
           </p>
           <Link
             to="/#contact"
-            className="inline-block px-8 py-4 rounded-lg text-white font-semibold text-lg hover:opacity-90 transition-opacity"
+            className="inline-block rounded-lg px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:px-8 sm:py-4 sm:text-lg"
             style={{ backgroundColor: '#C9972E' }}
           >
             Ota Yhteyttä
