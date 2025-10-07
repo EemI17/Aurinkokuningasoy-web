@@ -66,13 +66,13 @@ function App() {
               >
                 Projektit
               </Link>
-              <a
-                href="#contact"
+              <Link
+                to="/yhteystiedot"
                 className="px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
                 style={{ color: '#3E3326' }}
               >
                 Yhteystiedot
-              </a>
+              </Link>
             </div>
           </div>
         </nav>

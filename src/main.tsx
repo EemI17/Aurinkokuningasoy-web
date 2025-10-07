@@ -7,6 +7,7 @@ import RakennesuunnitteluPage from './RakennesuunnitteluPage.tsx';
 import RakennuttajapalvelutPage from './RakennuttajapalvelutPage.tsx';
 import KonsultointipalvelutPage from './KonsultointipalvelutPage.tsx';
 import ProjektitPage from './ProjektitPage.tsx';
+import YhteystiedotPage from './YhteystiedotPage.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/rakennuttajapalvelut" element={<RakennuttajapalvelutPage />} />
         <Route path="/konsultointipalvelut" element={<KonsultointipalvelutPage />} />
         <Route path="/projektit" element={<ProjektitPage />} />
+        <Route path="/yhteystiedot" element={<YhteystiedotPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
