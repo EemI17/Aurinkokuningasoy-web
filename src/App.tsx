@@ -111,16 +111,49 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex items-center justify-center px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{ color: '#3E3326' }}>Minusta</h2>
-          <div className="space-y-6 text-lg" style={{ color: '#3E3326' }}>
-            <p>
-              Taustani ulottuu käytännön rakennustöistä työnjohtoon ja projektinhallintaan, joten ymmärrän rakentamista monesta näkökulmasta. Työskentelyssäni yhdistyvät asiantuntemus, käytännön kokemus ja halu tehdä rakennusprojekteista asiakkaille selkeitä ja sujuvia
-            </p>
+        <section id="about" className="min-h-screen flex items-center justify-center px-6 py-16">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold" style={{ color: '#3E3326' }}>Minusta</h2>
+            </div>
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,320px)_1fr] items-start">
+              <div
+                className="rounded-3xl border shadow-lg p-8 flex flex-col items-center text-center"
+                style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF', color: '#3E3326' }}
+              >
+                <div className="w-36 h-36 rounded-full overflow-hidden mb-6 border-4" style={{ borderColor: '#C9972E' }}>
+                  <img
+                    src="/IMG_1785.jpg"
+                    alt="Tami Takala"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-semibold">Tami Takala</h3>
+                  <div className="space-y-1 text-base" style={{ color: '#3E3326', opacity: 0.85 }}>
+                    <p className="font-medium" style={{ opacity: 0.9 }}>Yrittäjä</p>
+                    <p>+358 XX XXX XXXX</p>
+                    <p>kristian@aurinkokuningas.fi</p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-6 text-lg leading-relaxed">
+                <div className="rounded-3xl border p-8 shadow-sm" style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF' }}>
+                  <p style={{ color: '#3E3326' }}>
+                    Taustani ulottuu käytännön rakennustöistä työnjohtoon ja projektinhallintaan, joten ymmärrän rakentamista
+                    monesta näkökulmasta. Työskentelyssäni yhdistyvät asiantuntemus, käytännön kokemus ja halu tehdä rakennusprojekteista
+                    asiakkaille selkeitä ja sujuvia. Johdan projekteja ihmisläheisesti, kuunnellen asiakkaiden tarpeita ja etsien
+                    ratkaisuja, jotka tuovat arvoa sekä lyhyellä että pitkällä tähtäimellä.
+                  </p>
+                  <p style={{ color: '#3E3326' }}>
+                    Uskon, että vahva vuorovaikutus ja läpinäkyvä viestintä ovat onnistuneiden hankkeiden kulmakivet. Siksi pidän
+                    asiakkaani ajan tasalla jokaisessa projektin vaiheessa ja varmistun siitä, että lopputulos täyttää sovitut tavoitteet.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center px-6">
