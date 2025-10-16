@@ -38,7 +38,9 @@ function App() {
     projectType: '',
     message: ''
   });
-  const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submissionStatus, setSubmissionStatus] = useState<
+    'idle' | 'success' | 'error' | 'submitting'
+  >('idle');
   const [submissionError, setSubmissionError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
@@ -90,7 +92,7 @@ function App() {
     }
   };
 
-  const handleContactSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
@@ -99,23 +101,38 @@ function App() {
       return;
     }
 
-    const body = [
-      `Nimi: ${formData.name.trim()}`,
-      `Sähköposti: ${formData.email.trim()}`,
-      formData.phone.trim() ? `Puhelin: ${formData.phone.trim()}` : null,
-      formData.projectType ? `Kiinnostuksen kohde: ${formData.projectType}` : null,
-      '',
-      'Viesti:',
-      formData.message.trim()
-    ]
-      .filter(Boolean)
-      .join('\n');
+    setSubmissionError('');
+    setSubmissionStatus('submitting');
 
-    const subject = encodeURIComponent(`Uusi yhteydenottopyyntö: ${formData.name.trim()}`);
-    const mailtoUrl = `mailto:info@aurinkokuningasoy.fi?subject=${subject}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/info@aurinkokuningasoy.fi', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim() || undefined,
+          projectType: formData.projectType || undefined,
+          message: formData.message.trim()
+        })
+      });
 
-    window.location.href = mailtoUrl;
-    setSubmissionStatus('success');
+      if (!response.ok) {
+        throw new Error('Failed to submit contact form');
+      }
+
+      setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
+      setSubmissionStatus('success');
+    } catch (error) {
+      console.error('Contact form submission failed', error);
+      setSubmissionError(
+        'Viestin lähetys epäonnistui. Yritä uudelleen tai ota yhteyttä suoraan sähköpostitse info@aurinkokuningasoy.fi.'
+      );
+      setSubmissionStatus('error');
+    }
   };
 
   return (
@@ -539,17 +556,23 @@ function App() {
                     {submissionError}
                   </p>
                 )}
+                {submissionStatus === 'submitting' && (
+                  <p className="text-sm" style={{ color: '#3E3326' }} role="status">
+                    Lähetetään viestiä...
+                  </p>
+                )}
                 {submissionStatus === 'success' && !submissionError && (
                   <p className="text-sm" style={{ color: '#3E3326' }} role="status">
-                    Sähköpostisovelluksesi avautuu luonnoksella osoitteeseen info@aurinkokuningasoy.fi. Muistathan lähettää viestin.
+                    Kiitos viestistäsi! Olemme vastaanottaneet yhteydenottosi ja palaamme asiaan yhden arkipäivän sisällä.
                   </p>
                 )}
                 <button
                   type="submit"
-                  className="w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+                  disabled={submissionStatus === 'submitting'}
+                  className="w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed disabled:shadow-none disabled:translate-y-0"
                   style={{ backgroundColor: '#C9972E', boxShadow: '0 12px 24px rgba(201, 151, 46, 0.25)' }}
                 >
-                  Lähetä viesti
+                  {submissionStatus === 'submitting' ? 'Lähetetään...' : 'Lähetä viesti'}
                 </button>
               </div>
             </form>
