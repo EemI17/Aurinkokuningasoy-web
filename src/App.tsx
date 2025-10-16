@@ -280,8 +280,8 @@ function App() {
                 <h3 className="text-xl sm:text-2xl font-semibold">Tami Takala</h3>
                 <div className="space-y-1 text-sm sm:text-base" style={{ color: '#3E3326', opacity: 0.85 }}>
                   <p className="font-medium" style={{ opacity: 0.9 }}>Yrittäjä</p>
-                  <p>+358 XX XXX XXXX</p>
-                  <p>kristian@aurinkokuningas.fi</p>
+                  <p>+358401547538</p>
+                  <p>tami.takala@aurinkokuningasoy.fi</p>
                 </div>
               </div>
             </div>
