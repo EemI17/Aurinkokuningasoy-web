@@ -1,4 +1,5 @@
 import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function RakennuttajapalvelutPage() {
   return (
@@ -17,13 +18,14 @@ function RakennuttajapalvelutPage() {
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
             </div>
-            <a
-              href="/"
+            <Link
+              to="/"
+              state={{ scrollTo: 'services' }}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#C9972E]/40 px-4 py-2.5 text-sm font-medium text-[#3E3326] transition-colors hover:bg-[#C9972E]/15 sm:text-base"
             >
               <ArrowLeft className="w-5 h-5" />
               Takaisin
-            </a>
+            </Link>
           </div>
         </nav>
       </header>

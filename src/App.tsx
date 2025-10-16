@@ -1,5 +1,5 @@
-import { type MouseEvent, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { type MouseEvent, useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
     logo: '/rakennesuunnittelu-logo.svg'
   },
   {
-    title: 'Konsultointipalvelut – pähkinänkuoressa',
+    title: 'Konsultointipalvelut',
     desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
     link: '/konsultointipalvelut',
     logo: '/konsultointipalvelut-logo.svg'
@@ -32,6 +32,18 @@ const services = [
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollTarget = (location.state as { scrollTo?: string } | null)?.scrollTo;
+    if (scrollTarget === 'services') {
+      const element = document.getElementById('services');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      navigate('.', { replace: true });
+    }
+  }, [location, navigate]);
 
   const handleServiceNavigation = (link?: string) => {
     if (!link) {
