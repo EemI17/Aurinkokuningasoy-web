@@ -5,7 +5,10 @@ function RakennesuunnitteluPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}>
+      <header
+        className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
+        style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
+      >
         <nav className="px-4 sm:px-6 py-4">
           <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <div className="flex items-center justify-center gap-4 sm:justify-start">
@@ -80,6 +83,37 @@ function RakennesuunnitteluPage() {
             >
               Tavoitteeni on, että saat selkeät ja luotettavat rakennesuunnitelmat, jotka helpottavat rakentamista ja varmistavat, että lopputulos on turvallinen, toimiva ja pitkäikäinen.
             </p>
+
+            <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-2" style={{ borderColor: '#C9972E' }}>
+              <h2
+                className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
+                style={{ color: '#3E3326' }}
+              >
+                Palvelut sisältävät
+              </h2>
+              <ul className="space-y-4">
+                {[
+                  'Rakennesuunnitelmat pientaloihin ja talousrakennuksiin',
+                  'Kantavien rakenteiden ja liitosten mitoitukset',
+                  'Perustusten ja rungon suunnittelu',
+                  'Rakennedetaljit ja rakennepiirustukset',
+                  'Yhteensovitus arkkitehti- ja LVI-sähkösuunnitelmien kanssa',
+                  'Rakennusluvan edellyttämät rakennesuunnitelmat ja laskelmat'
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-3 text-base sm:text-lg"
+                    style={{ color: '#3E3326' }}
+                  >
+                    <span
+                      className="w-2 h-2 rounded-full"
+                      style={{ backgroundColor: '#C9972E' }}
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

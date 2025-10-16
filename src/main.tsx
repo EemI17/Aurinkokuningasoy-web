@@ -10,7 +10,7 @@ import ProjektitPage from './ProjektitPage.tsx';
 import YhteystiedotPage from './YhteystiedotPage.tsx';
 import './index.css';
 
-function ScrollToTop() {
+export function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
