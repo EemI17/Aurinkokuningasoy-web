@@ -5,7 +5,10 @@ function ArkkitehtisuunnitteluPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 backdrop-blur-sm border-b" style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}>
+      <header
+        className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
+        style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
+      >
         <nav className="px-4 sm:px-6 py-4">
           <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <div className="flex items-center justify-center gap-4 sm:justify-start">
