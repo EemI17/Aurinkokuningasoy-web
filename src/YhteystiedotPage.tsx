@@ -34,7 +34,7 @@ function YhteystiedotPage() {
               Ota yhteyttä
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style={{ color: '#3E3326' }}>
-              Yhdessä teemme seuraavasta projektistasi onnistuneen
+              Tami auttaa
             </h1>
             <p className="text-base sm:text-lg max-w-3xl mx-auto" style={{ color: '#3E3326', lineHeight: '1.9' }}>
               Olipa kyseessä uusi rakennusprojekti tai nykyisen hankkeen tukeminen, Tami Takala auttaa sinua
@@ -46,7 +46,7 @@ function YhteystiedotPage() {
           <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div
               className="rounded-3xl border shadow-2xl p-6 sm:p-8 lg:p-10 space-y-8"
-              style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF', boxShadow: '0 25px 45px rgba(201, 151, 46, 0.18)' }}
+              style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E', boxShadow: '0 25px 45px rgba(201, 151, 46, 0.18)' }}
             >
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="text-left space-y-2">
@@ -102,7 +102,7 @@ function YhteystiedotPage() {
                         ? 'hover:-translate-y-1 hover:shadow-xl hover:border-[#C9972E]'
                         : 'cursor-default'
                     }`}
-                    style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF', color: '#3E3326' }}
+                    style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E', color: '#3E3326' }}
                   >
                     <div
                       className="mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-transform group-hover:scale-110"
@@ -129,7 +129,7 @@ function YhteystiedotPage() {
             <div className="space-y-8">
               <div
                 className="rounded-3xl border shadow-lg p-6 sm:p-8"
-                style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF', boxShadow: '0 16px 30px rgba(201, 151, 46, 0.12)' }}
+                style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E', boxShadow: '0 16px 30px rgba(201, 151, 46, 0.12)' }}
               >
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4" style={{ color: '#3E3326' }}>
                   Suunnitellaan seuraava askel yhdessä
@@ -150,7 +150,7 @@ function YhteystiedotPage() {
 
               <div
                 className="rounded-3xl border p-6 sm:p-8 space-y-5"
-                style={{ backgroundColor: 'rgba(201, 151, 46, 0.08)', borderColor: 'rgba(201, 151, 46, 0.3)' }}
+                style={{ backgroundColor: 'rgba(201, 151, 46, 0.08)', borderColor: '#C9972E' }}
               >
                 <h3 className="text-lg sm:text-xl font-semibold" style={{ color: '#3E3326' }}>
                   Miten voimme auttaa?
