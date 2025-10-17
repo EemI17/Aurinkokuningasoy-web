@@ -1,4 +1,4 @@
-import { ArrowLeft, Mail, MapPin, Phone, Clock, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 
 function YhteystiedotPage() {
   return (
@@ -36,11 +36,6 @@ function YhteystiedotPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style={{ color: '#3E3326' }}>
               Tami auttaa
             </h1>
-            <p className="text-base sm:text-lg max-w-3xl mx-auto" style={{ color: '#3E3326', lineHeight: '1.9' }}>
-              Olipa kyseessä uusi rakennusprojekti tai nykyisen hankkeen tukeminen, Tami Takala auttaa sinua
-              varmistamaan, että kokonaisuus pysyy hallittuna ja tavoitteet saavutetaan. Valitse itsellesi sopivin
-              yhteydenottotapa, niin palaamme asiaan nopeasti.
-            </p>
           </section>
 
           <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -70,34 +65,31 @@ function YhteystiedotPage() {
                   {
                     icon: <Phone className="w-6 h-6" />,
                     title: 'Puhelin',
-                    value: '+358 40 123 4567',
+                    value: '+358401547538',
                     helper: 'Parhaiten tavoitat arkisin klo 8–17',
-                    href: 'tel:+358401234567'
-                  },
-                  {
-                    icon: <Mail className="w-6 h-6" />,
-                    title: 'Sähköposti',
-                    value: 'tami.takala@aurinkokuningas.fi',
-                    helper: 'Vastaamme viesteihin yhden arkipäivän sisällä',
-                    href: 'mailto:tami.takala@aurinkokuningas.fi'
+                    href: 'tel:+358401547538'
                   },
                   {
                     icon: <MapPin className="w-6 h-6" />,
                     title: 'Toimialue',
-                    value: 'Pohjanmaa ja koko Suomi sopimuksen mukaan',
+                    value: 'Pirkanmaa ja koko Suomi sopimuksen mukaan',
                     helper: 'Joustavat ratkaisut myös etäpalavereilla'
                   },
                   {
-                    icon: <Clock className="w-6 h-6" />,
-                    title: 'Aukiolo',
-                    value: 'Ma–Pe 8.00–17.00',
-                    helper: 'Sovi tapaaminen joustavasti tarpeesi mukaan'
+                    icon: <Mail className="w-6 h-6" />,
+                    title: 'Sähköposti',
+                    value: 'tami.takala@aurinkokuningasoy.fi',
+                    helper: 'Vastaamme viesteihin yhden arkipäivän sisällä',
+                    href: 'mailto:tami.takala@aurinkokuningasoy.fi',
+                    wrapperClassName: 'md:col-span-2'
                   }
                 ].map((item, index) => (
                   <a
                     key={index}
                     href={item.href}
                     className={`group rounded-2xl border p-5 transition-all duration-300 sm:p-6 ${
+                      item.wrapperClassName ?? ''
+                    } ${
                       item.href
                         ? 'hover:-translate-y-1 hover:shadow-xl hover:border-[#C9972E]'
                         : 'cursor-default'
@@ -113,7 +105,10 @@ function YhteystiedotPage() {
                     <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#3E3326' }}>
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3E3326' }}>
+                    <p
+                      className="text-sm sm:text-base leading-relaxed break-words"
+                      style={{ color: '#3E3326' }}
+                    >
                       {item.value}
                     </p>
                     {item.helper && (
@@ -139,7 +134,7 @@ function YhteystiedotPage() {
                   että jokainen vaihe pysyy aikataulussa ja budjetissa.
                 </p>
                 <a
-                  href="mailto:tami.takala@aurinkokuningas.fi"
+                  href="mailto:tami.takala@aurinkokuningasoy.fi"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-xl py-3 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl sm:py-4 sm:text-lg"
                   style={{ backgroundColor: '#C9972E', color: '#FEF8EB', boxShadow: '0 12px 24px rgba(201, 151, 46, 0.25)' }}
                 >
