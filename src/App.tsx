@@ -48,8 +48,8 @@ function App() {
 
   useEffect(() => {
     const scrollTarget = (location.state as { scrollTo?: string } | null)?.scrollTo;
-    if (scrollTarget === 'services') {
-      const element = document.getElementById('services');
+    if (scrollTarget) {
+      const element = document.getElementById(scrollTarget);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
@@ -419,7 +419,7 @@ function App() {
                       <CalendarCheck className="mt-1 h-5 w-5" />
                       <div>
                         <p className="font-semibold text-white">Toiminta-alue</p>
-                        <p>Suunnittelu- ja rakennusprojektit koko Uudellamaalla ja sopimuksesta muualla Suomessa</p>
+                        <p>Pirkanmaa ja koko Suomi sopimuksen mukaan</p>
                       </div>
                     </div>
                   </div>
