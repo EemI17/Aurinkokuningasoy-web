@@ -176,7 +176,8 @@ function ProjektitPage() {
             Haluatko toteuttaa oman rakennusprojektisi? Ota yhteyttä ja keskustellaan, miten voimme auttaa visiosi toteutumisessa.
           </p>
           <Link
-            to="/#contact"
+            to="/"
+            state={{ scrollTo: 'contact' }}
             className="inline-block rounded-lg px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:px-8 sm:py-4 sm:text-lg"
             style={{ backgroundColor: '#C9972E' }}
           >
