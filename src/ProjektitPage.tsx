@@ -6,49 +6,51 @@ function ProjektitPage() {
   const projects = [
     {
       title: 'Autotalli laajennus',
-      category: 'Asuinrakennus',
+      category: 'Talousrakennus',
       area: '88 m²',
+      location: 'Mänttä',
+      year: '2022',
+      description:
+        'Olemassa oleva autokatos muutetaan autotalliksi/autosuojaksi. Lisäksi rakennetaan pyöräkatos talousrakennuksen eteläpuolelle.',
+      features: [
+        'Toimiva ja käytännöllinen ratkaisu arjen tarpeisiin',
+        'Suojaisa tila autoille ja polkupyörille',
+        'Energiatehokas ja kestävä rakenne',
+        'Yhdistyy harmonisesti olemassa olevaan talousrakennukseen'
+      ]
+    },
+    {
+      title: 'Venevaja',
+      category: 'Talousrakennus',
+      area: '29 m²',
+      location: 'Mänttä – Vilppula',
+      year: '2022',
+      description:
+        'Venevaja tarjoaa suojaisan ja käytännöllisen tilan veneille ympäri vuoden. Rakennus suunnitellaan kestämään vaihtelevia sääolosuhteita ja sijoitetaan lähelle rantaa, jotta veneiden käsittely ja vesillelasku on mahdollisimman helppoa. Venevaja yhdistää toimivuuden ja perinteisen rantamiljöön sopivalla tavalla.',
+      features: [
+        'Suojaisa ja toimiva säilytystila veneille',
+        'Pitkäikäinen ja sääolosuhteita hyvin kestävä rakenne',
+        'Helppo pääsy vesistöön',
+        'Käytännöllinen pohjaratkaisu',
+        'Yhdistyy ympäristöön harmonisesti'
+      ]
+    },
+    {
+      title: 'Varasto',
+      category: 'Talousrakennus',
+      area: '32 m²',
       location: 'Mänttä-Vilppula',
-      year: '2022',
-      description: 'Ylellinen ja moderni huvila, jossa yhdistyvät tyylikkäät arkkitehtoniset ratkaisut ja korkealaatuiset materiaalit.',
-      features: ['Avoin pohjaratkaisu', 'Suuret ikkunat', 'Energiatehokas', 'Korkealaatuiset materiaalit']
-    },
-    {
-      title: 'Liiketilakompleksi',
-      category: 'Liikerakennus',
-      area: '1,200 m²',
-      location: 'Helsinki',
       year: '2023',
-      description: 'Monipuolinen liiketilakompleksi keskeisellä sijainnilla, suunniteltu vastaamaan modernin liiketoiminnan tarpeita.',
-      features: ['Modulaarinen suunnittelu', 'Joustavat tilat', 'Hyvät liikenneyhteydet', 'Modernit tekniset ratkaisut']
-    },
-    {
-      title: 'Kaupunkiasunto',
-      category: 'Asuinrakennus',
-      area: '320 m²',
-      location: 'Helsinki',
-      year: '2024',
-      description: 'Tyylikäs kaupunkiasunto keskellä Helsinkiä, jossa yhdistyvät toimivuus ja viihtyisyys.',
-      features: ['Optimoitu tilankäyttö', 'Laadukkaat pintamateriaalit', 'Älykkäät kodinhoitoratkaisut', 'Hyvä äänieristys']
-    },
-    {
-      title: 'Rivitaloalue',
-      category: 'Asuinrakennus',
-      area: '850 m²',
-      location: 'Vantaa',
-      year: '2023',
-      description: 'Perhekeskeinen rivitaloalue rauhallisessa ympäristössä, suunniteltu yhteisöllisyyden ja yksityisyyden tasapainoon.',
-      features: ['Perheystävällinen suunnittelu', 'Yhteiset ulkotilat', 'Energiatehokkuus', 'Lähellä palveluita']
-    },
-    {
-      title: 'Toimistorakennus',
-      category: 'Liikerakennus',
-      area: '2,100 m²',
-      location: 'Tampere',
-      year: '2022',
-      description: 'Moderni toimistorakennus, joka tarjoaa inspiroivan ja tehokkaan työympäristön.',
-      features: ['Avoimet työtilat', 'Neuvottelutilat', 'Lounasravintola', 'Kattoterassi']
-    },
+      description:
+        'Rakennetaan uusi talousrakennus varastokäyttöön. Rakennus tarjoaa käytännöllisen ja suojaisan säilytystilan pihapiirin tarpeisiin sekä täydentää kokonaisuutta toimivalla tavalla.',
+      features: [
+        'Tilava ja helposti muunneltava varastotila',
+        'Pitkäikäinen ja huoltovapaa rakenne',
+        'Käytännöllinen sijainti pihapiirissä',
+        'Selkeä ja toimiva pohjaratkaisu',
+        'Sopii yhteen ympäröivän rakennuskannan ja maiseman kanssa'
+      ]
+    }
   ];
 
   return (
