@@ -1,5 +1,6 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Footer from './components/Footer';
 
 function ProjektitPage() {
   const projects = [
@@ -182,14 +183,7 @@ function ProjektitPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.2)' }}>
-        <div className="container mx-auto text-center">
-          <p style={{ color: '#3E3326' }}>
-            &copy; 2025 Aurinkokuninkan Suunnittelu-ja Rakennuspalvelu OY. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

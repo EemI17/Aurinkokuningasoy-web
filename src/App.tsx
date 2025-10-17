@@ -1,6 +1,7 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Menu, Phone, User, X } from 'lucide-react';
+import Footer from './components/Footer';
 
 const services = [
   {
@@ -201,7 +202,7 @@ function App() {
               isMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'pointer-events-none max-h-0 opacity-0'
             }`}
           >
-            <div className="flex flex-col gap-2 rounded-2xl border p-4 shadow-lg" style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF' }}>
+            <div className="flex flex-col gap-2 rounded-2xl border p-4 shadow-lg" style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E' }}>
               <a
                 href="#services"
                 onClick={(event) => handleAnchorClick(event, 'services')}
@@ -340,7 +341,7 @@ function App() {
           <div className="grid gap-10 lg:gap-12 lg:grid-cols-[minmax(0,320px)_1fr] items-start">
             <div
               className="rounded-3xl border shadow-lg p-8 flex flex-col items-center text-center"
-              style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF', color: '#3E3326' }}
+              style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E', color: '#3E3326' }}
             >
               <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden mb-6 border-4" style={{ borderColor: '#C9972E' }}>
                 <img
@@ -359,7 +360,7 @@ function App() {
               </div>
             </div>
             <div className="space-y-6 text-base sm:text-lg leading-relaxed">
-              <div className="rounded-3xl border p-6 sm:p-8 shadow-sm" style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF' }}>
+              <div className="rounded-3xl border p-6 sm:p-8 shadow-sm" style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E' }}>
                 <p style={{ color: '#3E3326' }}>
                   Taustani ulottuu käytännön rakennustöistä työnjohtoon ja projektinhallintaan, joten ymmärrän rakentamista
                   monesta näkökulmasta. Työskentelyssäni yhdistyvät asiantuntemus, käytännön kokemus ja halu tehdä rakennusprojekteista
@@ -385,10 +386,13 @@ function App() {
         <div className="container mx-auto max-w-5xl">
           <div
             className="rounded-[32px] border shadow-2xl overflow-hidden"
-            style={{ backgroundColor: '#FEF8EB', borderColor: '#E0D2BF' }}
+            style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E' }}
           >
             <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] items-start">
-              <div className="px-6 py-8 sm:px-10 sm:py-12" style={{ backgroundColor: '#C9972E' }}>
+              <div
+                className="px-6 py-8 sm:px-10 sm:py-12 border"
+                style={{ backgroundColor: '#C9972E', borderColor: '#000000' }}
+              >
                 <div className="max-w-xl space-y-6 text-left">
                   <span
                     className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1 text-sm font-semibold uppercase tracking-[0.25em]"
@@ -455,7 +459,7 @@ function App() {
                       className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
                       style={{
                         backgroundColor: '#FEF8EB',
-                        borderColor: '#E0D2BF',
+                        borderColor: '#C9972E',
                         color: '#3E3326'
                       }}
                     />
@@ -476,7 +480,7 @@ function App() {
                       className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
                       style={{
                         backgroundColor: '#FEF8EB',
-                        borderColor: '#E0D2BF',
+                        borderColor: '#C9972E',
                         color: '#3E3326'
                       }}
                     />
@@ -498,7 +502,7 @@ function App() {
                       className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
                       style={{
                         backgroundColor: '#FEF8EB',
-                        borderColor: '#E0D2BF',
+                        borderColor: '#C9972E',
                         color: '#3E3326'
                       }}
                     />
@@ -515,7 +519,7 @@ function App() {
                       className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
                       style={{
                         backgroundColor: '#FEF8EB',
-                        borderColor: '#E0D2BF',
+                        borderColor: '#C9972E',
                         color: '#3E3326'
                       }}
                     >
@@ -543,7 +547,7 @@ function App() {
                     className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
                     style={{
                       backgroundColor: '#FEF8EB',
-                      borderColor: '#E0D2BF',
+                      borderColor: '#C9972E',
                       color: '#3E3326',
                       resize: 'vertical'
                     }}
@@ -581,14 +585,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
-        <div className="container mx-auto text-center">
-          <p style={{ color: '#3E3326' }}>
-            &copy; 2025 Aurinkokuninkan Suunnittelu-ja Rakennuspalvelu OY. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
