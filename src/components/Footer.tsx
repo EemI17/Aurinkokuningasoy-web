@@ -16,7 +16,7 @@ const socialLinks = [
   {
     label: 'Instagram',
     Icon: Instagram,
-    href: '#'
+    href: 'https://www.instagram.com/ak_suunnittelu_ja_rakennus?igsh=MXJzampkdDRhNWZtdw=='
   },
   {
     label: 'Facebook',
