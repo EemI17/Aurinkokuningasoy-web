@@ -1,5 +1,6 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 import Footer from './components/Footer';
 
 function ProjektitPage() {
@@ -64,9 +65,9 @@ function ProjektitPage() {
           <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <Link to="/" className="flex items-center justify-center gap-4 transition-opacity hover:opacity-80 sm:justify-start">
               <img
-                src="/logo.svg"
-                alt="Aurinkokuninkan Logo"
-                className="h-12 w-12 sm:h-14 sm:w-14 object-contain"
+                src={aurinkokuningasLogo}
+                alt="Aurinkokuninkaan Logo"
+                className="h-14 w-auto object-contain mix-blend-multiply sm:h-16 md:h-20"
               />
               <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
