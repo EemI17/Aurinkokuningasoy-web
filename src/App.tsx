@@ -8,25 +8,22 @@ const services = [
     title: 'Arkkitehtisuunnittelu',
     desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat',
     link: '/arkkitehtisuunnittelu',
-    logo: '/arkkitehtisuunnittelu-logo.svg'
+    logo: '/arkkitehtisuunnittelu-service-logo.svg'
   },
   {
     title: 'Rakennesuunnittelu',
     desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa',
-    link: '/rakennesuunnittelu',
-    logo: '/rakennesuunnittelu-logo.svg'
+    link: '/rakennesuunnittelu'
   },
   {
     title: 'Konsultointipalvelut',
     desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
-    link: '/konsultointipalvelut',
-    logo: '/konsultointipalvelut-logo.svg'
+    link: '/konsultointipalvelut'
   },
   {
     title: 'Rakennuttajapalvelut',
     desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi',
-    link: '/rakennuttajapalvelut',
-    logo: '/rakennuttajapalvelut-logo.svg'
+    link: '/rakennuttajapalvelut'
   }
 ];
 
@@ -264,10 +261,21 @@ function App() {
           </h2>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 max-w-6xl mx-auto">
             {services.map((service, index) => {
+              const isArkkitehtisuunnittelu = service.title === 'Arkkitehtisuunnittelu';
+              const logoElement =
+                isArkkitehtisuunnittelu && service.logo ? (
+                  <img
+                    src={service.logo}
+                    alt="Arkkitehtisuunnittelu logo"
+                    className="absolute top-4 right-4 w-16 h-16 sm:w-20 sm:h-20 opacity-90 select-none pointer-events-none"
+                    aria-hidden={true}
+                  />
+                ) : null;
+
               const ServiceBox = (
                 <div
                   key={index}
-                  className="group rounded-xl border-2" 
+                  className="group relative overflow-hidden rounded-xl border-2"
                   style={{
                     backgroundColor: '#FEF8EB',
                     border: '2px solid #C9972E',
@@ -284,14 +292,7 @@ function App() {
                     }
                   }}
                 >
-                  {service.logo && (
-                    <img
-                      src={service.logo}
-                      alt={`${service.title} logo`}
-                      className="absolute -top-8 -right-8 w-32 h-32 sm:w-36 sm:h-36 opacity-10 select-none pointer-events-none"
-                      style={{ color: '#3E3326' }}
-                    />
-                  )}
+                  {logoElement}
                   <div className="relative z-10 flex h-full flex-col gap-6 p-6 sm:p-8 lg:p-10">
                     <h3
                       className="text-xl sm:text-2xl font-bold"
