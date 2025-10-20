@@ -1,6 +1,7 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Menu, Phone, User, X } from 'lucide-react';
+import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 import Footer from './components/Footer';
 
 const services = [
@@ -144,9 +145,9 @@ function App() {
           <div className="flex items-center justify-between gap-4">
             <div className="flex flex-1 items-center gap-4">
               <img
-                src="/logo.svg"
-                alt="Aurinkokuninkan Logo"
-                className="h-14 w-14 object-contain flex-shrink-0"
+                src={aurinkokuningasLogo}
+                alt="Aurinkokuninkaan Logo"
+                className="h-16 w-auto object-contain flex-shrink-0 mix-blend-multiply md:h-20"
               />
               <span className="text-sm sm:text-base md:text-lg font-semibold leading-snug" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
