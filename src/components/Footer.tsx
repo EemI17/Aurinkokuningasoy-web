@@ -21,7 +21,7 @@ const socialLinks = [
   {
     label: 'Facebook',
     Icon: Facebook,
-    href: '#'
+    href: 'https://www.facebook.com/share/1APfb3Bzrz/?mibextid=wwXIfr'
   },
   {
     label: 'TikTok',
