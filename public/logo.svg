@@ -1,0 +1,34 @@
+<svg width="300" height="360" viewBox="0 0 300 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Aurinkokuningas Oy logo</title>
+  <g stroke="#C9972E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M150 45L124 90L150 75L176 90L150 45Z" fill="#C9972E" stroke="none"/>
+    <path d="M108 105L92 60L150 108L208 60L192 105"/>
+    <circle cx="150" cy="150" r="70" fill="white" stroke="#C9972E" stroke-width="10"/>
+    <path d="M150 110C132 110 120 128 120 150"/>
+    <path d="M150 110C168 110 180 128 180 150"/>
+    <path d="M136 150C136 162 130 170 122 170"/>
+    <path d="M164 150C164 162 170 170 178 170"/>
+    <path d="M132 184C138 194 144 200 150 200C156 200 162 194 168 184"/>
+    <path d="M150 80V40"/>
+    <path d="M108 92L80 70"/>
+    <path d="M96 132L52 122"/>
+    <path d="M96 168L54 182"/>
+    <path d="M108 206L82 228"/>
+    <path d="M150 220V260"/>
+    <path d="M192 92L220 70"/>
+    <path d="M204 132L248 122"/>
+    <path d="M204 168L246 182"/>
+    <path d="M192 206L218 228"/>
+  </g>
+  <g stroke="#C9972E" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="#FDF7EA">
+    <rect x="54" y="240" width="192" height="96" rx="6"/>
+    <rect x="78" y="210" width="144" height="30"/>
+    <path d="M126 336V300H174V336"/>
+    <rect x="96" y="270" width="36" height="30"/>
+    <rect x="168" y="270" width="36" height="30"/>
+    <rect x="138" y="270" width="24" height="30"/>
+    <path d="M96 240V210"/>
+    <path d="M204 240V210"/>
+    <path d="M150 210V186"/>
+  </g>
+</svg>
