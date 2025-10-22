@@ -1,33 +1,68 @@
-import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
+import { type ChangeEvent, type FormEvent, type MouseEvent, type ReactNode, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
+import BrandLogo from '@/components/BrandLogo';
 import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 import Footer from './components/Footer';
 
-const services = [
+type Service = {
+  title: string;
+  desc: string;
+  link?: string;
+  logo?: ReactNode;
+};
+
+const services: Service[] = [
   {
     title: 'Arkkitehtisuunnittelu',
     desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat',
     link: '/arkkitehtisuunnittelu',
-    logo: { src: '/logos/arkkitehtisuunnittelu.svg', alt: 'Arkkitehtisuunnittelu' }
+    logo: (
+      <BrandLogo
+        size={56}
+        className="absolute right-6 top-6"
+        label="Arkkitehtisuunnittelun logo"
+      />
+    )
   },
   {
     title: 'Rakennesuunnittelu',
     desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa',
     link: '/rakennesuunnittelu',
-    logo: { src: '/logos/rakennesuunnittelu.svg', alt: 'Rakennesuunnittelu' }
+    logo: (
+      <img
+        src="/logos/rakennesuunnittelu.svg"
+        alt="Rakennesuunnittelu"
+        className="absolute right-6 top-6 h-12 w-auto object-contain sm:h-14 md:h-16"
+        loading="lazy"
+      />
+    )
   },
   {
     title: 'Konsultointipalvelut',
     desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
     link: '/konsultointipalvelut',
-    logo: { src: '/logos/konsultointi.svg', alt: 'Konsultointi' }
+    logo: (
+      <img
+        src="/logos/konsultointi.svg"
+        alt="Konsultointi"
+        className="absolute right-6 top-6 h-12 w-auto object-contain sm:h-14 md:h-16"
+        loading="lazy"
+      />
+    )
   },
   {
     title: 'Rakennuttajapalvelut',
     desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi',
     link: '/rakennuttajapalvelut',
-    logo: { src: '/logos/rakennuttajapalvelu.svg', alt: 'Rakennuttajapalvelu' }
+    logo: (
+      <img
+        src="/logos/rakennuttajapalvelu.svg"
+        alt="Rakennuttajapalvelu"
+        className="absolute right-6 top-6 h-12 w-auto object-contain sm:h-14 md:h-16"
+        loading="lazy"
+      />
+    )
   }
 ];
 
@@ -287,14 +322,7 @@ function App() {
                     }
                   }}
                 >
-                  {service.logo && (
-                    <img
-                      src={service.logo.src}
-                      alt={service.logo.alt}
-                      className="absolute right-6 top-6 h-12 w-auto object-contain sm:h-14 md:h-16"
-                      loading="lazy"
-                    />
-                  )}
+                  {service.logo}
                   <div className="relative z-10 flex h-full flex-col gap-6 p-6 pr-24 sm:p-8 sm:pr-32 lg:p-10 lg:pr-40">
                     <h3
                       className="text-xl sm:text-2xl font-bold"
