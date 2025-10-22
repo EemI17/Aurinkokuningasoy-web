@@ -77,7 +77,7 @@ function YhteystiedotPage() {
                     title: 'Puhelin',
                     value: '+358 40 154 7538',
                     helper: 'Parhaiten tavoitat arkisin klo 8–17',
-                    href: 'tel:+358401547538'
+                    emphasize: true
                   },
                   {
                     icon: <MapPin className="w-6 h-6" />,
@@ -91,7 +91,7 @@ function YhteystiedotPage() {
                     value: 'tami.takala@aurinkokuningasoy.fi',
                     helper: 'Vastaamme viesteihin yhden arkipäivän sisällä',
                     wrapperClassName: 'md:col-span-2',
-                    href: 'mailto:tami.takala@aurinkokuningasoy.fi'
+                    emphasize: true
                   }
                 ].map((item, index) => (
                   <div
@@ -110,22 +110,14 @@ function YhteystiedotPage() {
                     <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#3E3326' }}>
                       {item.title}
                     </h3>
-                    {item.href ? (
-                      <a
-                        href={item.href}
-                        className="text-sm sm:text-base leading-relaxed break-words font-medium transition-colors hover:text-[#C9972E] focus:text-[#C9972E] focus:outline-none"
-                        style={{ color: '#3E3326' }}
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <p
-                        className="text-sm sm:text-base leading-relaxed break-words"
-                        style={{ color: '#3E3326' }}
-                      >
-                        {item.value}
-                      </p>
-                    )}
+                    <p
+                      className={`text-sm sm:text-base leading-relaxed break-words ${
+                        item.emphasize ? 'font-medium' : ''
+                      }`}
+                      style={{ color: '#3E3326' }}
+                    >
+                      {item.value}
+                    </p>
                     {item.helper && (
                       <p className="mt-3 text-xs sm:text-sm" style={{ color: '#3E3326', opacity: 0.75 }}>
                         {item.helper}

@@ -358,20 +358,12 @@ function App() {
                 <h3 className="text-xl sm:text-2xl font-semibold">Tami Takala</h3>
                 <div className="space-y-1 text-sm sm:text-base" style={{ color: '#3E3326', opacity: 0.85 }}>
                   <p className="font-medium" style={{ opacity: 0.9 }}>Yrittäjä</p>
-                  <a
-                    href="tel:+358401547538"
-                    className="block transition-colors hover:text-[#C9972E] focus:text-[#C9972E] focus:outline-none"
-                    style={{ color: '#3E3326' }}
-                  >
+                  <p className="block font-medium" style={{ color: '#3E3326' }}>
                     +358 40 154 7538
-                  </a>
-                  <a
-                    href="mailto:tami.takala@aurinkokuningasoy.fi"
-                    className="block transition-colors hover:text-[#C9972E] focus:text-[#C9972E] focus:outline-none"
-                    style={{ color: '#3E3326' }}
-                  >
+                  </p>
+                  <p className="block font-medium" style={{ color: '#3E3326' }}>
                     tami.takala@aurinkokuningasoy.fi
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -428,12 +420,9 @@ function App() {
                       <Phone className="mt-1 h-5 w-5" />
                       <div>
                         <p className="font-semibold text-white">Suora puhelin</p>
-                        <a
-                          href="tel:+358401547538"
-                          className="text-white transition-opacity hover:opacity-80 focus:opacity-80 focus:outline-none"
-                        >
+                        <p className="text-white font-medium">
                           +358 40 154 7538
-                        </a>
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
