@@ -1,7 +1,6 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, type ReactNode, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
-import BrandLogo from '@/components/BrandLogo';
 import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 import Footer from './components/Footer';
 
@@ -18,10 +17,11 @@ const services: Service[] = [
     desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat',
     link: '/arkkitehtisuunnittelu',
     logo: (
-      <BrandLogo
-        size={56}
-        className="absolute right-6 top-6"
-        label="Arkkitehtisuunnittelun logo"
+      <img
+        src="/logos/arkkitehtisuunnittelu.svg"
+        alt="Arkkitehtisuunnittelu"
+        className="absolute right-6 top-6 h-16 w-auto object-contain sm:h-20"
+        loading="lazy"
       />
     )
   },
