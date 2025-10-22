@@ -1,61 +1,17 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="bgGradient" cx="50%" cy="38%" r="65%" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFE7AC" />
-      <stop offset="0.35" stop-color="#F4C66A" />
-      <stop offset="0.68" stop-color="#B37A29" />
-      <stop offset="1" stop-color="#1B1207" />
-    </radialGradient>
-    <linearGradient id="strokeGradient" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFF2C9" />
-      <stop offset="0.45" stop-color="#F7C76C" />
-      <stop offset="1" stop-color="#E29C2E" />
-    </linearGradient>
-    <linearGradient id="textGradient" x1="256" y1="404" x2="256" y2="468" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFF2C9" />
-      <stop offset="1" stop-color="#E8A545" />
-    </linearGradient>
-    <filter id="logoGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-      <feColorMatrix in="blur" type="matrix"
-        values="0 0 0 0 1  0 0 0 0 0.82  0 0 0 0 0.45  0 0 0 0.35 0" result="glow" />
-      <feMerge>
-        <feMergeNode in="glow" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    <filter id="textGlow" x="-40%" y="-40%" width="180%" height="200%" color-interpolation-filters="sRGB">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="textBlur" />
-      <feColorMatrix in="textBlur" type="matrix"
-        values="0 0 0 0 1  0 0 0 0 0.82  0 0 0 0 0.45  0 0 0 0.45 0" result="textGlowColor" />
-      <feMerge>
-        <feMergeNode in="textGlowColor" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-  </defs>
-  <rect width="512" height="512" fill="#0F0904" />
-  <rect width="512" height="512" fill="url(#bgGradient)" />
-  <g filter="url(#logoGlow)" stroke="url(#strokeGradient)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M132 368H380" />
-    <path d="M156 366V246L224 202V366" />
-    <path d="M224 366V184L300 142V366" />
-    <path d="M300 366V132L372 156V366" />
-    <path d="M176 272H212" />
-    <path d="M176 304H212" />
-    <path d="M176 336H212" />
-    <path d="M244 220H288" />
-    <path d="M244 260H288" />
-    <path d="M244 300H288" />
-    <path d="M244 340H288" />
-    <path d="M320 206H356" />
-    <path d="M320 238H356" />
-    <path d="M320 270H356" />
-    <path d="M320 302H356" />
-    <path d="M320 334H356" />
-  </g>
-  <g filter="url(#textGlow)">
-    <text x="256" y="430" text-anchor="middle" fill="url(#textGradient)" font-family="'Montserrat', 'Segoe UI', sans-serif"
-      font-size="64" font-weight="700" letter-spacing="6" dominant-baseline="middle">ARCHITECTURE</text>
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#C9972E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M32 124H128" />
+    <path d="M48 122V78L72 64V122" />
+    <path d="M72 122V54L100 40V122" />
+    <path d="M100 122V32L128 44V122" />
+    <path d="M56 88H64" />
+    <path d="M56 102H64" />
+    <path d="M56 116H64" />
+    <path d="M82 76H92" />
+    <path d="M82 92H92" />
+    <path d="M82 108H92" />
+    <path d="M108 82H120" />
+    <path d="M108 98H120" />
+    <path d="M108 114H120" />
   </g>
 </svg>
