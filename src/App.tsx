@@ -9,22 +9,25 @@ const services = [
     title: 'Arkkitehtisuunnittelu',
     desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat',
     link: '/arkkitehtisuunnittelu',
-    logo: '/arkkitehtisuunnittelu-service-logo.svg'
+    logo: { src: '/logos/arkkitehtisuunnittelu.svg', alt: 'Arkkitehtisuunnittelu' }
   },
   {
     title: 'Rakennesuunnittelu',
     desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa',
-    link: '/rakennesuunnittelu'
+    link: '/rakennesuunnittelu',
+    logo: { src: '/logos/rakennesuunnittelu.svg', alt: 'Rakennesuunnittelu' }
   },
   {
     title: 'Konsultointipalvelut',
     desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
-    link: '/konsultointipalvelut'
+    link: '/konsultointipalvelut',
+    logo: { src: '/logos/konsultointi.svg', alt: 'Konsultointi' }
   },
   {
     title: 'Rakennuttajapalvelut',
     desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi',
-    link: '/rakennuttajapalvelut'
+    link: '/rakennuttajapalvelut',
+    logo: { src: '/logos/rakennuttajapalvelu.svg', alt: 'Rakennuttajapalvelu' }
   }
 ];
 
@@ -264,17 +267,6 @@ function App() {
           </h2>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 max-w-6xl mx-auto">
             {services.map((service, index) => {
-              const isArkkitehtisuunnittelu = service.title === 'Arkkitehtisuunnittelu';
-              const logoElement =
-                isArkkitehtisuunnittelu && service.logo ? (
-                  <img
-                    src={service.logo}
-                    alt="Arkkitehtisuunnittelu logo"
-                    className="absolute top-4 right-4 w-16 h-16 sm:w-20 sm:h-20 opacity-90 select-none pointer-events-none"
-                    aria-hidden={true}
-                  />
-                ) : null;
-
               const ServiceBox = (
                 <div
                   key={index}
@@ -295,8 +287,15 @@ function App() {
                     }
                   }}
                 >
-                  {logoElement}
-                  <div className="relative z-10 flex h-full flex-col gap-6 p-6 sm:p-8 lg:p-10">
+                  {service.logo && (
+                    <img
+                      src={service.logo.src}
+                      alt={service.logo.alt}
+                      className="absolute right-6 top-6 h-12 w-auto object-contain sm:h-14 md:h-16"
+                      loading="lazy"
+                    />
+                  )}
+                  <div className="relative z-10 flex h-full flex-col gap-6 p-6 pr-24 sm:p-8 sm:pr-32 lg:p-10 lg:pr-40">
                     <h3
                       className="text-xl sm:text-2xl font-bold"
                       style={{ color: '#3E3326', lineHeight: '1.4', letterSpacing: '0.01em' }}
