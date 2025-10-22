@@ -1,4 +1,4 @@
-import { ArrowLeft, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Mail, MapPin, Phone } from 'lucide-react';
 import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 
 function YhteystiedotPage() {
@@ -39,8 +39,13 @@ function YhteystiedotPage() {
               Ota yhteyttä
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style={{ color: '#3E3326' }}>
-              Tami auttaa
+              Yhdessä teemme seuraavasta projektistasi onnistuneen
             </h1>
+            <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed" style={{ color: '#3E3326' }}>
+              Olipa kyseessä uusi rakennusprojekti tai nykyisen hankkeen tukeminen, Tami auttaa sinua varmistamaan, että
+              kokonaisuus pysyy hallittuna ja tavoitteet saavutetaan. Valitse itsellesi sopivin yhteydenottotapa, niin
+              palaamme asiaan nopeasti.
+            </p>
           </section>
 
           <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -51,7 +56,7 @@ function YhteystiedotPage() {
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="text-left space-y-2">
                   <h2 className="text-2xl sm:text-3xl font-semibold" style={{ color: '#3E3326' }}>
-                    Tami Takala
+                    Tami
                   </h2>
                   <p className="text-xs sm:text-sm uppercase tracking-[0.25em]" style={{ color: '#C9972E' }}>
                     Yrittäjä, rakennusalan asiantuntija
@@ -70,7 +75,7 @@ function YhteystiedotPage() {
                   {
                     icon: <Phone className="w-6 h-6" />,
                     title: 'Puhelin',
-                    value: '+358401547538',
+                    value: '+358 40 154 7538',
                     helper: 'Parhaiten tavoitat arkisin klo 8–17',
                     href: 'tel:+358401547538'
                   },
@@ -85,19 +90,14 @@ function YhteystiedotPage() {
                     title: 'Sähköposti',
                     value: 'tami.takala@aurinkokuningasoy.fi',
                     helper: 'Vastaamme viesteihin yhden arkipäivän sisällä',
-                    href: 'mailto:tami.takala@aurinkokuningasoy.fi',
-                    wrapperClassName: 'md:col-span-2'
+                    wrapperClassName: 'md:col-span-2',
+                    href: 'mailto:tami.takala@aurinkokuningasoy.fi'
                   }
                 ].map((item, index) => (
-                  <a
+                  <div
                     key={index}
-                    href={item.href}
                     className={`group rounded-2xl border p-5 transition-all duration-300 sm:p-6 ${
                       item.wrapperClassName ?? ''
-                    } ${
-                      item.href
-                        ? 'hover:-translate-y-1 hover:shadow-xl hover:border-[#C9972E]'
-                        : 'cursor-default'
                     }`}
                     style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E', color: '#3E3326' }}
                   >
@@ -110,18 +110,28 @@ function YhteystiedotPage() {
                     <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#3E3326' }}>
                       {item.title}
                     </h3>
-                    <p
-                      className="text-sm sm:text-base leading-relaxed break-words"
-                      style={{ color: '#3E3326' }}
-                    >
-                      {item.value}
-                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-sm sm:text-base leading-relaxed break-words font-medium transition-colors hover:text-[#C9972E] focus:text-[#C9972E] focus:outline-none"
+                        style={{ color: '#3E3326' }}
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p
+                        className="text-sm sm:text-base leading-relaxed break-words"
+                        style={{ color: '#3E3326' }}
+                      >
+                        {item.value}
+                      </p>
+                    )}
                     {item.helper && (
                       <p className="mt-3 text-xs sm:text-sm" style={{ color: '#3E3326', opacity: 0.75 }}>
                         {item.helper}
                       </p>
                     )}
-                  </a>
+                  </div>
                 ))}
               </div>
             </div>
@@ -134,18 +144,10 @@ function YhteystiedotPage() {
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4" style={{ color: '#3E3326' }}>
                   Suunnitellaan seuraava askel yhdessä
                 </h2>
-                <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: '#3E3326' }}>
-                  Kerro lyhyesti projektistasi tai haasteestasi. Räätälöimme palvelun tarpeidesi mukaan ja varmistamme,
-                  että jokainen vaihe pysyy aikataulussa ja budjetissa.
+                <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3E3326' }}>
+                  Ota yhteyttä, niin rakennamme yhdessä selkeän suunnitelman seuraaville askelille. Saat asiantuntevan
+                  näkemyksen, realistisen aikataulun sekä läpinäkyvän tavan seurata projektin etenemistä.
                 </p>
-                <a
-                  href="mailto:tami.takala@aurinkokuningasoy.fi"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl py-3 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl sm:py-4 sm:text-lg"
-                  style={{ backgroundColor: '#C9972E', color: '#FEF8EB', boxShadow: '0 12px 24px rgba(201, 151, 46, 0.25)' }}
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Lähetä sähköposti
-                </a>
               </div>
 
               <div
