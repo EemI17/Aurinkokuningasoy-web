@@ -1,6 +1,6 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { CalendarCheck, ClipboardList, Mail, Menu, Phone, User, X } from 'lucide-react';
+import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
 import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 import Footer from './components/Footer';
 
@@ -35,6 +35,7 @@ function App() {
     email: '',
     phone: '',
     projectType: '',
+    contactSource: '',
     message: ''
   });
   const [submissionStatus, setSubmissionStatus] = useState<
@@ -115,6 +116,7 @@ function App() {
           email: formData.email.trim(),
           phone: formData.phone.trim() || undefined,
           projectType: formData.projectType || undefined,
+          contactSource: formData.contactSource || undefined,
           message: formData.message.trim()
         })
       });
@@ -123,7 +125,7 @@ function App() {
         throw new Error('Failed to submit contact form');
       }
 
-      setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', projectType: '', contactSource: '', message: '' });
       setSubmissionStatus('success');
     } catch (error) {
       console.error('Contact form submission failed', error);
@@ -356,8 +358,20 @@ function App() {
                 <h3 className="text-xl sm:text-2xl font-semibold">Tami Takala</h3>
                 <div className="space-y-1 text-sm sm:text-base" style={{ color: '#3E3326', opacity: 0.85 }}>
                   <p className="font-medium" style={{ opacity: 0.9 }}>Yrittäjä</p>
-                  <p>+358401547538</p>
-                  <p>tami.takala@aurinkokuningasoy.fi</p>
+                  <a
+                    href="tel:+358401547538"
+                    className="block transition-colors hover:text-[#C9972E] focus:text-[#C9972E] focus:outline-none"
+                    style={{ color: '#3E3326' }}
+                  >
+                    +358 40 154 7538
+                  </a>
+                  <a
+                    href="mailto:tami.takala@aurinkokuningasoy.fi"
+                    className="block transition-colors hover:text-[#C9972E] focus:text-[#C9972E] focus:outline-none"
+                    style={{ color: '#3E3326' }}
+                  >
+                    tami.takala@aurinkokuningasoy.fi
+                  </a>
                 </div>
               </div>
             </div>
@@ -414,7 +428,12 @@ function App() {
                       <Phone className="mt-1 h-5 w-5" />
                       <div>
                         <p className="font-semibold text-white">Suora puhelin</p>
-                        <p>+358 40 154 7538</p>
+                        <a
+                          href="tel:+358401547538"
+                          className="text-white transition-opacity hover:opacity-80 focus:opacity-80 focus:outline-none"
+                        >
+                          +358 40 154 7538
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -534,6 +553,30 @@ function App() {
                     </select>
                   </label>
                 </div>
+                <label className="block text-left">
+                  <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                    <Megaphone className="h-4 w-4" />
+                    Mistä kuulit meistä? (valinnainen)
+                  </span>
+                  <select
+                    name="contactSource"
+                    value={formData.contactSource}
+                    onChange={handleContactFieldChange}
+                    className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                    style={{
+                      backgroundColor: '#FEF8EB',
+                      borderColor: '#C9972E',
+                      color: '#3E3326'
+                    }}
+                  >
+                    <option value="">Valitse vaihtoehto</option>
+                    <option value="Google-haku">Google-haku</option>
+                    <option value="Suosittelu">Suosittelu</option>
+                    <option value="Sosiaalinen media">Sosiaalinen media</option>
+                    <option value="Tapahtuma tai messut">Tapahtuma tai messut</option>
+                    <option value="Muualta">Muualta</option>
+                  </select>
+                </label>
                 <label className="block text-left">
                   <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
                     <ClipboardList className="h-4 w-4" />
