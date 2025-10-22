@@ -1,5 +1,5 @@
 import { ArrowLeft, Mail, MapPin, Phone } from 'lucide-react';
-import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
+import aurinkokuningasLogo from '../assets/aurinkokuningas-logo.svg';
 
 function YhteystiedotPage() {
   return (
