@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="arkkitehtiPalette" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20160E" />
+      <stop offset="100%" stop-color="#3B2C1B" />
+    </linearGradient>
+    <pattern id="arkkitehtiGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0v60" fill="none" stroke="#8D7452" stroke-opacity="0.12" stroke-width="2" />
+    </pattern>
+    <filter id="arkkitehtiShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#arkkitehtiPalette)" />
+  <rect width="1200" height="900" fill="url(#arkkitehtiGrid)" />
+  <g transform="translate(600 440)">
+    <circle r="220" fill="#2B1F13" stroke="#F4E7D1" stroke-width="8" filter="url(#arkkitehtiShadow)" />
+    <g transform="translate(-120 -120)" fill="none" stroke="#F4E7D1" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="28" y="40" width="304" height="196" rx="26" stroke-width="14" />
+      <path d="M180 40v196" stroke-width="10" opacity="0.7" />
+      <path d="M180 80l74 52-74 52-74-52 74-52z" stroke-width="12" />
+      <path d="M180 188v48" stroke-width="10" />
+      <path d="M72 124h216" stroke-width="10" opacity="0.65" />
+      <path d="M72 164h92" stroke-width="10" opacity="0.45" />
+      <path d="M252 164h36" stroke-width="10" opacity="0.45" />
+      <path d="M316 40V8" stroke-width="10" />
+      <path d="M44 40V8" stroke-width="10" />
+    </g>
+    <g stroke="#E3C58A" stroke-linecap="round" stroke-width="12">
+      <path d="M0-198l128 344" />
+      <path d="M0-198L-128 146" />
+      <path d="M-42 40h84" />
+      <circle cx="0" cy="-198" r="22" fill="#E3C58A" stroke="none" />
+      <circle cx="-128" cy="146" r="18" fill="#E3C58A" stroke="none" />
+      <circle cx="128" cy="146" r="18" fill="#E3C58A" stroke="none" />
+    </g>
+  </g>
+</svg>
