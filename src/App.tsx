@@ -2,34 +2,43 @@ import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
 import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
+import arkkitehtisuunnitteluBackground from '../assets/palvelut/arkkitehtisuunnittelu-bg.svg';
+import konsultointipalvelutBackground from '../assets/palvelut/konsultointipalvelut-bg.svg';
+import rakennuttajapalvelutBackground from '../assets/palvelut/rakennuttajapalvelut-bg.svg';
+import rakennesuunnitteluBackground from '../assets/palvelut/rakennesuunnittelu-bg.svg';
 import Footer from './components/Footer';
 
 type Service = {
   title: string;
   desc: string;
   link?: string;
+  image: string;
 };
 
 const services: Service[] = [
   {
     title: 'Arkkitehtisuunnittelu',
     desc: '• Asemapiirustus\n\n• Pohjapiirustus\n\n• Leikkauspiirustukset\n\n• Julkisivukuvat',
-    link: '/arkkitehtisuunnittelu'
+    link: '/arkkitehtisuunnittelu',
+    image: arkkitehtisuunnitteluBackground
   },
   {
     title: 'Rakennesuunnittelu',
     desc: '• Turvalliset ja kestävät rakenteet kaikkiin kohteisiin\n\n• Ratkaisut, jotka tukevat arkkitehtisuunnittelua ja helpottavat työmaan toteutusta\n\n• Selkeät ja luotettavat rakennesuunnitelmat, jotka tekevät rakentamisesta sujuvampaa',
-    link: '/rakennesuunnittelu'
+    link: '/rakennesuunnittelu',
+    image: rakennesuunnitteluBackground
   },
   {
     title: 'Konsultointipalvelut',
     desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
-    link: '/konsultointipalvelut'
+    link: '/konsultointipalvelut',
+    image: konsultointipalvelutBackground
   },
   {
     title: 'Rakennuttajapalvelut',
     desc: '• Vastaavatyönjohtaja\n\n• Pääsuunnittelija\n\n• Rakennushankkeen hallinta alusta loppuun\n\n• Asiakkaan edunvalvonta koko projektin ajan\n\n• Vaivattomampi ja hallitumpi rakennusprosessi',
-    link: '/rakennuttajapalvelut'
+    link: '/rakennuttajapalvelut',
+    image: rakennuttajapalvelutBackground
   }
 ];
 
@@ -272,11 +281,14 @@ function App() {
               const ServiceBox = (
                 <div
                   key={index}
-                  className="group relative overflow-hidden rounded-xl border-2"
+                  className="group relative overflow-hidden rounded-xl border-2 transition-transform duration-500 ease-out hover:-translate-y-1"
                   style={{
-                    backgroundColor: '#FEF8EB',
+                    backgroundImage: `linear-gradient(160deg, rgba(33, 24, 16, 0.82), rgba(62, 51, 38, 0.55)), url(${service.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                     border: '2px solid #C9972E',
-                    boxShadow: '0 4px 12px rgba(201, 151, 46, 0.15)',
+                    boxShadow: '0 4px 18px rgba(201, 151, 46, 0.25)',
                     cursor: service.link ? 'pointer' : 'default'
                   }}
                   onClick={() => handleServiceNavigation(service.link)}
@@ -292,14 +304,14 @@ function App() {
                   <div className="relative z-10 flex h-full flex-col gap-6 p-6 sm:p-8 lg:p-10">
                     <h3
                       className="text-xl sm:text-2xl font-bold"
-                      style={{ color: '#3E3326', lineHeight: '1.4', letterSpacing: '0.01em' }}
+                      style={{ color: '#FEF8EB', lineHeight: '1.4', letterSpacing: '0.01em' }}
                     >
                       {service.title}
                     </h3>
                     <p
                       className="text-base sm:text-lg"
                       style={{
-                        color: '#3E3326',
+                        color: '#FDF3E0',
                         whiteSpace: 'pre-line',
                         lineHeight: '1.8',
                         fontWeight: 400,
@@ -310,7 +322,7 @@ function App() {
                     </p>
                     {service.link && (
                       <span
-                        className="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-widest text-[#C9972E] transition-transform duration-200 group-hover:translate-x-1"
+                        className="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-widest text-[#FDE2AA] transition-transform duration-200 group-hover:translate-x-1"
                       >
                         Tutustu palveluun →
                       </span>
