@@ -1,38 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Tyylitelty arkkitehtipiirustusta muistuttava tausta">
   <defs>
-    <linearGradient id="arkkitehtiPalette" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#20160E" />
-      <stop offset="100%" stop-color="#3B2C1B" />
+    <linearGradient id="arkkitehtiBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#23170F" />
+      <stop offset="100%" stop-color="#342618" />
     </linearGradient>
-    <pattern id="arkkitehtiGrid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M60 0H0v60" fill="none" stroke="#8D7452" stroke-opacity="0.12" stroke-width="2" />
+    <pattern id="arkkitehtiBlueprint" width="70" height="70" patternUnits="userSpaceOnUse">
+      <path d="M70 0H0v70" fill="none" stroke="#C7A15A" stroke-opacity="0.12" stroke-width="1.5" />
     </pattern>
-    <filter id="arkkitehtiShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.4" />
-    </filter>
   </defs>
-  <rect width="1200" height="900" fill="url(#arkkitehtiPalette)" />
-  <rect width="1200" height="900" fill="url(#arkkitehtiGrid)" />
-  <g transform="translate(600 440)">
-    <circle r="220" fill="#2B1F13" stroke="#F4E7D1" stroke-width="8" filter="url(#arkkitehtiShadow)" />
-    <g transform="translate(-120 -120)" fill="none" stroke="#F4E7D1" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="28" y="40" width="304" height="196" rx="26" stroke-width="14" />
-      <path d="M180 40v196" stroke-width="10" opacity="0.7" />
-      <path d="M180 80l74 52-74 52-74-52 74-52z" stroke-width="12" />
-      <path d="M180 188v48" stroke-width="10" />
-      <path d="M72 124h216" stroke-width="10" opacity="0.65" />
-      <path d="M72 164h92" stroke-width="10" opacity="0.45" />
-      <path d="M252 164h36" stroke-width="10" opacity="0.45" />
-      <path d="M316 40V8" stroke-width="10" />
-      <path d="M44 40V8" stroke-width="10" />
-    </g>
-    <g stroke="#E3C58A" stroke-linecap="round" stroke-width="12">
-      <path d="M0-198l128 344" />
-      <path d="M0-198L-128 146" />
-      <path d="M-42 40h84" />
-      <circle cx="0" cy="-198" r="22" fill="#E3C58A" stroke="none" />
-      <circle cx="-128" cy="146" r="18" fill="#E3C58A" stroke="none" />
-      <circle cx="128" cy="146" r="18" fill="#E3C58A" stroke="none" />
-    </g>
+  <rect width="1200" height="900" fill="url(#arkkitehtiBase)" />
+  <rect width="1200" height="900" fill="url(#arkkitehtiBlueprint)" />
+  <g transform="translate(600 460)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-250" y="-210" width="500" height="360" rx="42" stroke="#F5E6C8" stroke-width="10" />
+    <path d="M-250 -60H250" stroke="#F5E6C8" stroke-width="8" opacity="0.85" />
+    <path d="M-50 -210v360" stroke="#F5E6C8" stroke-width="8" opacity="0.85" />
+    <path d="M-50 -20l110 72-110 72-110-72 110-72z" stroke="#EBCB83" stroke-width="10" opacity="0.9" />
+    <circle cx="210" cy="-150" r="34" stroke="#EBCB83" stroke-width="8" opacity="0.75" />
+    <path d="M-190 -150h160" stroke="#EBCB83" stroke-width="8" opacity="0.6" />
+    <path d="M-190 40h120" stroke="#EBCB83" stroke-width="8" opacity="0.55" />
+    <path d="M60 120h140" stroke="#EBCB83" stroke-width="8" opacity="0.55" />
+    <rect x="70" y="-20" width="120" height="120" stroke="#F5E6C8" stroke-width="7" opacity="0.65" />
   </g>
 </svg>
