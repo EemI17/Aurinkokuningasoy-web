@@ -159,11 +159,12 @@ function App() {
       >
         <nav className="px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between gap-4">
-            <div className="flex flex-1 items-center gap-4">
+            <div className="flex flex-1 items-center gap-3 sm:gap-4">
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-20 w-auto object-contain flex-shrink-0 mix-blend-multiply md:h-24"
+                className="h-20 w-auto flex-shrink-0 object-contain"
+                style={{ transform: 'scale(1.15)', transformOrigin: 'left center' }}
               />
               <span className="text-sm sm:text-base md:text-lg font-semibold leading-snug" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy

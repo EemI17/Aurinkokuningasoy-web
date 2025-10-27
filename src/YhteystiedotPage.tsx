@@ -11,11 +11,12 @@ function YhteystiedotPage() {
       >
         <nav className="px-4 sm:px-6 py-4">
           <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
-            <div className="flex items-center justify-center gap-4 sm:justify-start">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 sm:justify-start">
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-16 w-auto object-contain mix-blend-multiply sm:h-20 md:h-24"
+                className="h-20 w-auto flex-shrink-0 object-contain"
+                style={{ transform: 'scale(1.15)', transformOrigin: 'left center' }}
               />
               <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
