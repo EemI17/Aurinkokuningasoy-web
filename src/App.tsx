@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
 import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
-import konsultointipalvelutBackground from '../assets/palvelut/konsultointipalvelut-bg.svg';
+import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from '../assets/palvelut/rakennuttajapalvelut-bg.svg';
 import rakennesuunnitteluBackground from '../assets/palvelut/rakennesuunnittelu-bg.svg';
 import Footer from './components/Footer';
