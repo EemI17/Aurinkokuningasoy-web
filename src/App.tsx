@@ -1,7 +1,7 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
-import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
+import aurinkokuningasLogo from './assets/aurinkokuningasTransparent';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from '../assets/palvelut/rakennuttajapalvelut-bg.svg';
@@ -157,58 +157,60 @@ function App() {
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
-        <nav className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 py-4">
-          <div className="flex flex-1 items-center gap-4">
-            <img
-              src={aurinkokuningasLogo}
-              alt="Aurinkokuninkaan Logo"
-              className="h-20 w-auto object-contain flex-shrink-0 mix-blend-multiply sm:h-24 md:h-28 lg:h-32"
-            />
-            <span className="text-sm sm:text-base md:text-lg font-semibold leading-snug" style={{ color: '#3E3326' }}>
-              Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
-            </span>
+        <nav className="px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-1 items-center gap-4">
+              <img
+                src={aurinkokuningasLogo}
+                alt="Aurinkokuninkaan Logo"
+                className="h-20 w-auto object-contain flex-shrink-0 mix-blend-multiply md:h-24"
+              />
+              <span className="text-sm sm:text-base md:text-lg font-semibold leading-snug" style={{ color: '#3E3326' }}>
+                Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
+              </span>
+            </div>
+            <div className="hidden md:flex space-x-2 lg:space-x-4">
+              <a
+                href="#services"
+                onClick={(event) => handleAnchorClick(event, 'services')}
+                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                style={{ color: '#3E3326' }}
+              >
+                Palvelut
+              </a>
+              <a
+                href="#about"
+                onClick={(event) => handleAnchorClick(event, 'about')}
+                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                style={{ color: '#3E3326' }}
+              >
+                Minusta
+              </a>
+              <Link
+                to="/projektit"
+                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                style={{ color: '#3E3326' }}
+              >
+                Projektit
+              </Link>
+              <Link
+                to="/yhteystiedot"
+                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                style={{ color: '#3E3326' }}
+              >
+                Yhteystiedot
+              </Link>
+            </div>
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center rounded-lg border border-[#C9972E]/30 p-2 text-[#3E3326] transition-colors hover:bg-[#C9972E]/10"
+              aria-label="Avaa valikko"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
-          <div className="hidden md:flex space-x-2 lg:space-x-4">
-            <a
-              href="#services"
-              onClick={(event) => handleAnchorClick(event, 'services')}
-              className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-              style={{ color: '#3E3326' }}
-            >
-              Palvelut
-            </a>
-            <a
-              href="#about"
-              onClick={(event) => handleAnchorClick(event, 'about')}
-              className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-              style={{ color: '#3E3326' }}
-            >
-              Minusta
-            </a>
-            <Link
-              to="/projektit"
-              className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-              style={{ color: '#3E3326' }}
-            >
-              Projektit
-            </Link>
-            <Link
-              to="/yhteystiedot"
-              className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-              style={{ color: '#3E3326' }}
-            >
-              Yhteystiedot
-            </Link>
-          </div>
-          <button
-            type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-lg border border-[#C9972E]/30 p-2 text-[#3E3326] transition-colors hover:bg-[#C9972E]/10"
-            aria-label="Avaa valikko"
-            aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
           <div
             className={`md:hidden transition-all duration-300 ease-in-out ${
               isMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'pointer-events-none max-h-0 opacity-0'
