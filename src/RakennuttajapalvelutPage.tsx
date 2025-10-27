@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from '../assets/aurinkokuningas.png';
+import aurinkokuningasLogo from './assets/aurinkokuningasTransparent';
 
 function RakennuttajapalvelutPage() {
   return (
@@ -16,7 +16,7 @@ function RakennuttajapalvelutPage() {
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-14 w-auto object-contain mix-blend-multiply sm:h-16 md:h-20"
+                className="h-16 w-auto object-contain mix-blend-multiply sm:h-20 md:h-24"
               />
               <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
