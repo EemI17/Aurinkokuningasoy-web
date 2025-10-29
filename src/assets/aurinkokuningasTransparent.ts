@@ -564,6 +564,6 @@ const aurinkokuningasTransparent = [
     'EQOdiIiIGOhERETEQCciIiIGOhEREQOdiIiIGOhERETEQCciIiIGOhEREQOdiIiIGOhERETEQCciIiIGOhEREQOdiIiIGOhERETEQCciIiIGOhEREQOdiIiI',
     'GOhERETEQCciIiIGOhERETHQiYiIGOhERETEQCciIiIGOhERETHQiYiIGOhERETEQCciIiIGOhERETHQiYiIGOhERETEQCciIiIGOhERETHQiYiIGOhERETE',
     'QCciIiIGOhERETHQiYiI/v/s/wNIoYPCekWfwAAAAABJRU5ErkJggg==',
-] .join('');
+].join('');
 
 export default aurinkokuningasTransparent;

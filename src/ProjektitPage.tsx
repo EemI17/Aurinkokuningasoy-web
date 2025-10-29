@@ -70,8 +70,7 @@ function ProjektitPage() {
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-20 w-auto flex-shrink-0 object-contain"
-                style={{ transform: 'scale(1.15)', transformOrigin: 'left center' }}
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto flex-shrink-0 object-contain"
               />
               <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
