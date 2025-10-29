@@ -163,10 +163,10 @@ function App() {
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-14 sm:h-16 md:h-[4.75rem] lg:h-[5.25rem] w-auto flex-shrink-0 object-contain"
+                className="self-center h-14 sm:h-16 md:h-[4.75rem] lg:h-[5.25rem] w-auto flex-shrink-0 object-contain"
               />
               <span
-                className="text-sm sm:text-base md:text-lg font-semibold leading-snug"
+                className="flex items-center text-sm sm:text-base md:text-lg font-semibold leading-tight"
                 style={{ color: '#3E3326' }}
               >
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
