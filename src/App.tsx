@@ -163,13 +163,14 @@ function App() {
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto flex-shrink-0 object-contain"
+                className="h-14 sm:h-16 md:h-[4.75rem] lg:h-[5.25rem] w-auto flex-shrink-0 object-contain"
               />
-              <div className="flex flex-col justify-center">
-                <span className="text-sm sm:text-base md:text-lg font-semibold leading-snug" style={{ color: '#3E3326' }}>
-                  Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
-                </span>
-              </div>
+              <span
+                className="text-sm sm:text-base md:text-lg font-semibold leading-snug"
+                style={{ color: '#3E3326' }}
+              >
+                Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
+              </span>
             </div>
             <div className="hidden md:flex space-x-2 lg:space-x-4">
               <a
