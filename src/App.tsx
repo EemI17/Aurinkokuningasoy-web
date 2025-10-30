@@ -158,8 +158,8 @@ function App() {
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
         <nav className="pl-2 pr-4 sm:pl-3 sm:pr-6 py-4">
-          <div className="flex w-full max-w-6xl items-center justify-between gap-4">
-            <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
+          <div className="flex w-full max-w-6xl items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-3">
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
@@ -172,7 +172,7 @@ function App() {
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
             </div>
-            <div className="hidden md:flex space-x-2 lg:space-x-4">
+            <div className="hidden md:flex space-x-2 lg:space-x-4 ml-auto">
               <a
                 href="#services"
                 onClick={(event) => handleAnchorClick(event, 'services')}
