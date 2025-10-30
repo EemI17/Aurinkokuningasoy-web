@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.svg';
 import Footer from './components/Footer';
 
 function ProjektitPage() {
@@ -62,7 +62,7 @@ function ProjektitPage() {
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
         <nav className="px-4 sm:px-6 py-4">
-          <div className="flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <Link
               to="/"
               className="flex items-center justify-center gap-3 transition-opacity hover:opacity-80 sm:gap-4 sm:justify-start"
@@ -70,7 +70,7 @@ function ProjektitPage() {
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto flex-shrink-0 object-contain"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
               />
               <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
