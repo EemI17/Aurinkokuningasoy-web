@@ -4,7 +4,7 @@ import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } f
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
-import rakennuttajapalvelutBackground from '../assets/palvelut/rakennuttajapalvelut-bg.svg';
+import rakennuttajapalvelutBackground from './assets/rakennuttajapalvelutBackground';
 import rakennesuunnitteluBackground from '../assets/palvelut/rakennesuunnittelu-bg.svg';
 import Footer from './components/Footer';
 
