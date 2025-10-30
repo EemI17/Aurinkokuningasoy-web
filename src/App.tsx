@@ -166,7 +166,7 @@ function App() {
                 className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto flex-shrink-0 object-contain"
               />
               <span
-                className="flex min-w-0 items-center text-sm font-semibold leading-tight sm:text-base md:text-lg"
+                className="whitespace-nowrap items-center text-sm font-semibold leading-tight sm:text-base md:text-lg"
                 style={{ color: '#3E3326' }}
               >
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
