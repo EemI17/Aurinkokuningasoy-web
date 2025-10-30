@@ -1,7 +1,7 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo.svg';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from '../assets/palvelut/rakennuttajapalvelut-bg.svg';
