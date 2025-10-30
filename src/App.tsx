@@ -1,7 +1,7 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.svg';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from '../assets/palvelut/rakennuttajapalvelut-bg.svg';
@@ -158,15 +158,15 @@ function App() {
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
         <nav className="px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex flex-1 items-center gap-3 sm:gap-4">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4">
+            <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="self-center h-14 sm:h-16 md:h-[4.75rem] lg:h-[5.25rem] w-auto flex-shrink-0 object-contain"
+                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto flex-shrink-0 object-contain"
               />
               <span
-                className="flex items-center text-sm sm:text-base md:text-lg font-semibold leading-tight"
+                className="flex min-w-0 items-center text-sm font-semibold leading-tight sm:text-base md:text-lg"
                 style={{ color: '#3E3326' }}
               >
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
