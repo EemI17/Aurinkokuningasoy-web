@@ -157,8 +157,8 @@ function App() {
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
-        <nav className="pl-2 pr-4 sm:pl-3 sm:pr-6 py-4">
-          <div className="flex w-full max-w-6xl items-center gap-4">
+        <nav className="pl-2 pr-2 sm:pl-3 sm:pr-3 py-4">
+          <div className="flex w-full items-center gap-4">
             <div className="flex items-center gap-2 sm:gap-3">
               <img
                 src={aurinkokuningasLogo}
