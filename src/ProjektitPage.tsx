@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo.svg';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
 import Footer from './components/Footer';
 
 function ProjektitPage() {
