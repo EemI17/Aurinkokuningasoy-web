@@ -157,9 +157,9 @@ function App() {
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
-        <nav className="px-4 sm:px-6 py-4">
-          <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4">
-            <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
+        <nav className="pl-2 pr-4 sm:pl-3 sm:pr-6 py-4">
+          <div className="flex w-full max-w-6xl items-center justify-between gap-4">
+            <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
