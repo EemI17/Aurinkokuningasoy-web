@@ -1,29 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140">
-  <g fill="none" stroke="#B8892E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M30 30l10-18 10 12 10-14 10 14 10-12 10 18"/>
-    <circle cx="60" cy="60" r="22"/>
-    <path d="M60 30V14"/>
-    <path d="M60 82v14"/>
-    <path d="M36 60H26"/>
-    <path d="M84 60h10"/>
-    <path d="M44 44l-9-9"/>
-    <path d="M76 44l9-9"/>
-    <path d="M44 76l-9 9"/>
-    <path d="M76 76l9 9"/>
-    <path d="M52 58q3-4 6 0"/>
-    <path d="M62 58q3-4 6 0"/>
-    <path d="M60 62v6"/>
-    <path d="M52 72q8 6 16 0"/>
-    <path d="M24 104l36-20 36 20"/>
-    <path d="M20 104h80v32H20z"/>
-    <path d="M20 120h80"/>
-    <rect x="32" y="110" width="14" height="16" rx="1"/>
-    <rect x="52" y="114" width="16" height="22" rx="1"/>
-    <rect x="74" y="110" width="14" height="16" rx="1"/>
-    <path d="M60 114v22"/>
-    <path d="M60 126h3"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 180 220"
+  role="img"
+  aria-labelledby="aurinkokuningas-logo-title"
+>
+  <title id="aurinkokuningas-logo-title">Aurinkokuningas Oy logo</title>
+  <g fill="none" stroke="#B58A2C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Crown -->
+    <path d="M45 50L60 12l18 28 12-30 12 30 18-28 15 38"/>
+    <path d="M90 48V28"/>
+    <!-- Face -->
+    <circle cx="90" cy="100" r="40"/>
+    <path d="M90 140v24"/>
+    <path d="M52 100H30"/>
+    <path d="M128 100h22"/>
+    <path d="M66 70L48 52"/>
+    <path d="M114 70l18-18"/>
+    <path d="M66 130l-18 18"/>
+    <path d="M114 130l18 18"/>
+    <path d="M90 86q-4 6-12 8"/>
+    <path d="M90 86q4 6 12 8"/>
+    <path d="M78 102q5-8 10 0"/>
+    <path d="M96 102q5-8 10 0"/>
+    <path d="M84 116q6 6 12 0"/>
+    <path d="M90 110v8"/>
+    <!-- Building -->
+    <path d="M34 166l56-30 56 30"/>
+    <path d="M28 166h124v48H28z"/>
+    <path d="M28 190h124"/>
+    <rect x="46" y="178" width="22" height="32" rx="2"/>
+    <rect x="124" y="178" width="22" height="32" rx="2"/>
+    <path d="M94 188v42"/>
+    <path d="M90 206h8"/>
+    <rect x="80" y="188" width="28" height="42" rx="2"/>
+    <path d="M72 176h12"/>
+    <path d="M96 176h12"/>
+    <path d="M72 188h12"/>
+    <path d="M108 188h12"/>
   </g>
-  <circle cx="39" cy="118" r="2" fill="#B8892E"/>
-  <circle cx="81" cy="118" r="2" fill="#B8892E"/>
-  <circle cx="63" cy="126" r="2" fill="#B8892E"/>
+  <g fill="#B58A2C">
+    <circle cx="57" cy="198" r="4"/>
+    <circle cx="136" cy="198" r="4"/>
+    <circle cx="98" cy="206" r="4"/>
+  </g>
 </svg>
