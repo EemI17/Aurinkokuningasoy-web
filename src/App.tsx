@@ -404,9 +404,9 @@ function App() {
             className="rounded-[32px] border shadow-2xl overflow-hidden"
             style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E' }}
           >
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] items-start">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] items-stretch">
               <div
-                className="px-6 py-8 sm:px-10 sm:py-12 border"
+                className="px-6 py-8 sm:px-10 sm:py-12 border flex flex-col"
                 style={{ backgroundColor: '#C9972E', borderColor: '#000000' }}
               >
                 <div className="max-w-xl space-y-6 text-left">
