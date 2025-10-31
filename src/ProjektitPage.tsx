@@ -26,7 +26,7 @@ function ProjektitPage() {
       title: 'Venevaja',
       category: 'Talousrakennus',
       area: '29 m²',
-      location: 'Mänttä – Vilppula',
+      location: 'Mänttä',
       year: '2022',
       description:
         'Venevaja tarjoaa suojaisan ja käytännöllisen tilan veneille ympäri vuoden. Rakennus suunnitellaan kestämään vaihtelevia sääolosuhteita ja sijoitetaan lähelle rantaa, jotta veneiden käsittely ja vesillelasku on mahdollisimman helppoa. Venevaja yhdistää toimivuuden ja perinteisen rantamiljöön sopivalla tavalla.',
@@ -43,7 +43,7 @@ function ProjektitPage() {
       title: 'Varasto',
       category: 'Talousrakennus',
       area: '32 m²',
-      location: 'Mänttä-Vilppula',
+      location: 'Ylä-Kolkki',
       year: '2023',
       description:
         'Rakennetaan uusi talousrakennus varastokäyttöön. Rakennus tarjoaa käytännöllisen ja suojaisan säilytystilan pihapiirin tarpeisiin sekä täydentää kokonaisuutta toimivalla tavalla.',
@@ -152,7 +152,7 @@ function ProjektitPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full object-center ${project.image === '/venevaja.jpg' ? 'object-contain' : 'object-cover'}`}
+                      className="w-full h-full object-cover object-center"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
