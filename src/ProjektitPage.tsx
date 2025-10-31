@@ -1,6 +1,7 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import venevajaPhoto from './assets/venevajaPhoto';
 import Footer from './components/Footer';
 
 function ProjektitPage() {
@@ -36,7 +37,7 @@ function ProjektitPage() {
         'Käytännöllinen pohjaratkaisu',
         'Yhdistyy ympäristöön harmonisesti'
       ],
-      image: '/venevaja.svg'
+      image: venevajaPhoto
     },
     {
       title: 'Varasto',
