@@ -10,17 +10,17 @@ function YhteystiedotPage() {
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
         <nav className="pl-2 pr-2 sm:pl-3 sm:pr-3 py-4">
-          <div className="flex w-full items-center gap-4">
+          <div className="flex w-full items-center gap-2 sm:gap-4">
             <a
               href="/"
-              className="flex items-center gap-2 sm:gap-3 transition-opacity hover:opacity-80"
+              className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1 transition-opacity hover:opacity-80"
             >
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
                 className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto flex-shrink-0 object-contain"
               />
-              <span className="whitespace-nowrap items-center text-sm font-semibold leading-tight sm:text-base md:text-lg" style={{ color: '#3E3326' }}>
+              <span className="hidden sm:inline items-center text-sm font-semibold leading-tight sm:text-base md:text-lg whitespace-nowrap" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
             </a>
