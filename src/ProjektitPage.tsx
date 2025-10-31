@@ -37,7 +37,7 @@ function ProjektitPage() {
         'Käytännöllinen pohjaratkaisu',
         'Yhdistyy ympäristöön harmonisesti'
       ],
-      image: venevajaPhoto
+      image: '/venevaja.jpg'
     },
     {
       title: 'Varasto',
