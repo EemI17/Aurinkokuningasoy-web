@@ -357,9 +357,9 @@ function App() {
             >
               <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden mb-6 border-4" style={{ borderColor: '#C9972E' }}>
                 <img
-                  src="/IMG_1785.jpg"
+                  src="/tami profiilikuva.jpg"
                   alt="Tami Takala"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="space-y-2">
