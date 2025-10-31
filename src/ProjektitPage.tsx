@@ -152,7 +152,8 @@ function ProjektitPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full object-cover ${project.image === '/venevaja.jpg' ? 'object-top' : 'object-center'}`}
+                      className="w-full h-full object-cover object-center"
+                      style={project.image === '/venevaja.jpg' ? { objectPosition: 'center 40%' } : {}}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
