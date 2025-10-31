@@ -5,7 +5,7 @@ import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from './assets/rakennuttajapalvelutBackground';
-import rakennesuunnitteluBackground from '../assets/palvelut/rakennesuunnittelu-bg.svg';
+import rakennesuunnitteluBackground from './assets/rakennesuunnitteluBackground';
 import Footer from './components/Footer';
 
 type Service = {
