@@ -9,21 +9,24 @@ function YhteystiedotPage() {
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
         style={{ backgroundColor: 'rgba(254, 248, 235, 0.95)', borderColor: '#C9972E' }}
       >
-        <nav className="px-4 sm:px-6 py-4">
-          <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
-            <div className="flex items-center justify-center gap-3 sm:gap-4 sm:justify-start">
+        <nav className="pl-2 pr-2 sm:pl-3 sm:pr-3 py-4">
+          <div className="flex w-full items-center gap-4">
+            <a
+              href="/"
+              className="flex items-center gap-2 sm:gap-3 transition-opacity hover:opacity-80"
+            >
               <img
                 src={aurinkokuningasLogo}
                 alt="Aurinkokuninkaan Logo"
-                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain"
+                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto flex-shrink-0 object-contain"
               />
-              <span className="text-base font-semibold sm:text-lg" style={{ color: '#3E3326' }}>
+              <span className="whitespace-nowrap items-center text-sm font-semibold leading-tight sm:text-base md:text-lg" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
-            </div>
+            </a>
             <a
               href="/"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#C9972E]/40 px-4 py-2.5 text-sm font-medium text-[#3E3326] transition-colors hover:bg-[#C9972E]/15 sm:text-base"
+              className="ml-auto inline-flex items-center justify-center gap-2 rounded-lg border border-[#C9972E]/40 px-4 py-2.5 text-sm font-medium text-[#3E3326] transition-colors hover:bg-[#C9972E]/15 lg:px-6 lg:py-3 lg:text-base"
             >
               <ArrowLeft className="w-5 h-5" />
               Takaisin etusivulle
