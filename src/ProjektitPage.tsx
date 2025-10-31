@@ -109,13 +109,13 @@ function ProjektitPage() {
                 className="flex flex-col overflow-hidden rounded-xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
               >
-                {index === 0 && (
+                {(index === 0 || index === 1) && (
                   <div
                     className="h-48 sm:h-56 flex items-center justify-center overflow-hidden"
                     style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                   >
                     <img
-                      src="/IMG_1785 copy.jpg"
+                      src={index === 0 ? "/IMG_1785 copy.jpg" : "/venevaja.jpg"}
                       alt={project.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {
