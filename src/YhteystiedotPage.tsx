@@ -42,12 +42,12 @@ function YhteystiedotPage() {
               Ota yhteyttä
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style={{ color: '#3E3326' }}>
-              Yhdessä teemme seuraavasta projektistasi onnistuneen
+              Yhdessä teen seuraavasta projektistasi onnistuneen
             </h1>
             <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed" style={{ color: '#3E3326' }}>
-              Olipa kyseessä uusi rakennusprojekti tai nykyisen hankkeen tukeminen, Tami auttaa sinua varmistamaan, että
+              Olipa kyseessä uusi rakennusprojekti tai nykyisen hankkeen tukeminen, autan sinua varmistamaan, että
               kokonaisuus pysyy hallittuna ja tavoitteet saavutetaan. Valitse itsellesi sopivin yhteydenottotapa, niin
-              palaamme asiaan nopeasti.
+              palaan asiaan nopeasti.
             </p>
           </section>
 
@@ -92,7 +92,7 @@ function YhteystiedotPage() {
                     icon: <Mail className="w-6 h-6" />,
                     title: 'Sähköposti',
                     value: 'tami.takala@aurinkokuningasoy.fi',
-                    helper: 'Vastaamme viesteihin yhden arkipäivän sisällä',
+                    helper: 'Vastaan viesteihin yhden arkipäivän sisällä',
                     wrapperClassName: 'md:col-span-2',
                     emphasize: true
                   }
@@ -140,7 +140,7 @@ function YhteystiedotPage() {
                   Suunnitellaan seuraava askel yhdessä
                 </h2>
                 <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#3E3326' }}>
-                  Ota yhteyttä, niin rakennamme yhdessä selkeän suunnitelman seuraaville askelille. Saat asiantuntevan
+                  Ota yhteyttä, niin rakennan yhdessä kanssasi selkeän suunnitelman seuraaville askelille. Saat asiantuntevan
                   näkemyksen, realistisen aikataulun sekä läpinäkyvän tavan seurata projektin etenemistä.
                 </p>
               </div>
@@ -150,7 +150,7 @@ function YhteystiedotPage() {
                 style={{ backgroundColor: 'rgba(201, 151, 46, 0.08)', borderColor: '#C9972E' }}
               >
                 <h3 className="text-lg sm:text-xl font-semibold" style={{ color: '#3E3326' }}>
-                  Miten voimme auttaa?
+                  Miten voin auttaa?
                 </h3>
                 <ul className="space-y-3 text-sm sm:text-base" style={{ color: '#3E3326' }}>
                   {[

@@ -177,7 +177,7 @@ function ProjektitPage() {
             Aloita Oma Projektisi
           </h2>
           <p className="text-base sm:text-lg mb-8" style={{ color: '#3E3326', opacity: 0.9 }}>
-            Haluatko toteuttaa oman rakennusprojektisi? Ota yhteyttä ja keskustellaan, miten voimme auttaa visiosi toteutumisessa.
+            Haluatko toteuttaa oman rakennusprojektisi? Ota yhteyttä ja keskustellaan, miten voin auttaa visiosi toteutumisessa.
           </p>
           <Link
             to="/"

@@ -264,7 +264,7 @@ function App() {
             Tarkkaa suunnittelua, varmaa valvontaa
           </h2>
           <p className="text-xl sm:text-2xl md:text-3xl font-semibold max-w-2xl mx-auto" style={{ color: '#C9972E' }}>
-            Yhdessä teemme unelmastasi totta
+            Yhdessä teen unelmastasi totta
           </p>
         </div>
       </section>
@@ -418,10 +418,10 @@ function App() {
                     Ota yhteyttä
                   </span>
                   <h2 className="text-3xl sm:text-4xl font-bold" style={{ color: '#FEF8EB' }}>
-                    Kerro projektistasi – palaamme sinulle yhden arkipäivän sisällä
+                    Kerro projektistasi – palaan sinulle yhden arkipäivän sisällä
                   </h2>
                   <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#FEF8EB', opacity: 0.92 }}>
-                    Täytä viereinen lomake mahdollisimman kattavasti. Saat sähköpostitse vahvistuksen, jossa yhteenveto lähettämistäsi tiedoista, ja palaamme sinulle henkilökohtaisesti.
+                    Täytä viereinen lomake mahdollisimman kattavasti. Saat sähköpostitse vahvistuksen, jossa yhteenveto lähettämistäsi tiedoista, ja palaan sinulle henkilökohtaisesti.
                   </p>
                   <div className="grid gap-4 text-sm sm:text-base text-white/90">
                     <div className="flex items-start gap-3">
@@ -609,7 +609,7 @@ function App() {
                 )}
                 {submissionStatus === 'success' && !submissionError && (
                   <p className="text-sm" style={{ color: '#3E3326' }} role="status">
-                    Kiitos viestistäsi! Olemme vastaanottaneet yhteydenottosi ja palaamme asiaan yhden arkipäivän sisällä.
+                    Kiitos viestistäsi! Olen vastaanottanut yhteydenottosi ja palaan asiaan yhden arkipäivän sisällä.
                   </p>
                 )}
                 <button
