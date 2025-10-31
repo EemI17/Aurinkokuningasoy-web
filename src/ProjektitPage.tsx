@@ -54,6 +54,38 @@ function ProjektitPage() {
         'Selkeä ja toimiva pohjaratkaisu',
         'Sopii yhteen ympäröivän rakennuskannan ja maiseman kanssa'
       ]
+    },
+    {
+      title: 'Konesuoja',
+      category: 'Talousrakennus',
+      area: '147 m²',
+      location: 'Vilppula',
+      year: '2025',
+      description:
+        'Rakennetaan avoin konesuoja maatalouskoneiden ja ajoneuvojen säilytystä varten. Rakennus tarjoaa suojan sateelta ja auringolta, mutta pysyy ilmavana ja helposti käytettävänä vuoden ympäri. Konesuoja suunnitellaan tukemaan tehokasta käyttöä ja sulautumaan harmonisesti ympäröivään pihapiiriin.',
+      features: [
+        'Avoin ja käytännöllinen suoja koneille ja laitteille',
+        'Säältä suojaava mutta hyvin tuulettuva rakenne',
+        'Pitkäikäinen ja huoltovapaa toteutus',
+        'Helppo pääsy ajoneuvoille ja työkoneille',
+        'Yhdistyy tyyliltään ympäröivään rakennuskantaan'
+      ]
+    },
+    {
+      title: 'Konesuoja',
+      category: 'Talousrakennus',
+      area: '219 m²',
+      location: 'Vilppula',
+      year: '2025',
+      description:
+        'Laajempi konesuoja tarjoaa reilusti tilaa raskaalle kalustolle ja työkoneille. Rakennus on avonainen ja käytännöllinen ratkaisu, joka suojaa kaluston säältä ja helpottaa päivittäistä käyttöä. Kestävät rakenteet ja selkeä muotokieli tekevät siitä toimivan ja huoltovapaan osan pihapiiriä.',
+      features: [
+        'Tilava ja avonainen rakenne raskaalle kalustolle',
+        'Suojaa sateelta ja auringolta, säilyttäen hyvän ilmanvaihdon',
+        'Vankka ja pitkäikäinen rakenne',
+        'Helppo liikkua ja käsitellä koneita',
+        'Sopii luontevasti osaksi ympäröivää maisemaa ja rakennuksia'
+      ]
     }
   ];
 
