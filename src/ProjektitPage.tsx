@@ -18,7 +18,8 @@ function ProjektitPage() {
         'Suojaisa tila autoille ja polkupyörille',
         'Energiatehokas ja kestävä rakenne',
         'Yhdistyy harmonisesti olemassa olevaan talousrakennukseen'
-      ]
+      ],
+      image: '/IMG_1785 copy.jpg'
     },
     {
       title: 'Venevaja',
@@ -34,7 +35,8 @@ function ProjektitPage() {
         'Helppo pääsy vesistöön',
         'Käytännöllinen pohjaratkaisu',
         'Yhdistyy ympäristöön harmonisesti'
-      ]
+      ],
+      image: '/venevaja.jpg'
     },
     {
       title: 'Varasto',
@@ -109,13 +111,13 @@ function ProjektitPage() {
                 className="flex flex-col overflow-hidden rounded-xl border-2 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 style={{ backgroundColor: '#FEF8EB', border: '2px solid #C9972E' }}
               >
-                {(index === 0 || index === 1) && (
+                {project.image && (
                   <div
                     className="h-48 sm:h-56 flex items-center justify-center overflow-hidden"
                     style={{ backgroundColor: 'rgba(201, 151, 46, 0.15)' }}
                   >
                     <img
-                      src={index === 0 ? "/IMG_1785 copy.jpg" : "/venevaja.jpg"}
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {
