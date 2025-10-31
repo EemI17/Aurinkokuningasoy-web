@@ -94,7 +94,7 @@ function ProjektitPage() {
             Projektit
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto" style={{ color: '#3E3326', opacity: 0.9 }}>
-            Tutustu toteutettuihin projekteihimme, jotka kuvaavat osaamistamme ja sitoutumistamme laatuun
+            Tutustu toteutettuihin projekteihini, jotka kuvaavat osaamistani ja sitoutumistani laatuun
           </p>
         </div>
       </section>
