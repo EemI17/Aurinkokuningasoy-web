@@ -36,7 +36,7 @@ function ProjektitPage() {
         'Käytännöllinen pohjaratkaisu',
         'Yhdistyy ympäristöön harmonisesti'
       ],
-      image: '/venevaja.jpg'
+      image: '/venevaja.svg'
     },
     {
       title: 'Varasto',
@@ -119,7 +119,7 @@ function ProjektitPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
