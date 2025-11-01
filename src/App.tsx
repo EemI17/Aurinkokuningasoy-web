@@ -280,17 +280,11 @@ function App() {
           </h2>
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2 max-w-6xl mx-auto">
             {services.map((service, index) => {
-              const isKonsultointi = service.title === 'Konsultointipalvelut';
               const ServiceBox = (
                 <div
                   key={index}
                   className="group relative overflow-hidden rounded-xl border-2 transition-transform duration-500 ease-out hover:-translate-y-1"
-                  style={isKonsultointi ? {
-                    backgroundColor: '#FEF8EB',
-                    border: '2px solid #C9972E',
-                    boxShadow: '0 10px 30px rgba(201, 151, 46, 0.12)',
-                    cursor: service.link ? 'pointer' : 'default'
-                  } : {
+                  style={{
                     backgroundImage: `linear-gradient(160deg, rgba(33, 24, 16, 0.82), rgba(62, 51, 38, 0.55)), url(${service.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
@@ -312,14 +306,14 @@ function App() {
                   <div className="relative z-10 flex h-full flex-col gap-6 p-6 sm:p-8 lg:p-10">
                     <h3
                       className="text-xl sm:text-2xl font-bold"
-                      style={{ color: isKonsultointi ? '#3E3326' : '#FEF8EB', lineHeight: '1.4', letterSpacing: '0.01em' }}
+                      style={{ color: '#FEF8EB', lineHeight: '1.4', letterSpacing: '0.01em' }}
                     >
                       {service.title}
                     </h3>
                     <p
                       className="text-base sm:text-lg"
                       style={{
-                        color: isKonsultointi ? '#3E3326' : '#FDF3E0',
+                        color: '#FDF3E0',
                         whiteSpace: 'pre-line',
                         lineHeight: '1.8',
                         fontWeight: 400,
@@ -330,8 +324,7 @@ function App() {
                     </p>
                     {service.link && (
                       <span
-                        className="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-widest transition-transform duration-200 group-hover:translate-x-1"
-                        style={{ color: isKonsultointi ? '#C9972E' : '#FDE2AA' }}
+                        className="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-widest text-[#FDE2AA] transition-transform duration-200 group-hover:translate-x-1"
                       >
                         Tutustu palveluun →
                       </span>
