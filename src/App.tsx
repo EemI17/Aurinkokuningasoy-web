@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
-import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from './assets/rakennuttajapalvelutBackground';
 import rakennesuunnitteluBackground from './assets/rakennesuunnitteluBackground';
 import Footer from './components/Footer';
@@ -32,7 +31,7 @@ const services: Service[] = [
     title: 'Konsultointipalvelut',
     desc: '• Asiantuntevaa tukea rakennushankkeen eri vaiheisiin\n\n• Suunnitelmien arviointi ja kustannusarvioiden laadinta\n\n• Viranomaisasioiden hoitamisen neuvonta\n\n• Ratkaisut asiakkaan tarpeen mukaan\n\n• Päätöksenteon helpottaminen ja projektin selkeyttäminen',
     link: '/konsultointipalvelut',
-    image: konsultointipalvelutBackground
+    image: arkkitehtisuunnitteluBackground
   },
   {
     title: 'Rakennuttajapalvelut',
