@@ -20,7 +20,7 @@ function ProjektitPage() {
         'Energiatehokas ja kestävä rakenne',
         'Yhdistyy harmonisesti olemassa olevaan talousrakennukseen'
       ],
-      image: '/IMG_1785 copy.jpg'
+      image: '/autotalli.jpg'
     },
     {
       title: 'Venevaja',
@@ -107,7 +107,7 @@ function ProjektitPage() {
                 alt="Aurinkokuninkaan Logo"
                 className="h-12 sm:h-14 md:h-16 lg:h-18 w-auto flex-shrink-0 object-contain"
               />
-              <span className="hidden sm:inline items-center text-sm font-semibold leading-tight sm:text-base md:text-lg whitespace-nowrap" style={{ color: '#3E3326' }}>
+              <span className="items-center text-xs font-semibold leading-tight sm:text-base md:text-lg sm:whitespace-nowrap" style={{ color: '#3E3326' }}>
                 Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy
               </span>
             </Link>
