@@ -1,7 +1,6 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
-import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 
 function KonsultointipalvelutPage() {
   return (
@@ -45,10 +44,7 @@ function KonsultointipalvelutPage() {
           <div
             className="mt-10 rounded-2xl border-2 p-6 sm:p-8 lg:p-12 space-y-6 sm:space-y-8"
             style={{
-              backgroundImage: `linear-gradient(160deg, rgba(33, 24, 16, 0.82), rgba(62, 51, 38, 0.6)), url(${konsultointipalvelutBackground})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#FEF8EB',
               border: '2px solid #C9972E',
               boxShadow: '0 10px 30px rgba(201, 151, 46, 0.12)'
             }}
@@ -56,7 +52,7 @@ function KonsultointipalvelutPage() {
             <p
               className="text-base sm:text-lg leading-relaxed"
               style={{
-                color: '#FEF8EB',
+                color: '#3E3326',
                 lineHeight: '2',
                 fontSize: '1.1rem',
                 letterSpacing: '0.01em'
@@ -68,7 +64,7 @@ function KonsultointipalvelutPage() {
             <p
               className="text-base sm:text-lg leading-relaxed"
               style={{
-                color: '#FEF8EB',
+                color: '#3E3326',
                 lineHeight: '2',
                 fontSize: '1.1rem',
                 letterSpacing: '0.01em'
@@ -79,11 +75,11 @@ function KonsultointipalvelutPage() {
 
             <div
               className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-2"
-              style={{ borderColor: 'rgba(253, 226, 170, 0.8)' }}
+              style={{ borderColor: '#C9972E' }}
             >
               <h2
                 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6"
-                style={{ color: '#FDE2AA' }}
+                style={{ color: '#3E3326' }}
               >
                 Palvelut sisältävät
               </h2>
@@ -98,11 +94,11 @@ function KonsultointipalvelutPage() {
                   <li
                     key={index}
                     className="flex items-center gap-3 text-base sm:text-lg"
-                    style={{ color: '#FEF8EB' }}
+                    style={{ color: '#3E3326' }}
                   >
                     <span
                       className="w-2 h-2 rounded-full"
-                      style={{ backgroundColor: '#FDE2AA' }}
+                      style={{ backgroundColor: '#C9972E' }}
                     />
                     {item}
                   </li>
