@@ -264,7 +264,7 @@ function App() {
             Tarkkaa suunnittelua, varmaa valvontaa
           </h2>
           <p className="text-xl sm:text-2xl md:text-3xl font-semibold max-w-2xl mx-auto" style={{ color: '#C9972E' }}>
-            Yhdessä teen unelmastasi totta
+            Yhdessä teemme unelmastasi totta
           </p>
         </div>
       </section>
