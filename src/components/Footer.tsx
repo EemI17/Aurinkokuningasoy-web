@@ -36,7 +36,7 @@ function Footer() {
       <div className="container mx-auto flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1 text-center sm:text-left">
           <p className="text-sm sm:text-base font-medium" style={{ color: '#3E3326' }}>
-            &copy; 2025 Aurinkokuninkan Suunnittelu-ja Rakennuspalvelu OY. All rights reserved.
+            &copy; 2025 Aurinkokuninkaan Suunnittelu-ja Rakennuspalvelu OY. All rights reserved.
           </p>
           <p className="text-sm sm:text-base" style={{ color: '#3E3326' }}>
             Purolantie 9 35800 Mänttä
