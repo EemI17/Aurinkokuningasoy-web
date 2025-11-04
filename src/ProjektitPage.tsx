@@ -210,7 +210,7 @@ function ProjektitPage() {
       <section className="py-16 px-4 sm:px-6" style={{ backgroundColor: 'rgba(201, 151, 46, 0.1)' }}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6" style={{ color: '#3E3326' }}>
-            Aloita Oma Projektisi
+            Aloita oma projektisi
           </h2>
           <p className="text-base sm:text-lg mb-8" style={{ color: '#3E3326', opacity: 0.9 }}>
             Haluatko toteuttaa oman rakennusprojektisi? Ota yhteyttä ja keskustellaan, miten voin auttaa visiosi toteutumisessa.
@@ -221,7 +221,7 @@ function ProjektitPage() {
             className="inline-block rounded-lg px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:px-8 sm:py-4 sm:text-lg"
             style={{ backgroundColor: '#C9972E' }}
           >
-            Ota Yhteyttä
+            Ota yhteyttä
           </Link>
         </div>
       </section>
