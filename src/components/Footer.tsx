@@ -26,7 +26,7 @@ const socialLinks = [
   {
     label: 'TikTok',
     Icon: TikTokIcon,
-    href: '#'
+    href: 'https://www.tiktok.com/@ak.suunnittelu.ja'
   }
 ];
 
