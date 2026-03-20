@@ -1,9 +1,24 @@
 import { ArrowLeft, Mail, MapPin, Phone } from 'lucide-react';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
+import SEO from './components/SEO';
+
+const yhteystiedotSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Yhteystiedot",
+  "description": "Ota yhteyttä Aurinkokuninkaan Suunnittelu- ja Rakennuspalveluun. Palvelemme Mänttä-Vilppulan ja Pirkanmaan alueella.",
+  "url": "https://www.aurinkokuningasoy.fi/yhteystiedot"
+};
 
 function YhteystiedotPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
+      <SEO
+        title="Yhteystiedot | Aurinkokuningasoy.fi"
+        description="Ota yhteyttä ja kysy lisää arkkitehti- ja rakennesuunnittelupalveluistamme. Palvelemme Mäntässä, Vilppulassa ja koko Pirkanmaalla."
+        canonical="https://www.aurinkokuningasoy.fi/yhteystiedot"
+        schema={yhteystiedotSchema}
+      />
       {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
@@ -99,9 +114,8 @@ function YhteystiedotPage() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className={`group rounded-2xl border p-5 transition-all duration-300 sm:p-6 ${
-                      item.wrapperClassName ?? ''
-                    }`}
+                    className={`group rounded-2xl border p-5 transition-all duration-300 sm:p-6 ${item.wrapperClassName ?? ''
+                      }`}
                     style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E', color: '#3E3326' }}
                   >
                     <div
@@ -114,9 +128,8 @@ function YhteystiedotPage() {
                       {item.title}
                     </h3>
                     <p
-                      className={`text-sm sm:text-base leading-relaxed break-words ${
-                        item.emphasize ? 'font-medium' : ''
-                      }`}
+                      className={`text-sm sm:text-base leading-relaxed break-words ${item.emphasize ? 'font-medium' : ''
+                        }`}
                       style={{ color: '#3E3326' }}
                     >
                       {item.value}

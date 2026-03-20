@@ -1,12 +1,13 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
-import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
+import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground.webp';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
 import rakennuttajapalvelutBackground from './assets/rakennuttajapalvelutBackground';
-import rakennesuunnitteluBackground from './assets/rakennesuunnitteluBackground';
+import rakennesuunnitteluBackground from './assets/rakennesuunnitteluBackground.webp';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
 
 type Service = {
   title: string;
@@ -41,6 +42,40 @@ const services: Service[] = [
     image: rakennuttajapalvelutBackground
   }
 ];
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy",
+  "image": "https://www.aurinkokuningasoy.fi/og-image.jpg",
+  "@id": "https://www.aurinkokuningasoy.fi",
+  "url": "https://www.aurinkokuningasoy.fi",
+  "telephone": "+358 40 154 7538",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mänttä-Vilppula",
+    "addressRegion": "Pirkanmaa",
+    "addressCountry": "FI"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 62.0294,
+    "longitude": 24.6242
+  },
+  "description": "Asiantuntevaa arkkitehti- ja rakennesuunnittelua, konsultointipalveluita sekä rakennuttajapalveluita Mäntässä ja Vilppulassa.",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "16:00"
+  }
+};
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -152,6 +187,12 @@ function App() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
+      <SEO
+        title="Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy | Arkkitehti- ja Rakennesuunnittelu"
+        description="Asiantuntevaa arkkitehti- ja rakennesuunnittelua, konsultointipalveluita sekä rakennuttajapalveluita. Luotettava kumppani rakennusprojekteihisi Mäntässä ja Vilppulassa."
+        canonical="https://www.aurinkokuningasoy.fi/"
+        schema={homeSchema}
+      />
       {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
@@ -215,9 +256,8 @@ function App() {
             </button>
           </div>
           <div
-            className={`md:hidden transition-all duration-300 ease-in-out ${
-              isMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'pointer-events-none max-h-0 opacity-0'
-            }`}
+            className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'pointer-events-none max-h-0 opacity-0'
+              }`}
           >
             <div className="flex flex-col gap-2 rounded-2xl border p-4 shadow-lg" style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E' }}>
               <a
@@ -357,7 +397,7 @@ function App() {
             >
               <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden mb-6 border-4" style={{ borderColor: '#C9972E' }}>
                 <img
-                  src="/tami profiilikuva.jpg"
+                  src="/tami_profiilikuva.webp"
                   alt="Tami Takala"
                   className="w-full h-full object-cover object-center"
                 />
@@ -390,6 +430,49 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="px-4 sm:px-6 py-16" style={{ backgroundColor: '#FEF8EB' }}>
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12" style={{ color: '#3E3326' }}>
+            Miksi valita meidät?
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="p-8 rounded-2xl border-2 transition-all hover:shadow-lg" style={{ borderColor: '#C9972E' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#3E3326' }}>Asiantuntemus</h3>
+              <p style={{ color: '#3E3326', opacity: 0.9 }}>
+                Vahva kokemus rakennusalan eri vaiheista takaa, että suunnitelmat ovat paitsi tyylikkäitä, myös teknisesti toteutuskelpoisia.
+              </p>
+            </div>
+            <div className="p-8 rounded-2xl border-2 transition-all hover:shadow-lg" style={{ borderColor: '#C9972E' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#3E3326' }}>Asiakaslähtöisyys</h3>
+              <p style={{ color: '#3E3326', opacity: 0.9 }}>
+                Kuuntelemme toiveitasi ja tarpeitasi tarkasti. Jokainen projekti on yksilöllinen, ja tavoitteemme on ylittää odotuksesi.
+              </p>
+            </div>
+            <div className="p-8 rounded-2xl border-2 transition-all hover:shadow-lg" style={{ borderColor: '#C9972E' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#3E3326' }}>Sujuva prosessi</h3>
+              <p style={{ color: '#3E3326', opacity: 0.9 }}>
+                Hoidamme viranomaisasiat ja lupaprosessit puolestasi, jotta voit keskittyä unelmasi rakentumiseen ilman turhaa stressiä.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Area Section */}
+      <section className="px-4 sm:px-6 py-16" style={{ backgroundColor: 'rgba(201, 151, 46, 0.05)' }}>
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{ color: '#3E3326' }}>
+            Palvelualue
+          </h2>
+          <p className="text-lg sm:text-xl leading-relaxed" style={{ color: '#3E3326' }}>
+            Palvelemme asiakkaita pääasiassa <strong>Mänttä-Vilppulan</strong>, <strong>Ruoveden</strong> ja <strong>Pirkanmaan</strong> alueella.
+            Tarvittaessa toteutamme arkkitehti- ja rakennesuunnittelua sekä konsultointia koko Suomen alueella.
+            Ota yhteyttä ja kysy lisää palveluistamme omalla paikkakunnallasi!
+          </p>
         </div>
       </section>
 
@@ -443,96 +526,121 @@ function App() {
                   </div>
                 </div>
               </div>
-            <form
-              noValidate
-              onSubmit={handleContactSubmit}
-              className="space-y-8 px-6 py-8 sm:px-8 sm:py-10"
-            >
-              <div className="space-y-2 text-left">
-                <p
-                  className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em]"
-                  style={{ color: '#C9972E' }}
-                >
-                  Aloitetaan yhteistyö
-                </p>
-                <p className="text-sm sm:text-base" style={{ color: '#3E3326', opacity: 0.85 }}>
-                  Täytä vähintään nimi, sähköposti ja lyhyt kuvaus tarpeestasi. Voit lisätä myös puhelinnumeron ja projektin vaiheen.
-                </p>
-              </div>
-              <div className="grid gap-5 sm:gap-6">
-                <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
-                  <label className="block text-left">
-                    <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
-                      <User className="h-4 w-4" />
-                      Nimi
-                    </span>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleContactFieldChange}
-                      required
-                      placeholder="Etunimi Sukunimi"
-                      autoComplete="name"
-                      className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
-                      style={{
-                        backgroundColor: '#FEF8EB',
-                        borderColor: '#C9972E',
-                        color: '#3E3326'
-                      }}
-                    />
-                  </label>
-                  <label className="block text-left">
-                    <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
-                      <Mail className="h-4 w-4" />
-                      Sähköposti
-                    </span>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleContactFieldChange}
-                      required
-                      placeholder="nimi@yritys.fi"
-                      autoComplete="email"
-                      className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
-                      style={{
-                        backgroundColor: '#FEF8EB',
-                        borderColor: '#C9972E',
-                        color: '#3E3326'
-                      }}
-                    />
-                  </label>
+              <form
+                noValidate
+                onSubmit={handleContactSubmit}
+                className="space-y-8 px-6 py-8 sm:px-8 sm:py-10"
+              >
+                <div className="space-y-2 text-left">
+                  <p
+                    className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em]"
+                    style={{ color: '#C9972E' }}
+                  >
+                    Aloitetaan yhteistyö
+                  </p>
+                  <p className="text-sm sm:text-base" style={{ color: '#3E3326', opacity: 0.85 }}>
+                    Täytä vähintään nimi, sähköposti ja lyhyt kuvaus tarpeestasi. Voit lisätä myös puhelinnumeron ja projektin vaiheen.
+                  </p>
                 </div>
-                <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
+                <div className="grid gap-5 sm:gap-6">
+                  <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
+                    <label className="block text-left">
+                      <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                        <User className="h-4 w-4" />
+                        Nimi
+                      </span>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleContactFieldChange}
+                        required
+                        placeholder="Etunimi Sukunimi"
+                        autoComplete="name"
+                        className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                        style={{
+                          backgroundColor: '#FEF8EB',
+                          borderColor: '#C9972E',
+                          color: '#3E3326'
+                        }}
+                      />
+                    </label>
+                    <label className="block text-left">
+                      <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                        <Mail className="h-4 w-4" />
+                        Sähköposti
+                      </span>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleContactFieldChange}
+                        required
+                        placeholder="nimi@yritys.fi"
+                        autoComplete="email"
+                        className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                        style={{
+                          backgroundColor: '#FEF8EB',
+                          borderColor: '#C9972E',
+                          color: '#3E3326'
+                        }}
+                      />
+                    </label>
+                  </div>
+                  <div className="grid gap-5 sm:gap-6 sm:grid-cols-2">
+                    <label className="block text-left">
+                      <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                        <Phone className="h-4 w-4" />
+                        Puhelin (valinnainen)
+                      </span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleContactFieldChange}
+                        placeholder="+358 40 123 4567"
+                        autoComplete="tel"
+                        className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                        style={{
+                          backgroundColor: '#FEF8EB',
+                          borderColor: '#C9972E',
+                          color: '#3E3326'
+                        }}
+                      />
+                    </label>
+                    <label className="block text-left">
+                      <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                        <CalendarCheck className="h-4 w-4" />
+                        Projektin vaihe (valinnainen)
+                      </span>
+                      <select
+                        name="projectType"
+                        value={formData.projectType}
+                        onChange={handleContactFieldChange}
+                        className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                        style={{
+                          backgroundColor: '#FEF8EB',
+                          borderColor: '#C9972E',
+                          color: '#3E3326'
+                        }}
+                      >
+                        <option value="">Valitse palvelu</option>
+                        <option value="Arkkitehtisuunnittelu">Arkkitehtisuunnittelu</option>
+                        <option value="Rakennesuunnittelu">Rakennesuunnittelu</option>
+                        <option value="Konsultointipalvelut">Konsultointipalvelut</option>
+                        <option value="Rakennuttajapalvelut">Rakennuttajapalvelut</option>
+                        <option value="Muu">Muu tai useampi palvelu</option>
+                      </select>
+                    </label>
+                  </div>
                   <label className="block text-left">
                     <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
-                      <Phone className="h-4 w-4" />
-                      Puhelin (valinnainen)
-                    </span>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleContactFieldChange}
-                      placeholder="+358 40 123 4567"
-                      autoComplete="tel"
-                      className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
-                      style={{
-                        backgroundColor: '#FEF8EB',
-                        borderColor: '#C9972E',
-                        color: '#3E3326'
-                      }}
-                    />
-                  </label>
-                  <label className="block text-left">
-                    <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
-                      <CalendarCheck className="h-4 w-4" />
-                      Projektin vaihe (valinnainen)
+                      <Megaphone className="h-4 w-4" />
+                      Mistä kuulit meistä? (valinnainen)
                     </span>
                     <select
-                      name="projectType"
-                      value={formData.projectType}
+                      name="contactSource"
+                      value={formData.contactSource}
                       onChange={handleContactFieldChange}
                       className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
                       style={{
@@ -541,87 +649,62 @@ function App() {
                         color: '#3E3326'
                       }}
                     >
-                      <option value="">Valitse palvelu</option>
-                      <option value="Arkkitehtisuunnittelu">Arkkitehtisuunnittelu</option>
-                      <option value="Rakennesuunnittelu">Rakennesuunnittelu</option>
-                      <option value="Konsultointipalvelut">Konsultointipalvelut</option>
-                      <option value="Rakennuttajapalvelut">Rakennuttajapalvelut</option>
-                      <option value="Muu">Muu tai useampi palvelu</option>
+                      <option value="">Valitse vaihtoehto</option>
+                      <option value="Google-haku">Google-haku</option>
+                      <option value="Suosittelu">Suosittelu</option>
+                      <option value="Sosiaalinen media">Sosiaalinen media</option>
+                      <option value="Tapahtuma tai messut">Tapahtuma tai messut</option>
+                      <option value="Muualta">Muualta</option>
                     </select>
                   </label>
+                  <label className="block text-left">
+                    <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
+                      <ClipboardList className="h-4 w-4" />
+                      Viesti
+                    </span>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleContactFieldChange}
+                      required
+                      placeholder="Kuvaile lyhyesti projektisi, aikataulutoiveesi ja tärkeimmät taustatiedot"
+                      rows={6}
+                      className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
+                      style={{
+                        backgroundColor: '#FEF8EB',
+                        borderColor: '#C9972E',
+                        color: '#3E3326',
+                        resize: 'vertical'
+                      }}
+                    />
+                  </label>
                 </div>
-                <label className="block text-left">
-                  <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
-                    <Megaphone className="h-4 w-4" />
-                    Mistä kuulit meistä? (valinnainen)
-                  </span>
-                  <select
-                    name="contactSource"
-                    value={formData.contactSource}
-                    onChange={handleContactFieldChange}
-                    className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
-                    style={{
-                      backgroundColor: '#FEF8EB',
-                      borderColor: '#C9972E',
-                      color: '#3E3326'
-                    }}
+                <div className="space-y-4">
+                  {submissionError && (
+                    <p className="text-sm font-semibold" style={{ color: '#B11F1F' }} role="alert">
+                      {submissionError}
+                    </p>
+                  )}
+                  {submissionStatus === 'submitting' && (
+                    <p className="text-sm" style={{ color: '#3E3326' }} role="status">
+                      Lähetetään viestiä...
+                    </p>
+                  )}
+                  {submissionStatus === 'success' && !submissionError && (
+                    <p className="text-sm" style={{ color: '#3E3326' }} role="status">
+                      Kiitos viestistäsi! Olen vastaanottanut yhteydenottosi ja palaan asiaan yhden arkipäivän sisällä.
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={submissionStatus === 'submitting'}
+                    className="w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed disabled:shadow-none disabled:translate-y-0"
+                    style={{ backgroundColor: '#C9972E', boxShadow: '0 12px 24px rgba(201, 151, 46, 0.25)' }}
                   >
-                    <option value="">Valitse vaihtoehto</option>
-                    <option value="Google-haku">Google-haku</option>
-                    <option value="Suosittelu">Suosittelu</option>
-                    <option value="Sosiaalinen media">Sosiaalinen media</option>
-                    <option value="Tapahtuma tai messut">Tapahtuma tai messut</option>
-                    <option value="Muualta">Muualta</option>
-                  </select>
-                </label>
-                <label className="block text-left">
-                  <span className="flex items-center gap-2 text-sm font-semibold mb-2" style={{ color: '#3E3326' }}>
-                    <ClipboardList className="h-4 w-4" />
-                    Viesti
-                  </span>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleContactFieldChange}
-                    required
-                    placeholder="Kuvaile lyhyesti projektisi, aikataulutoiveesi ja tärkeimmät taustatiedot"
-                    rows={6}
-                    className="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:ring-4 focus:ring-[#C9972E]/20 focus:border-[#C9972E] transition-all"
-                    style={{
-                      backgroundColor: '#FEF8EB',
-                      borderColor: '#C9972E',
-                      color: '#3E3326',
-                      resize: 'vertical'
-                    }}
-                  />
-                </label>
-              </div>
-              <div className="space-y-4">
-                {submissionError && (
-                  <p className="text-sm font-semibold" style={{ color: '#B11F1F' }} role="alert">
-                    {submissionError}
-                  </p>
-                )}
-                {submissionStatus === 'submitting' && (
-                  <p className="text-sm" style={{ color: '#3E3326' }} role="status">
-                    Lähetetään viestiä...
-                  </p>
-                )}
-                {submissionStatus === 'success' && !submissionError && (
-                  <p className="text-sm" style={{ color: '#3E3326' }} role="status">
-                    Kiitos viestistäsi! Olen vastaanottanut yhteydenottosi ja palaan asiaan yhden arkipäivän sisällä.
-                  </p>
-                )}
-                <button
-                  type="submit"
-                  disabled={submissionStatus === 'submitting'}
-                  className="w-full py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed disabled:shadow-none disabled:translate-y-0"
-                  style={{ backgroundColor: '#C9972E', boxShadow: '0 12px 24px rgba(201, 151, 46, 0.25)' }}
-                >
-                  {submissionStatus === 'submitting' ? 'Lähetetään...' : 'Lähetä viesti'}
-                </button>
-              </div>
-            </form>
+                    {submissionStatus === 'submitting' ? 'Lähetetään...' : 'Lähetä viesti'}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

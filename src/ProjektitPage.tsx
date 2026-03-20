@@ -1,8 +1,17 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
-import venevajaPhoto from './assets/venevajaPhoto';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
+import venevajaPhoto from './assets/venevajaPhoto.webp';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
+
+const projektitSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Referenssit ja Projektit",
+  "description": "Tutustu toteutettuihin arkkitehti- ja rakennesuunnitteluprojekteihimme Mäntässä, Vilppulassa ja lähialueilla.",
+  "url": "https://www.aurinkokuningasoy.fi/projektit"
+};
 
 function ProjektitPage() {
   const projects = [
@@ -91,6 +100,12 @@ function ProjektitPage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
+      <SEO
+        title="Referenssit & Projektit | Aurinkokuningasoy.fi"
+        description="Tutustu toteutettuihin arkkitehti- ja rakennesuunnitteluprojekteihimme. Referenssimme kattavat pientalot, autotallit ja muut talousrakennukset."
+        canonical="https://www.aurinkokuningasoy.fi/projektit"
+        schema={projektitSchema}
+      />
       {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"

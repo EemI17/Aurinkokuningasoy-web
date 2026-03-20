@@ -10,7 +10,7 @@
 3. **Add a property**
    - Click **"Add property"**
    - Choose **"URL prefix"**
-   - Enter: `https://www.aurinkokuningas.fi`
+   - Enter: `https://www.aurinkokuningasoy.fi`
    - Click **"Continue"**
 
 ## Step 2: Verify Ownership
@@ -54,7 +54,7 @@ Once verified:
 
 2. **Add your sitemap URL**:
    ```
-   https://www.aurinkokuningas.fi/sitemap.xml
+   https://www.aurinkokuningasoy.fi/sitemap.xml
    ```
 
 3. Click **"Submit"**
@@ -85,7 +85,7 @@ Once verified:
 
 Before submitting, you can test if it's accessible:
 
-1. Go to: https://www.aurinkokuningas.fi/sitemap.xml
+1. Go to: https://www.aurinkokuningasoy.fi/sitemap.xml
 2. You should see the XML file with all your URLs
 
 ## Useful Google Search Console Features
@@ -113,7 +113,7 @@ After setup, use these features:
 For each important page:
 
 1. Use **"URL Inspection"** tool
-2. Enter a page URL (e.g., https://www.aurinkokuningas.fi/)
+2. Enter a page URL (e.g., https://www.aurinkokuningasoy.fi/)
 3. Click **"Request indexing"**
 
 This asks Google to crawl that page sooner.
@@ -129,7 +129,7 @@ This asks Google to crawl that page sooner.
 
 **Issue**: Sitemap not found
 - **Solution**: Make sure Netlify has deployed the latest version
-- Check: https://www.aurinkokuningas.fi/sitemap.xml
+- Check: https://www.aurinkokuningasoy.fi/sitemap.xml
 
 **Issue**: Verification fails
 - **Solution**: Make sure you added the meta tag correctly and deployed

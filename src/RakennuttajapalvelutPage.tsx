@@ -1,10 +1,29 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
+import SEO from './components/SEO';
+
+const rakennuttajaSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Rakennuttajapalvelut",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy"
+  },
+  "description": "Asiantuntevaa rakennuttajapalvelua, vastaava työnjohtaja ja pääsuunnittelija Mäntässä ja Vilppulassa.",
+  "areaServed": "Pirkanmaa"
+};
 
 function RakennuttajapalvelutPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
+      <SEO
+        title="Rakennuttajapalvelut & Vastaava Työnjohtaja Mänttä | Aurinkokuningasoy.fi"
+        description="Tarjoamme asiantuntevaa rakennuttajapalvelua, vastaavan työnjohtajan ja pääsuunnittelijan palvelut. Varmistamme projektisi sujuvuuden ja laadun."
+        canonical="https://www.aurinkokuningasoy.fi/rakennuttajapalvelut"
+        schema={rakennuttajaSchema}
+      />
       {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
@@ -82,7 +101,22 @@ function RakennuttajapalvelutPage() {
                 letterSpacing: '0.01em'
               }}
             >
-              Tavoitteeni on tehdä rakentamisesta sinulle mahdollisimman vaivatonta. Kun minä pidän langat käsissä, voit luottaa siihen, että projekti etenee hallitusti ja turvallisesti.
+              <strong>Vastaava työnjohtaja Mänttä-Vilppula</strong> alueella tuntee paikalliset urakoitsijat ja toimintatavat.
+              Tämä helpottaa yhteistyötä ja varmistaa, että työmaalla noudatetaan hyvää rakennustapaa ja turvallisuusmääräyksiä.
+            </p>
+
+            <p
+              className="text-base sm:text-lg leading-relaxed"
+              style={{
+                color: '#3E3326',
+                lineHeight: '2',
+                fontSize: '1.1rem',
+                letterSpacing: '0.01em'
+              }}
+            >
+              Tavoitteeni on tehdä rakennusprosessista sinulle mahdollisimman vaivatonta ja
+              hallittu. Huolehdin siitä, että kaikki osapuolet tietävät tehtävänsä ja että lopputulos
+              on teknisesti ja laadullisesti kestävä.
             </p>
 
             <div

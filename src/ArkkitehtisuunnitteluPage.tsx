@@ -1,10 +1,29 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
+import SEO from './components/SEO';
+
+const arkkitehtiSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Arkkitehtisuunnittelu",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy"
+  },
+  "description": "Asiantuntevaa arkkitehtisuunnittelua pientaloihin ja talousrakennuksiin Mäntässä ja Vilppulassa.",
+  "areaServed": "Pirkanmaa"
+};
 
 function ArkkitehtisuunnitteluPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
+      <SEO
+        title="Arkkitehtisuunnittelu Mänttä & Vilppula | Aurinkokuningasoy.fi"
+        description="Tarjoan asiantuntevaa arkkitehtisuunnittelua pientaloihin ja talousrakennuksiin. Suunnittelemme toimivat ja tyylikkäät ratkaisut tarpeidesi mukaan."
+        canonical="https://www.aurinkokuningasoy.fi/arkkitehtisuunnittelu"
+        schema={arkkitehtiSchema}
+      />
       {/* Header */}
       <header
         className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-sm border-b"
@@ -87,9 +106,22 @@ function ArkkitehtisuunnitteluPage() {
                 letterSpacing: '0.01em'
               }}
             >
+              <strong>Arkkitehtisuunnittelu Mänttä-Vilppula</strong> ja lähialueilla vaatii usein paikallisten olosuhteiden ja kaavamääräysten tuntemusta.
+              Pitkä kokemukseni alueella auttaa varmistamaan, että suunnitelmat etenevät sujuvasti rakennusvalvonnassa.
+            </p>
+
+            <p
+              className="text-base sm:text-lg leading-relaxed"
+              style={{
+                color: '#3E3326',
+                lineHeight: '2',
+                fontSize: '1.1rem',
+                letterSpacing: '0.01em'
+              }}
+            >
               Tavoitteeni on, että saat rakennusprojektiisi suunnitelman, joka helpottaa lupaprosessia,
               tekee rakentamisesta sujuvampaa ja varmistaa, että lopputulos vastaa sekä käytännön
-              tarpeita että esteettisiä toiveita.
+              tarpeita että esteettisiä toiveita. Panostamme erityisesti tilankäytön tehokkuuteen ja energiaystävällisiin ratkaisuihin.
             </p>
 
             <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-2" style={{ borderColor: '#C9972E' }}>
@@ -101,10 +133,11 @@ function ArkkitehtisuunnitteluPage() {
               </h2>
               <ul className="space-y-4">
                 {[
-                  'Asemapiirustus',
-                  'Pohjapiirustus',
-                  'Leikkauspiirustukset',
-                  'Julkisivukuvat'
+                  'Asemapiirustus ja tontinkäyttösuunnitelma',
+                  'Pohjapiirustus ja tilasuunnittelu',
+                  'Leikkauspiirustukset ja rakenteelliset periaatteet',
+                  'Julkisivukuvat ja ulkoasun suunnittelu',
+                  'Rakennuslupadokumentaatio ja viranomaisasiointi'
                 ].map((item, index) => (
                   <li
                     key={index}

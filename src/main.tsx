@@ -1,6 +1,7 @@
 import { StrictMode, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import ArkkitehtisuunnitteluPage from './ArkkitehtisuunnitteluPage.tsx';
 import RakennesuunnitteluPage from './RakennesuunnitteluPage.tsx';
@@ -20,19 +21,28 @@ export function ScrollToTop() {
   return null;
 }
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root')!;
+const app = (
   <StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/arkkitehtisuunnittelu" element={<ArkkitehtisuunnitteluPage />} />
-        <Route path="/rakennesuunnittelu" element={<RakennesuunnitteluPage />} />
-        <Route path="/rakennuttajapalvelut" element={<RakennuttajapalvelutPage />} />
-        <Route path="/konsultointipalvelut" element={<KonsultointipalvelutPage />} />
-        <Route path="/projektit" element={<ProjektitPage />} />
-        <Route path="/yhteystiedot" element={<YhteystiedotPage />} />
-      </Routes>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/arkkitehtisuunnittelu" element={<ArkkitehtisuunnitteluPage />} />
+          <Route path="/rakennesuunnittelu" element={<RakennesuunnitteluPage />} />
+          <Route path="/rakennuttajapalvelut" element={<RakennuttajapalvelutPage />} />
+          <Route path="/konsultointipalvelut" element={<KonsultointipalvelutPage />} />
+          <Route path="/projektit" element={<ProjektitPage />} />
+          <Route path="/yhteystiedot" element={<YhteystiedotPage />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}

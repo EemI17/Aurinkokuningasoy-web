@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aurinkokuningasLogo from './assets/aurinkokuningasLogo';
+import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
 
 function KonsultointipalvelutPage() {
   return (
