@@ -29,7 +29,7 @@ function ProjektitPage() {
         'Energiatehokas ja kestävä rakenne',
         'Yhdistyy harmonisesti olemassa olevaan talousrakennukseen'
       ],
-      image: '/autotalli.jpg'
+      image: '/autotalli.webp'
     },
     {
       title: 'Venevaja',
@@ -46,7 +46,7 @@ function ProjektitPage() {
         'Käytännöllinen pohjaratkaisu',
         'Yhdistyy ympäristöön harmonisesti'
       ],
-      image: '/venevaja.jpg'
+      image: '/venevaja.webp'
     },
     {
       title: 'Varasto',
@@ -168,7 +168,7 @@ function ProjektitPage() {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover object-center"
-                      style={project.image === '/venevaja.jpg' ? { objectPosition: 'center 40%' } : {}}
+                      style={project.image === '/venevaja.webp' ? { objectPosition: 'center 40%' } : {}}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.style.display = 'none';
