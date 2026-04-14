@@ -1,7 +1,6 @@
 import { ArrowLeft, Calendar, MapPin, Ruler } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
-import venevajaPhoto from './assets/venevajaPhoto.webp';
 import Footer from './components/Footer';
 import SEO from './components/SEO';
 
