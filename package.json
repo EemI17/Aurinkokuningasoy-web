@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "postbuild": "react-snap"
+    "postbuild": "node scripts/prerender.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
@@ -32,28 +32,12 @@
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
-    "react-snap": "^1.23.0",
+    "puppeteer": "^24.40.0",
     "sharp": "^0.34.5",
+    "sirv": "^3.0.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.0.0"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "include": [
-      "/",
-      "/arkkitehtisuunnittelu",
-      "/rakennesuunnittelu",
-      "/rakennuttajapalvelut",
-      "/konsultointipalvelut",
-      "/projektit",
-      "/yhteystiedot",
-      "/opas-rakennushankkeeseen"
-    ]
   }
 }
