@@ -41,7 +41,6 @@
   },
   "reactSnap": {
     "source": "dist",
-    "puppeteerExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
@@ -53,7 +52,8 @@
       "/rakennuttajapalvelut",
       "/konsultointipalvelut",
       "/projektit",
-      "/yhteystiedot"
+      "/yhteystiedot",
+      "/opas-rakennushankkeeseen"
     ]
   }
 }

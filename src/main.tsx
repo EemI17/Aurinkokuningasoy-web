@@ -9,6 +9,7 @@ import RakennuttajapalvelutPage from './RakennuttajapalvelutPage.tsx';
 import KonsultointipalvelutPage from './KonsultointipalvelutPage.tsx';
 import ProjektitPage from './ProjektitPage.tsx';
 import YhteystiedotPage from './YhteystiedotPage.tsx';
+import OpasPage from './OpasPage.tsx';
 import './index.css';
 
 export function ScrollToTop() {
@@ -35,6 +36,7 @@ const app = (
           <Route path="/konsultointipalvelut" element={<KonsultointipalvelutPage />} />
           <Route path="/projektit" element={<ProjektitPage />} />
           <Route path="/yhteystiedot" element={<YhteystiedotPage />} />
+          <Route path="/opas-rakennushankkeeseen" element={<OpasPage />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

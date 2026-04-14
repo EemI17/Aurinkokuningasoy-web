@@ -19,8 +19,8 @@ function RakennuttajapalvelutPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       <SEO
-        title="Rakennuttajapalvelut & Vastaava Työnjohtaja Mänttä | Aurinkokuningasoy.fi"
-        description="Tarjoamme asiantuntevaa rakennuttajapalvelua, vastaavan työnjohtajan ja pääsuunnittelijan palvelut. Varmistamme projektisi sujuvuuden ja laadun."
+        title="Rakennuttajapalvelut ja valvonta Mänttä-Vilppula | Aurinkokuningas Oy"
+        description="Vastaava työnjohtaja ja pääsuunnittelija palvelut Pirkanmaalla. Varmistamme rakennushankkeesi laadun, aikataulun ja budjetin pysyvyyden."
         canonical="https://www.aurinkokuningasoy.fi/rakennuttajapalvelut"
         schema={rakennuttajaSchema}
       />
@@ -57,7 +57,7 @@ function RakennuttajapalvelutPage() {
       <section className="px-4 sm:px-6 pt-28 pb-16">
         <div className="container mx-auto max-w-4xl">
           <h1 className="mt-20 text-center text-3xl font-bold sm:mt-12 sm:text-4xl md:text-5xl" style={{ color: '#3E3326' }}>
-            Rakennuttajapalvelut
+            Rakennuttajapalvelut ja Valvonta Mänttä-Vilppulassa
           </h1>
 
           <div
@@ -69,7 +69,7 @@ function RakennuttajapalvelutPage() {
             }}
           >
             <p
-              className="text-base sm:text-lg leading-relaxed"
+              className="text-base sm:text-lg leading-relaxed mb-6"
               style={{
                 color: '#3E3326',
                 lineHeight: '2',
@@ -77,23 +77,62 @@ function RakennuttajapalvelutPage() {
                 letterSpacing: '0.01em'
               }}
             >
-              Projektinjohdon ja valvonnan avulla varmistat, että rakennushanke etenee suunnitelmien mukaisesti ja pysyy sovitussa aikataulussa ja budjetissa. Huolehdin siitä, että työmaalla tehdään laadukasta työtä ja että kaikki osapuolet toimivat yhteen sovitulla tavalla.
+              Onnistunut ja laadukas rakennushanke vaatii kokeneen ja ammattitaitoisen rakennuttajan. Aurinkokuningas Oy tarjoaa ensiluokkaiset rakennuttajapalvelut, joiden ytimessä on luotettava projektinjohto ja tarkka valvonta koko Pirkanmaan alueella. Ammattilaisten avulla varmistat, että hankkeesi etenee suunnitelmien mukaisesti, sovitussa aikataulussa ja täsmällisesti budjetissa.
             </p>
 
-            <p
-              className="text-base sm:text-lg leading-relaxed"
-              style={{
-                color: '#3E3326',
-                lineHeight: '2',
-                fontSize: '1.1rem',
-                letterSpacing: '0.01em'
-              }}
-            >
-              Valvontapalveluni kattaa rakennustyön eri vaiheet aloituksesta loppukatselmukseen saakka. Olen asiakkaan tukena ja edunvalvojana koko prosessin ajan, jotta lopputulos vastaa sovittuja suunnitelmia ja laatuvaatimuksia.
-            </p>
+            <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#3E3326' }}>
+                Mitä vastaava työnjohtaja tekee?
+              </h3>
+              <p
+                className="text-base sm:text-lg leading-relaxed"
+                style={{
+                  color: '#3E3326',
+                  lineHeight: '2',
+                  fontSize: '1.1rem',
+                  letterSpacing: '0.01em'
+                }}
+              >
+                Kun suunnittelet rakentamista Mänttä-Vilppulassa tai sen lähialueilla, vastaava työnjohtaja on paras mahdollinen sijoituksesi mielenrauhaan ja laatuun. Vastaava työnjohtaja on lakisääteinen rakennusammattilainen, joka vastaa työmaan teknisestä ohjauksesta, työturvallisuudesta ja varmistaa, että rakentaminen tehdään hyväksyttyjen piirustusten ja hyvän rakennustavan mukaisesti. Autan rakennuslupien hakemisessa ja viranomaisneuvotteluissa heti projektin alkumetreiltä asti.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#3E3326' }}>
+                Pääsuunnittelijan palvelut Pirkanmaalla
+              </h3>
+              <p
+                className="text-base sm:text-lg leading-relaxed"
+                style={{
+                  color: '#3E3326',
+                  lineHeight: '2',
+                  fontSize: '1.1rem',
+                  letterSpacing: '0.01em'
+                }}
+              >
+                Pääsuunnittelija huolehtii siitä, että rakennushankkeesi eri suunnitelmat (arkkitehti-, rakenne- ja talotekniikkasuunnitelmat) toimivat saumattomasti yhteen. Tämä ehkäisee kalliit ja aikaavievät ristiriidat työmaavaiheessa. Toimin tarvittaessa projektisi pääsuunnittelijana kokoamalla kaikki palaset laadukkaaksi kokonaisuudeksi, hyödyntäen vahvaa asiantuntemustamme arkkitehti- ja rakennesuunnittelussa.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold" style={{ color: '#3E3326' }}>
+                Miksi valita paikallinen asiantuntija?
+              </h3>
+              <p
+                className="text-base sm:text-lg leading-relaxed"
+                style={{
+                  color: '#3E3326',
+                  lineHeight: '2',
+                  fontSize: '1.1rem',
+                  letterSpacing: '0.01em'
+                }}
+              >
+                Rakennuttajapalvelut edellyttävät vahvaa paikallistuntemusta ja verkostoja. Vastaava työnjohtaja Mänttä-Vilppulan alueella tuntee paikalliset urakoitsijat ja rakennusvalvonnan käytännöt. Tämä tekee viranomaisyhteistyöstä joustavaa ja auttaa ongelmatilanteiden ratkaisemisessa tehokkaasti – ennen kuin niistä kasvaa haasteita budjetille.
+              </p>
+            </div>
 
             <p
-              className="text-base sm:text-lg leading-relaxed"
+              className="text-base sm:text-lg leading-relaxed mt-6"
               style={{
                 color: '#3E3326',
                 lineHeight: '2',
@@ -101,22 +140,7 @@ function RakennuttajapalvelutPage() {
                 letterSpacing: '0.01em'
               }}
             >
-              <strong>Vastaava työnjohtaja Mänttä-Vilppula</strong> alueella tuntee paikalliset urakoitsijat ja toimintatavat.
-              Tämä helpottaa yhteistyötä ja varmistaa, että työmaalla noudatetaan hyvää rakennustapaa ja turvallisuusmääräyksiä.
-            </p>
-
-            <p
-              className="text-base sm:text-lg leading-relaxed"
-              style={{
-                color: '#3E3326',
-                lineHeight: '2',
-                fontSize: '1.1rem',
-                letterSpacing: '0.01em'
-              }}
-            >
-              Tavoitteeni on tehdä rakennusprosessista sinulle mahdollisimman vaivatonta ja
-              hallittu. Huolehdin siitä, että kaikki osapuolet tietävät tehtävänsä ja että lopputulos
-              on teknisesti ja laadullisesti kestävä.
+              Tavoitteenani on taata asukkaille ja rakennuksen omistajille tekniikaltaan asiallinen ja arvoltaan kestävä lopputulos ilman stressiä omien aikataulujen sovittamisesta työmaan tarpeisiin. Edustan asiakasta koko rakennusprojektin ajan, kilpailutuksista aina viralliseen loppukatselmukseen.
             </p>
 
             <div

@@ -1,6 +1,6 @@
 import { type ChangeEvent, type FormEvent, type MouseEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X } from 'lucide-react';
+import { CalendarCheck, ClipboardList, Mail, Megaphone, Menu, Phone, User, X, ChevronDown } from 'lucide-react';
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
 import arkkitehtisuunnitteluBackground from './assets/arkkitehtisuunnitteluBackground.webp';
 import konsultointipalvelutBackground from './assets/konsultointipalvelutBackground';
@@ -188,8 +188,8 @@ function App() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       <SEO
-        title="Aurinkokuninkaan Suunnittelu- ja Rakennuspalvelu Oy | Arkkitehti- ja Rakennesuunnittelu"
-        description="Asiantuntevaa arkkitehti- ja rakennesuunnittelua, konsultointipalveluita sekä rakennuttajapalveluita. Luotettava kumppani rakennusprojekteihisi Mäntässä ja Vilppulassa."
+        title="Arkkitehti- ja rakennesuunnittelu Mänttä-Vilppula | Aurinkokuningas Oy"
+        description="Asiantuntevaa arkkitehtisuunnittelua, rakennesuunnittelua ja rakennuttajapalveluita Mänttä-Vilppulassa ja Pirkanmaalla. Pyydä tarjous projektillesi!"
         canonical="https://www.aurinkokuningasoy.fi/"
         schema={homeSchema}
       />
@@ -214,14 +214,51 @@ function App() {
               </span>
             </div>
             <div className="hidden md:flex space-x-2 lg:space-x-4 ml-auto">
-              <a
-                href="#services"
-                onClick={(event) => handleAnchorClick(event, 'services')}
-                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-                style={{ color: '#3E3326' }}
-              >
-                Palvelut
-              </a>
+              <div className="relative group">
+                <a
+                  href="#services"
+                  onClick={(event) => handleAnchorClick(event, 'services')}
+                  className="flex items-center gap-1.5 px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                  style={{ color: '#3E3326' }}
+                >
+                  Palvelut
+                  <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                </a>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-[80%] left-0 pt-4 w-[280px] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                  <div className="bg-[#FEF8EB] rounded-xl border-2 shadow-xl overflow-hidden py-2" style={{ borderColor: '#C9972E' }}>
+                    <Link
+                      to="/arkkitehtisuunnittelu"
+                      className="block px-5 py-3 text-base font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Arkkitehtisuunnittelu
+                    </Link>
+                    <Link
+                      to="/rakennesuunnittelu"
+                      className="block px-5 py-3 text-base font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Rakennesuunnittelu
+                    </Link>
+                    <Link
+                      to="/konsultointipalvelut"
+                      className="block px-5 py-3 text-base font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Konsultointipalvelut
+                    </Link>
+                    <Link
+                      to="/rakennuttajapalvelut"
+                      className="block px-5 py-3 text-base font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Rakennuttajapalvelut
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <a
                 href="#about"
                 onClick={(event) => handleAnchorClick(event, 'about')}
@@ -236,6 +273,13 @@ function App() {
                 style={{ color: '#3E3326' }}
               >
                 Projektit
+              </Link>
+              <Link
+                to="/opas-rakennushankkeeseen"
+                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                style={{ color: '#3E3326' }}
+              >
+                Opas
               </Link>
               <Link
                 to="/yhteystiedot"
@@ -260,14 +304,50 @@ function App() {
               }`}
           >
             <div className="flex flex-col gap-2 rounded-2xl border p-4 shadow-lg" style={{ backgroundColor: '#FEF8EB', borderColor: '#C9972E' }}>
-              <a
-                href="#services"
-                onClick={(event) => handleAnchorClick(event, 'services')}
-                className="rounded-xl px-4 py-3 text-base font-medium transition-colors hover:bg-[#C9972E]/15"
-                style={{ color: '#3E3326' }}
-              >
-                Palvelut
-              </a>
+              <div className="flex flex-col">
+                <a
+                  href="#services"
+                  onClick={(event) => handleAnchorClick(event, 'services')}
+                  className="rounded-xl px-4 py-3 text-base font-medium transition-colors hover:bg-[#C9972E]/15"
+                  style={{ color: '#3E3326' }}
+                >
+                  Palvelut
+                </a>
+                <div className="flex flex-col mt-1 mb-2 border-l-2 ml-6 space-y-1" style={{ borderColor: '#C9972E', opacity: 0.9 }}>
+                  <Link
+                    to="/arkkitehtisuunnittelu"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Arkkitehtisuunnittelu
+                  </Link>
+                  <Link
+                    to="/rakennesuunnittelu"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Rakennesuunnittelu
+                  </Link>
+                  <Link
+                    to="/konsultointipalvelut"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Konsultointipalvelut
+                  </Link>
+                  <Link
+                    to="/rakennuttajapalvelut"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Rakennuttajapalvelut
+                  </Link>
+                </div>
+              </div>
               <a
                 href="#about"
                 onClick={(event) => handleAnchorClick(event, 'about')}
@@ -285,6 +365,14 @@ function App() {
                 Projektit
               </Link>
               <Link
+                to="/opas-rakennushankkeeseen"
+                onClick={() => setIsMenuOpen(false)}
+                className="rounded-xl px-4 py-3 text-base font-medium transition-colors hover:bg-[#C9972E]/15"
+                style={{ color: '#3E3326' }}
+              >
+                Opas
+              </Link>
+              <Link
                 to="/yhteystiedot"
                 onClick={() => setIsMenuOpen(false)}
                 className="rounded-xl px-4 py-3 text-base font-medium transition-colors hover:bg-[#C9972E]/15"
@@ -300,11 +388,11 @@ function App() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-32 pb-16">
         <div className="container mx-auto text-center space-y-6">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold" style={{ color: '#3E3326' }}>
-            Tarkkaa suunnittelua, varmaa valvontaa
-          </h2>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold" style={{ color: '#3E3326' }}>
+            Arkkitehti- ja Rakennuspalvelut Mänttä-Vilppulassa
+          </h1>
           <p className="text-xl sm:text-2xl md:text-3xl font-semibold max-w-2xl mx-auto" style={{ color: '#C9972E' }}>
-            Yhdessä teemme unelmastasi totta
+            Tarkkaa suunnittelua, varmaa valvontaa
           </p>
         </div>
       </section>

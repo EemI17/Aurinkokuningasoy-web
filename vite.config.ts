@@ -12,8 +12,5 @@ export default defineConfig({
   },
   build: {
     target: 'es2015',
-  },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+  }
 });
