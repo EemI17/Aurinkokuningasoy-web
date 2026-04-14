@@ -16,6 +16,11 @@ const routes = [
 ];
 
 async function prerender() {
+  if (process.env.VERCEL) {
+    console.log('⚡ Vercel detected. Skipping prerendering for preview environment.');
+    return;
+  }
+
   const distDir = path.resolve(process.cwd(), 'dist');
   
   // 1. Start the static server
