@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { ArrowLeft, CheckCircle2, AlertTriangle, UserCheck, FileText, Lightbulb, Calculator, Briefcase } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import aurinkokuningasLogo from './assets/aurinkokuningasLogo.webp';
 import rakennesuunnitteluBackground from './assets/rakennesuunnitteluBackground.webp';
 import Footer from './components/Footer';
@@ -17,6 +18,23 @@ const opasSchema = {
 };
 
 function OpasPage() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const targetId = hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        // Use a small timeout to ensure the DOM is fully painted
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location, navigate]);
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FEF8EB' }}>
       <SEO
@@ -82,7 +100,7 @@ function OpasPage() {
         <div className="container mx-auto max-w-4xl space-y-16">
 
           {/* 1. Rakennusprojekti vaihe vaiheelta */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
+          <div id="vaihe-vaiheelta" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#3E3326' }}>
               <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" style={{ color: '#C9972E' }} />
               Rakennusprojekti vaihe vaiheelta
@@ -148,7 +166,7 @@ function OpasPage() {
           </div>
 
           {/* 2. Tarvitseeko rakennusprojektiin pääsuunnittelijan? */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
+          <div id="paasuunnittelija" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#3E3326' }}>
               <UserCheck className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" style={{ color: '#C9972E' }} />
               Tarvitseeko rakennusprojektiin pääsuunnittelijan?
@@ -199,7 +217,7 @@ function OpasPage() {
           </div>
 
           {/* 3. Rakennuslupa */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
+          <div id="rakennuslupa" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#3E3326' }}>
               <FileText className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" style={{ color: '#C9972E' }} />
               Rakennuslupa, milloin sitä tarvitaan ja miten se haetaan
@@ -257,7 +275,7 @@ function OpasPage() {
           </div>
 
           {/* 4. Paljonko rakennussuunnittelu maksaa? */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
+          <div id="hinta" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#3E3326' }}>
               <Calculator className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" style={{ color: '#C9972E' }} />
               Paljonko rakennussuunnittelu maksaa?
@@ -305,7 +323,7 @@ function OpasPage() {
           </div>
 
           {/* 5. Yleisimmät virheet */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#B11F1F' }}>
+          <div id="yleisimmat-virheet" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#B11F1F' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#B11F1F' }}>
               <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" />
               Yleisimmät virheet rakennushankkeessa
@@ -360,7 +378,7 @@ function OpasPage() {
           </div>
 
           {/* 6. Mitä rakennuttajapalvelu tarkoittaa? */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
+          <div id="rakennuttajapalvelu" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#3E3326' }}>
               <Briefcase className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" style={{ color: '#C9972E' }} />
               Mitä rakennuttajapalvelu tarkoittaa?
@@ -411,7 +429,7 @@ function OpasPage() {
           </div>
 
           {/* 7. Aloitus */}
-          <div className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
+          <div id="aloitus" className="bg-white rounded-2xl shadow-sm border p-6 sm:p-10" style={{ borderColor: '#C9972E' }}>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 flex items-center gap-3" style={{ color: '#3E3326' }}>
               <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 shrink-0" style={{ color: '#C9972E' }} />
               Miten valmistautua ensimmäiseen suunnittelutapaamiseen

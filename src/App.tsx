@@ -274,13 +274,71 @@ function App() {
               >
                 Projektit
               </Link>
-              <Link
-                to="/opas-rakennushankkeeseen"
-                className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
-                style={{ color: '#3E3326' }}
-              >
-                Opas
-              </Link>
+              <div className="relative group">
+                <Link
+                  to="/opas-rakennushankkeeseen"
+                  className="flex items-center gap-1.5 px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
+                  style={{ color: '#3E3326' }}
+                >
+                  Opas
+                  <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                </Link>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-[80%] left-0 pt-4 w-[360px] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                  <div className="bg-[#FEF8EB] rounded-xl border-2 shadow-xl overflow-hidden py-2" style={{ borderColor: '#C9972E' }}>
+                    <Link
+                      to="/opas-rakennushankkeeseen#vaihe-vaiheelta"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Rakennusprojekti vaihe vaiheelta
+                    </Link>
+                    <Link
+                      to="/opas-rakennushankkeeseen#paasuunnittelija"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Tarvitseeko rakennusprojekti pääsuunnittelijan
+                    </Link>
+                    <Link
+                      to="/opas-rakennushankkeeseen#rakennuslupa"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Rakennuslupa, milloin sitä tarvitaan ja miten se haetaan
+                    </Link>
+                    <Link
+                      to="/opas-rakennushankkeeseen#hinta"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Paljonko rakennussuunnittelu maksaa?
+                    </Link>
+                    <Link
+                      to="/opas-rakennushankkeeseen#yleisimmat-virheet"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Yleisimmät virheet rakennushankkeessa
+                    </Link>
+                    <Link
+                      to="/opas-rakennushankkeeseen#rakennuttajapalvelu"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Mitä rakennuttajapalvelu tarkoittaa
+                    </Link>
+                    <Link
+                      to="/opas-rakennushankkeeseen#aloitus"
+                      className="block px-5 py-3 text-sm font-semibold transition-colors hover:bg-[#C9972E]/15"
+                      style={{ color: '#3E3326' }}
+                    >
+                      Miten valmistautua ensimmäiseen suunnittelutapaamiseen
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <Link
                 to="/yhteystiedot"
                 className="px-4 lg:px-6 py-2.5 lg:py-3 rounded-lg text-base lg:text-lg font-medium transition-all duration-300 hover:bg-[#C9972E]"
@@ -364,14 +422,74 @@ function App() {
               >
                 Projektit
               </Link>
-              <Link
-                to="/opas-rakennushankkeeseen"
-                onClick={() => setIsMenuOpen(false)}
-                className="rounded-xl px-4 py-3 text-base font-medium transition-colors hover:bg-[#C9972E]/15"
-                style={{ color: '#3E3326' }}
-              >
-                Opas
-              </Link>
+              <div className="flex flex-col">
+                <Link
+                  to="/opas-rakennushankkeeseen"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="rounded-xl px-4 py-3 text-base font-medium transition-colors hover:bg-[#C9972E]/15"
+                  style={{ color: '#3E3326' }}
+                >
+                  Opas
+                </Link>
+                <div className="flex flex-col mt-1 mb-2 border-l-2 ml-6 space-y-1" style={{ borderColor: '#C9972E', opacity: 0.9 }}>
+                  <Link
+                    to="/opas-rakennushankkeeseen#vaihe-vaiheelta"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Rakennusprojekti vaihe vaiheelta
+                  </Link>
+                  <Link
+                    to="/opas-rakennushankkeeseen#paasuunnittelija"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Tarvitseeko rakennusprojekti pääsuunnittelijan
+                  </Link>
+                  <Link
+                    to="/opas-rakennushankkeeseen#rakennuslupa"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Rakennuslupa, milloin sitä tarvitaan ja miten se haetaan
+                  </Link>
+                  <Link
+                    to="/opas-rakennushankkeeseen#hinta"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Paljonko rakennussuunnittelu maksaa?
+                  </Link>
+                  <Link
+                    to="/opas-rakennushankkeeseen#yleisimmat-virheet"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Yleisimmät virheet rakennushankkeessa
+                  </Link>
+                  <Link
+                    to="/opas-rakennushankkeeseen#rakennuttajapalvelu"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Mitä rakennuttajapalvelu tarkoittaa
+                  </Link>
+                  <Link
+                    to="/opas-rakennushankkeeseen#aloitus"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    style={{ color: '#3E3326' }}
+                  >
+                    Miten valmistautua ensimmäiseen suunnittelutapaamiseen
+                  </Link>
+                </div>
+              </div>
               <Link
                 to="/yhteystiedot"
                 onClick={() => setIsMenuOpen(false)}
