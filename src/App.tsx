@@ -285,7 +285,7 @@ function App() {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className="absolute top-[80%] left-0 pt-4 w-[360px] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                <div className="absolute top-[80%] right-0 pt-4 w-[360px] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
                   <div className="bg-[#FEF8EB] rounded-xl border-2 shadow-xl overflow-hidden py-2" style={{ borderColor: '#C9972E' }}>
                     <Link
                       to="/opas-rakennushankkeeseen#vaihe-vaiheelta"
@@ -435,7 +435,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#vaihe-vaiheelta"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Rakennusprojekti vaihe vaiheelta
@@ -443,7 +443,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#paasuunnittelija"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Tarvitseeko rakennusprojekti pääsuunnittelijan
@@ -451,7 +451,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#rakennuslupa"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Rakennuslupa, milloin sitä tarvitaan ja miten se haetaan
@@ -459,7 +459,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#hinta"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Paljonko rakennussuunnittelu maksaa?
@@ -467,7 +467,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#yleisimmat-virheet"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Yleisimmät virheet rakennushankkeessa
@@ -475,7 +475,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#rakennuttajapalvelu"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Mitä rakennuttajapalvelu tarkoittaa
@@ -483,7 +483,7 @@ function App() {
                   <Link
                     to="/opas-rakennushankkeeseen#aloitus"
                     onClick={() => setIsMenuOpen(false)}
-                    className="rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15"
+                    className="block rounded-r-xl px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-[#C9972E]/15 break-words whitespace-normal"
                     style={{ color: '#3E3326' }}
                   >
                     Miten valmistautua ensimmäiseen suunnittelutapaamiseen
