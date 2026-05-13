@@ -94,6 +94,153 @@ function ProjektitPage() {
         'Helppo liikkua ja käsitellä koneita',
         'Sopii luontevasti osaksi ympäröivää maisemaa ja rakennuksia'
       ]
+    },
+    {
+      title: 'Autotalli Mänttä',
+      category: 'Talousrakennus',
+      area: '67 m²',
+      location: 'Mänttä',
+      year: '2025–2026',
+      description:
+        'Suunnittelimme asiakkaalle käytännöllisen ja monipuolisen autotallin rakennuslupaa varten Tammikankaan alueelle Mäntässä. Projekti sisältää kokonaisvaltaisen suunnittelun asemapiirroksesta pohjakuviin, julkisivuihin ja rakennusvalvontaan toimitettaviin lupakuviin sekä työmaavalvonnan rakentamisen aikana. Tavoitteena on luoda toimiva, pitkäikäinen ja ympäristöön sopiva talousrakennus, joka palvelee sekä ajoneuvosuojana että varasto- ja harrastetilana.',
+      features: [
+        'Rakennuslupasuunnittelu ja viranomaisasiat kokonaispalveluna',
+        '67 m² toimiva autotalli / talousrakennus',
+        'Asemapiirros, pohjapiirustus, julkisivut ja leikkauskuvat',
+        'Työmaavalvonta ja rakennuttajan tuki',
+        'Suunniteltu asiakkaan tarpeisiin ja tontin ominaisuuksiin',
+        'Rakentamisen arvioitu aloitus keväällä 2026'
+      ]
+    },
+    {
+      title: 'Vapaa-ajan mökin muutoslupa',
+      category: 'Vapaa-ajan rakennus',
+      area: 'Muutos- ja kehityssuunnittelu',
+      location: 'Makkoskylä',
+      year: '2025',
+      description:
+        'Toteutimme vapaa-ajan rakennuksen kokonaisvaltaisen muutoslupaprojektin Makkoskylässä, jossa päivitettiin mökin pohjakuvat, laadittiin asemapiirros sekä suunniteltiin toimiva harmaavesijärjestelmä viranomaisvaatimusten mukaisesti. Tavoitteena oli modernisoida vapaa-ajan kohde käytännöllisemmäksi ja määräysten mukaiseksi säilyttäen samalla rakennuksen käyttömukavuus ja ympäristöön sopivuus.',
+      features: [
+        'Mökin pohjakuvien päivitys ja rakennuksen kehityssuunnittelu',
+        'Asemapiirros',
+        'Harmaavesijärjestelmän suunnittelu',
+        'Työmaavalvonta ja rakennuttajan tuki',
+        'Käytännöllinen ja määräystenmukainen ratkaisu vapaa-ajan käyttöön'
+      ]
+    },
+    {
+      title: 'Sauna / Tupa / Autotalli – Ruovesi',
+      category: 'Talousrakennus',
+      area: 'n. 80–90 m²',
+      location: 'Ruovesi',
+      year: '2026',
+      description:
+        'Käynnissä oleva monipuolinen sauna / tupa / autotalli -kokonaisuus Ruovedellä suunnitellaan asiakkaalle luonnosvaiheessa urakkalaskentaa varten. Projektin ensimmäinen vaihe keskittyy toimivan pohjaratkaisun, julkisivujen ja rakenneleikkausten suunnitteluun, jotta tilaaja voi kilpailuttaa urakoitsijat ja materiaalitoimittajat tehokkaasti ennen varsinaista rakennuslupa- ja toteutusvaihetta. Tavoitteena on yhdistää vapaa-ajan käyttö, käytännölliset tilaratkaisut ja pitkäikäinen rakennuskokonaisuus yhdeksi ympäristöön sopivaksi talousrakennukseksi.',
+      features: [
+        'Vaihe 1: luonnossuunnittelu urakkalaskentaa varten',
+        'Sauna, tupa ja autotalli samassa rakennuskokonaisuudessa',
+        'Arvioitu koko noin 80–90 m²',
+        'Pohjakuva, julkisivut ja rakenneleikkaus',
+        'Suunniteltu tarjouspyyntöjen ja kustannusvertailun tueksi',
+        'Jatkovaihe mahdollistaa rakennuslupa-, pääsuunnittelu- ja valvontapalvelut',
+        'Käytännöllinen ja asiakkaan tarpeisiin räätälöity kokonaisuus'
+      ]
+    },
+    {
+      title: 'Tallirakennus 135 m² – Halli',
+      category: 'Talousrakennus',
+      area: '135 m²',
+      location: 'Halli',
+      year: '2026',
+      description:
+        'Suunnitteilla oleva 135 m² tallirakennus Hallissa tarjoaa asiakkaalle laajan ja käytännöllisen ratkaisun monipuoliseen käyttöön. Projekti kattaa kokonaisvaltaisesti rakennuslupakuvat, pääsuunnittelun sekä vastaavan työnjohdon, mikä mahdollistaa sujuvan etenemisen suunnittelusta lupaprosessin kautta toteutukseen. Tavoitteena on luoda toimiva, pitkäikäinen ja asiakkaan tarpeisiin räätälöity tallirakennus, jossa yhdistyvät tehokas tilankäyttö, rakennusmääräysten mukaisuus ja ammattimainen projektinhallinta.',
+      features: [
+        '135 m² tallirakennuksen kokonaisvaltainen suunnittelu',
+        'Rakennuslupakuvat ja viranomaisprosessin koordinointi',
+        'Pääsuunnittelijan tehtävät (PS)',
+        'Vastaavan työnjohtajan palvelut (VTJ)',
+        'Rakennuksen sijoittuminen tontille ja toiminnallinen suunnittelu',
+        'Sopii monipuoliseen varasto-, harraste- tai työtilakäyttöön',
+        'Suunniteltu tehokkaaseen toteutukseen ja hallittuun rakennusprosessiin'
+      ]
+    },
+    {
+      title: 'Autotallin muutos asuinhuoneeksi – Ylöjärvi',
+      category: 'Muutossuunnittelu / Asuinrakennus',
+      area: 'n. 15 m² käyttötarkoituksen muutos',
+      location: 'Ylöjärvi',
+      year: '2026',
+      description:
+        'Tässä projektissa olemassa oleva autotalli muutetaan toimivaksi ja määräystenmukaiseksi asuinhuoneeksi osaksi kodin nykyisiä tiloja. Suunnittelu kattaa rakennuslupaa varten tarvittavat piirustukset, tilaratkaisun, julkisivumuutokset sekä ilmanvaihdon liittämisen olemassa olevaan LTO-järjestelmään. Kokonaisuus sisältää myös Lupapisteen hoitamisen, viranomaisyhteydet ja projektin käytännön neuvonnan, mikä tekee käyttötarkoituksen muutoksesta asiakkaalle sujuvan ja hallitun prosessin.',
+      features: [
+        'Autotallin muuttaminen asuinhuoneeksi',
+        'Uusi noin 15 m² huonetila osaksi nykyistä asuntoa',
+        'Pohjapiirros, asemapiirros, julkisivut ja leikkauskuvat',
+        'Autotallin oven korvaaminen ikkunaratkaisulla',
+        'Ilmanvaihdon suunnittelu olemassa olevaan LTO-järjestelmään',
+        'Lupapisteen ja rakennuslupaprosessin hoitaminen',
+        'Käytännöllinen lisätila asumiseen ilman uudisrakentamista'
+      ]
+    },
+    {
+      title: 'Valesokkelitalon korjaussuunnittelu – Ylöjärvi',
+      category: 'Korjausrakentaminen / Omakotitalo',
+      area: 'Kokonaisvaltainen rakennekorjaus',
+      location: 'Ylöjärvi',
+      year: '2026',
+      description:
+        'Laaja omakotitalon korjaushanke Ylöjärvellä keskittyy valesokkelirakenteisen talon rakenteelliseen korjaukseen, asumisterveyden parantamiseen ja rakennuksen pitkäikäisyyden varmistamiseen. Projekti sisältää valesokkelin kengityksen suunnittelun, ulkoseinä–lattialiittymän rakenneratkaisut, lattiarakenteen uusimisen vesikiertoiselle lattialämmitykselle sekä salaoja- ja sadevesijärjestelmien suunnittelun. Kokonaisuus kattaa myös rakennuslupasuunnittelun, pääsuunnittelijan ja vastaavan työnjohtajan vastuut sekä lisälupahakemukset, mikä tekee hankkeesta asiakkaalle hallitun ja turvallisen kokonaispalvelun.',
+      features: [
+        'Valesokkelin kengityksen suunnittelu',
+        'Ulkoseinä–lattialiittymän rakennekorjaus',
+        'Lattiarakenteen uusiminen vesikiertoiselle lattialämmitykselle',
+        'Salaoja- ja sadevesijärjestelmien suunnittelu',
+        'Rakennuslupakuvat ja viranomaisprosessin hoitaminen',
+        'Pääsuunnittelija (PS) ja vastaava työnjohtaja (VTJ)',
+        'Ilmavesilämpöpumpun ja katon muutostöiden lupahakemukset',
+        'Rakennuksen terveellisyyden, energiatehokkuuden ja käyttöiän parantaminen'
+      ]
+    },
+    {
+      title: 'Autotalli työhuoneeksi – Ylöjärvi',
+      category: 'Muutossuunnittelu / Työtila',
+      area: 'n. 20 m² käyttötarkoituksen muutos',
+      location: 'Ylöjärvi',
+      year: '2026',
+      description:
+        'Tässä hankkeessa olemassa oleva autotalli muutetaan moderniksi ja toimivaksi työhuoneeksi osaksi asuinkiinteistöä. Projekti sisältää käyttötarkoituksen muutoksen kokonaisvaltaisen suunnittelun, rakennuslupakuvat, pääsuunnittelun sekä vastaavan työnjohdon, minkä lisäksi mukana ovat materiaalilaskenta ja urakoitsijoiden kilpailutus. Tavoitteena on luoda tehokas, viihtyisä ja teknisesti toimiva työtila, joka integroituu saumattomasti olemassa olevaan rakennukseen sekä ilmanvaihto- ja lämmitysjärjestelmiin.',
+      features: [
+        'Autotallin muuttaminen työhuoneeksi',
+        'Noin 20 m² uusi työtila',
+        'Oviaukko talon ja autotallin välille',
+        'Nosto-oven muuttaminen ikkunaseinäksi',
+        'Ilmanvaihdon ja lämmityksen integrointi olemassa olevaan järjestelmään',
+        'Rakennuslupakuvat, pääsuunnittelu (PS) ja vastaava työnjohto (VTJ)',
+        'Materiaalilaskenta ja budjetointi',
+        'Urakoitsijoiden kilpailutus',
+        'Käytännöllinen lisätila etätyöhön tai yrityskäyttöön'
+      ]
+    },
+    {
+      title: 'Korjaus- ja muutostyö / valesokkelikorjaus – Jyväskylä',
+      category: 'Korjausrakentaminen / Omakotitalo',
+      area: 'Rakenteellinen korjaus ja tilamuutos',
+      location: 'Jyväskylä',
+      year: '2026',
+      description:
+        'Suunnitteilla oleva laaja korjaus- ja muutostyöhanke Jyväskylässä keskittyy olemassa olevan rakennuksen energiatehokkuuden, terveellisyyden ja rakenteellisen toimivuuden parantamiseen. Projekti sisältää valesokkelikorjauksen rajatulle osuudelle, ulkoseinien ja lattiarakenteiden lisäeristyksen, vesikiertoisen lattialämmityksen suunnittelun sekä merkittävät tilamuutokset. Kohteessa ei ole valmiita portaita kerrosten välillä, joten suunnitelmaan kuuluu betonilattian läpivienti ja uuden aukon tekeminen kulkuyhteyttä varten, mikä mahdollistaa täysin uuden yhteyden rakennuksen tasojen välille. Kokonaisuus yhdistää rakennuslupasuunnittelun, rakennekuvat, talotekniikan yhteensovituksen sekä pääsuunnittelijan ja vastaavan työnjohdon tehtävät hallituksi kokonaispalveluksi.',
+      features: [
+        'Valesokkelikorjauksen suunnittelu rajatulle osuudelle',
+        'Ulkoseinien ja lattiarakenteiden lisäeristys',
+        'Betonilattian puhkaisu uuden kulkuyhteyden toteuttamiseksi',
+        'Uuden kerrosten välisen yhteyden suunnittelu ilman olemassa olevia portaita',
+        'Vesikiertoinen lattialämmitys ja vesi-ilmalämpöpumppu',
+        'Koneellinen ilmanvaihto lämmöntalteenotolla',
+        'Salaojien ja sadevesijärjestelmän suunnittelu',
+        'Rakennuslupakuvat, rakennekuvat ja detaljit',
+        'Pääsuunnittelija (PS) ja vastaava työnjohtaja (VTJ)',
+        'Rakennuksen käyttöiän, energiatehokkuuden ja toiminnallisuuden merkittävä parantaminen'
+      ]
     }
   ];
 
