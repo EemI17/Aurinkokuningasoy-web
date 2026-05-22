@@ -507,7 +507,7 @@ function App() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-32 pb-16">
         <div className="container mx-auto text-center space-y-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold" style={{ color: '#3E3326' }}>
-            Arkkitehti- ja Rakennuspalvelut Mänttä-Vilppulassa
+            Arkkitehti- ja Rakennuspalvelut Mänttä-Vilppulassa sekä Pirkanmaalla
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl font-semibold max-w-2xl mx-auto" style={{ color: '#C9972E' }}>
             Tarkkaa suunnittelua, varmaa valvontaa
