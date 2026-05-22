@@ -96,7 +96,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Autotalli Mänttä',
+      title: 'Autotalli',
       category: 'Talousrakennus',
       area: '67 m²',
       location: 'Mänttä',
@@ -129,7 +129,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Sauna / Tupa / Autotalli – Ruovesi',
+      title: 'Sauna / Tupa / Autotalli',
       category: 'Talousrakennus',
       area: 'n. 80–90 m²',
       location: 'Ruovesi',
@@ -147,7 +147,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Tallirakennus 135 m² – Halli',
+      title: 'Tallirakennus 135 m²',
       category: 'Talousrakennus',
       area: '135 m²',
       location: 'Halli',
@@ -165,7 +165,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Autotallin muutos asuinhuoneeksi – Ylöjärvi',
+      title: 'Autotallin muutos asuinhuoneeksi',
       category: 'Muutossuunnittelu / Asuinrakennus',
       area: 'n. 15 m² käyttötarkoituksen muutos',
       location: 'Ylöjärvi',
@@ -183,7 +183,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Valesokkelitalon korjaussuunnittelu – Ylöjärvi',
+      title: 'Valesokkelitalon korjaussuunnittelu',
       category: 'Korjausrakentaminen / Omakotitalo',
       area: 'Kokonaisvaltainen rakennekorjaus',
       location: 'Ylöjärvi',
@@ -202,7 +202,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Autotalli työhuoneeksi – Ylöjärvi',
+      title: 'Autotalli työhuoneeksi',
       category: 'Muutossuunnittelu / Työtila',
       area: 'n. 20 m² käyttötarkoituksen muutos',
       location: 'Ylöjärvi',
@@ -222,7 +222,7 @@ function ProjektitPage() {
       ]
     },
     {
-      title: 'Korjaus- ja muutostyö / valesokkelikorjaus – Jyväskylä',
+      title: 'Korjaus- ja muutostyö / valesokkelikorjaus',
       category: 'Korjausrakentaminen / Omakotitalo',
       area: 'Rakenteellinen korjaus ja tilamuutos',
       location: 'Jyväskylä',
