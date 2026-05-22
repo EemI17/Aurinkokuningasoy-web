@@ -675,7 +675,7 @@ function App() {
             Palvelualue
           </h2>
           <p className="text-lg sm:text-xl leading-relaxed" style={{ color: '#3E3326' }}>
-            Palvelemme asiakkaita pääasiassa <strong>Mänttä-Vilppulan</strong>, <strong>Ruoveden</strong> ja <strong>Pirkanmaan</strong> alueella.
+            Palvelemme asiakkaita pääasiassa <strong>Mänttä-Vilppulan</strong>, <strong>Ruoveden</strong>, <strong>Keuruun</strong>, <strong>Jämsän</strong>, <strong>Oriveden</strong>, <strong>Jyväskylän</strong> ja <strong>Pirkanmaan</strong> alueella.
             Tarvittaessa toteutamme arkkitehti- ja rakennesuunnittelua sekä konsultointia koko Suomen alueella.
             Ota yhteyttä ja kysy lisää palveluistamme omalla paikkakunnallasi!
           </p>
