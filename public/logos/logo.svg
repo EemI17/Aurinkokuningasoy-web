@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Aurinkokuningas Oy emblem</title>
+  <desc id="desc">Stylised sun emblem for Aurinkokuningas Oy without text.</desc>
+  <defs>
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff3b0" />
+      <stop offset="55%" stop-color="#ffd166" />
+      <stop offset="100%" stop-color="#f77f00" />
+    </radialGradient>
+    <linearGradient id="sunRays" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcbf49" />
+      <stop offset="100%" stop-color="#f77f00" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(100 100)">
+    <circle
+      r="78"
+      fill="none"
+      stroke="url(#sunRays)"
+      stroke-width="20"
+      stroke-dasharray="12 20"
+      stroke-linecap="round"
+      transform="rotate(-15)"
+    />
+    <circle r="50" fill="url(#sunCore)" />
+  </g>
+</svg>
